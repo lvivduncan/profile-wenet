@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Особистий кабінет - Історія платежів</title>
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="qgyYomFZea8uMtJ1axkPwXzk8ZlLy_dU7tiHSOoH-WY" />
+
+    <link rel="stylesheet" href="https://wenet.lviv.ua/site/templates/css/style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+
+    <style>
+         :root {
+            --first: #42A5F5;
+            --second: #337AB7;
+            --red: #FF0000;
+            --rate-color: #FFFFFF;
+            --rate-bg-button: #0BD663;
+            --after: #2C94E0;
+        }
+        
+        .black-rate .param {
+            background: url(/site/assets/files/1073/63290040-black-abstract-background-with-transparent-squares-vector-illustration.jpg) fixed;
+        }
+    </style>
+    <script src="https://my.wenet.lviv.ua/jquery-3.4.1.min.js"></script>
+    <script src="https://wenet.lviv.ua/site/templates/js/slick.min.js"></script>
+</head>
+
+<body>
+    <header id="top">
+        <div class="wrap">
+            <div id="logo">
+                <a href="/"><img src="https://wenet.lviv.ua/site/assets/files/1073/wenet.png" alt=""></a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href='/zapitannia/'>Запитання</a></li>
+                    <li><a href='https://wenet.lviv.ua/usi-tarifi/'>Тарифи</a></li>
+                    <li><a href='https://wenet.lviv.ua/tv'>ІР телебачення</a></li>
+                    <li><a href='/poslugi/'>Послуги</a></li>
+                    <li><a href='/pro-nas/'>Про Нас</a></li>
+                </ul><a href="#" id="to-cabinet" data-fancybox="form-cabinet" data-src="#form-cabinet"><span>кабінет</span></a>
+                <div id="form-cabinet" style="display: none;">
+                    <div id="msg-form" class="cabinet-msg cabinet-errmsg"></div>
+                    <form action="#">
+                        <p><label>Ім'я користувача:
+    <input type="text" placeholder="Ім'я користувача" name="uname"></label></p>
+                        <p><label>Пароль:
+    <input type="password" placeholder="Пароль" name="passw"></label></p><span>
+    Запамятати?
+</span><input type="checkbox" id="save"><label for="save" class="toggle"><span></span></label><input type="submit" value="Увійти!"><a href="/cabinet/#recover">Я забув пароль, надіслати SMS</a></form>
+                </div>
+            </nav>
+            <a id="menu-button" href=""></a>
+        </div>
+    </header>
+    <div id="breadcrumbs">
+        <div class="wrap">
+            <h1>Особистий кабінет</h1>
+            <ul>
+                <li><a href=/>Провайдер інтернету</a>
+                </li>
+                <li class="active">Особистий кабінет</li>
+            </ul>
+        </div>
+    </div>
+    <!-- <div class="wrap"> -->
+    <main id="page" role="main" class="panel-wrapper">
+
+        <section id="panel">
+            <div id="panel-aside">
+                <h1>Особистий кабінет</h1>
+                <aside id="aside-nav">
+                    <ul class="levus-aside-menu">
+                        <li><a href="#main" class="current">Головна</a></li>
+                        <li><a href="#pay">Поповнення</a></li>
+                        <li><a href="#service-tv">Телебачення</a></li>
+                        <li><a href="#service">Послуги</a>
+                            <ul>
+                                <li><a href="#service-real_ip">Реальний IP</a></li>
+                                <li><a href="#service-sms">SMS нагадування</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#history">Історія</a>
+                            <ul>
+                                <li><a href="#history-payment">Історія платежів</a></li>
+                                <li><a href="#history-session">Історія сесій</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#logout">Вийти</a></li>
+                    </ul>
+                </aside>
+                <aside id="aside-news">
+                    <h2>Новини</h2>
+                    <div id="levus-fadescroll">
+                        <span id="left"></span>
+                        <span id="right"></span>
+                        <div style="background: url('https://lvivduncan.github.io/levus-fadescroll/images/01.jpg')">
+                            <a href="/novini-ta-aktcii/aktualizatciia-tarifnikh-planiv-m.lviv-m.borislav-ta-m.sambir-privatnii-sektor/">Актуалізація тарифних планів м.Львів, м.Борислав та м.Самбір (приватний сектор)</a>
+                        </div>
+                        <div style="background: url('https://lvivduncan.github.io/levus-fadescroll/images/02.jpg')">
+                            <a href="/novini-ta-aktcii/interne-tb/">Інтернет+ТБ - Разом дешевше!</a>
+                        </div>
+                        <div style="background: url('https://lvivduncan.github.io/levus-fadescroll/images/03.jpg')">
+                            <a href="/novini-ta-aktcii/shalene-lito/">2+1 Шалене Літо з WeNet</a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+
+            <div id="panel-content">
+                <h4>Історія платежів</h4>
+
+                <section>
+                    <p>В історії відображаються останні 50 платежів</p>
+                    <ul class="plus3 center">
+                        <li>Тип платежу </li>
+                        <li>До платежу (грн)</li>
+                        <li>Сума (грн)</li>
+                        <li>Примітка</li>
+                        <li>Дата, час</li>
+                    </ul>
+
+                    <ul class="plus3 center">
+                        <li>Сплата ренти зa IP адресу </li>
+                        <li><b>546.77</b></li>
+                        <li><b>2.26	</b></li>
+                        <li></li>
+                        <li>2020-08-06 15:33:28 </li>
+                    </ul>
+
+                    <ul class="plus3 center">
+                        <li>Кешбек</li>
+                        <li><b>496.77	</b></li>
+                        <li><b>50.00</b></li>
+                        <li>OmegaTV</li>
+                        <li>2020-08-06 15:24:32 </li>
+                    </ul>
+
+                    <ul class="plus3 center">
+                        <li>Оплата додаткових послуг </li>
+                        <li><b>596.77</b></li>
+                        <li><b>100.00</b></li>
+                        <li>OmegaTV</li>
+                        <li>2020-08-06 15:24:32 </li>
+                    </ul>
+
+                    <ul class="plus3 center">
+                        <li>Перерахунок</li>
+                        <li><b>600.00</b></li>
+                        <li><b>3.23	</b></li>
+                        <li>Продовження терміну надання освновної послуги у зв'язку з підключенням OmegaTV</li>
+                        <li>2020-08-06 15:24:32 </li>
+                    </ul>
+                </section>
+
+            </div>
+        </section>
+    </main>
+    <!-- </div> -->
+
+
+    <footer role="contentinfo" id="footer">
+        <div class="wrap">
+            <div id="footer-contacts">
+                <h3 class="title">Контакти</h3>
+                <div class="footer-contacts">
+                    <div class="footer-contact">
+                        <h4>Львів / Самбір / Жовківський р-н.</h4>
+                        <p>Графік роботи:<br /> (Пн-Нд 09:00-21:00)</p>
+                        <p>Телефони: </p>
+                        <p><a href="tel:0634224004" title="(063) 422-4004">(063) 422-4004</a></p>
+                        <p><a href="tel:0984224004" title="(098) 422-4004">(098) 422-4004</a></p>
+                        <p><a href="tel:0994224004" title="(099) 422-4004">(099) 422-4004</a></p>
+                        <p>E-mail:<br /> info@wenet.lviv.ua
+                        </p>
+                    </div>
+                    <div class="footer-contact">
+                        <h4>м. Борислав</h4>
+                        <p>Графік роботи:<br /> (Пн-Сб 09:00-21:00) (Нд 12:00-18:00)</p>
+                        <p>Телефони:</p>
+                        <p><a href="tel:0636416133">(063) 641-61-33</a></p>
+                        <p><a href="tel:0987466111">(098) 746-61-11</a></p>
+                        <p> </p>
+                        <p>E-mail:<br /> info@wenet.lviv.ua
+                        </p>
+                        <p> </p>
+                    </div>
+                </div>
+            </div>
+            <div id="footer-desc">
+                <figure><img src="/site/assets/files/1073/wenet_sirii.png" alt=""></figure>
+                <p>
+                    <p>Ми пропонуємо широкий вибір послуг із доступу до мережі Інтернет як для приватних, так і комерційних клієнтів. У нас Ви завжди зможете отримати оперативну та кваліфіковану технічну підтримку в усіх питаннях, що стосуються Вашої роботи
+                        в мережі Інтернет.</p>
+                    <p><img alt="" src="/site/assets/files/1073/visa-mastercard.png" width="200" /></p>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <footer id="copy">
+        <div class="wrap">
+            <p>© Copyright 2005-2019 <a href="/">Wenet</a> | All Rights Reserved.</p>
+        </div>
+    </footer>
+    <div id="chat">
+        <a href="#"></a>
+    </div>
+    <div id="chat-online">
+        <h6>Потрібна допомога?</h6>
+        <dl id="chat-messages"></dl>
+        <form id="chat-write">
+            <div id="chat-timer" style="font-size: 10px">Очікуйте відповіді. Орієнтовний час очікування: <b id="chat-timer-val"></b></div><textarea id="chat-write-text" cols="30" rows="10" placeholder="Ваше питання"></textarea><input type="submit" value="надіслати"></form>
+    </div>
+    <!-- <script src="https://wenet.lviv.ua/site/templates/js/jquery.fancybox.min.js"></script>
+    <script src="https://wenet.lviv.ua/site/templates/js/odometer.min.js"></script>
+    <script src="https://wenet.lviv.ua/site/templates/js/init.js"></script>
+    <script src="https://my.wenet.lviv.ua/cabinet.button.js"></script>
+    <script type="text/javascript" src="https://my.wenet.lviv.ua/site.chat.js"></script>
+    <script src="https://wenet.lviv.ua/site/templates/js/cabinet-draw.js"></script>
+    <script src="https://my.wenet.lviv.ua/cabinet.js"></script> -->
+
+    <!-- add -->
+    <script src="https://lvivduncan.github.io/levus-fadescroll/js/levus-fadescroll.js"></script>
+    <script src="https://lvivduncan.github.io/levus-aside-menu/js/levus-aside-menu.js"></script>
+
+</body>
+
+</html>
