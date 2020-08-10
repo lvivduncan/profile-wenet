@@ -9,8 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="qgyYomFZea8uMtJ1axkPwXzk8ZlLy_dU7tiHSOoH-WY" />
 
-    <link rel="stylesheet" href="https://wenet.lviv.ua/site/templates/css/style.css">
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <!-- <link rel="stylesheet" href="https://wenet.lviv.ua/site/templates/css/style.css"> -->
+    <link rel="stylesheet" href="style.css">
 
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
@@ -45,6 +45,15 @@
 </head>
 
 <body>
+    <div id="form-confirm">
+        <form>
+            <button class="red-button">Вімінити</button>
+            <input type="text" placeholder="Введіть пароль, щоб підтвердити">
+            <button class="green-button">Прийняти зміни (Змінити тариф на ... )</button>
+        </form>
+    </div>
+    <!-- #form-confirm -->
+
     <header id="top">
         <div class="wrap">
             <div id="logo">
@@ -132,7 +141,7 @@
                     <ul>
                         <li>Оберіть тариф:</li>
                         <li>
-                            <select name="packet_id">
+                            <select name="packet-id">
                                 <option value="4505">Ефір</option>
                                 <option value="4508">Преміум</option>
                                 <option value="4511">VIP HD</option>
@@ -305,6 +314,8 @@
     <!-- add -->
     <script src="https://lvivduncan.github.io/levus-fadescroll/js/levus-fadescroll.js"></script>
     <script src="https://lvivduncan.github.io/levus-aside-menu/js/levus-aside-menu.js"></script>
+
+    <script src="js/script.js"></script>
 
 </body>
 

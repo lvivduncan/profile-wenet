@@ -4526,6 +4526,18 @@ label {
 }
 
 
+/* історія платежів */
+
+.pay-list {
+    display: grid;
+    grid-template-columns: 1fr 2fr repeat(2, 1fr) 2fr;
+    grid-gap: 10px;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+
 /* panel inputs*/
 
 #panel input[type="text"],
@@ -4612,6 +4624,57 @@ label {
 #panel .notice.error {
     border-color: var(--red);
     color: var(--red);
+}
+
+
+/* форма з кнопками */
+
+#form-confirm {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    background: var(--first);
+    color: #000;
+    padding: 50px 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+}
+
+#form-confirm.open {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#form-confirm form {
+    display: grid;
+    width: 1200px;
+    margin: auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+    border: 1px solid var(--first);
+    background: var(--light);
+}
+
+#form-confirm input,
+#form-confirm button {
+    padding: 15px 5px;
+    border: none;
+}
+
+#form-confirm .red-button {
+    background: var(--red);
+    color: var(--light);
+    cursor: pointer;
+}
+
+#form-confirm .green-button {
+    background: var(--green);
+    color: var(--light);
+    cursor: pointer;
 }
 
 
