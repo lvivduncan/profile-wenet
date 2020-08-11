@@ -1,0 +1,711 @@
+/* 3-4-08-2020 -- 11-08-2020*/
+
+
+/* 2 кольори для тарифів -- старий і новий */
+
+.color-old {
+    color: var(--lightgray)!important;
+    text-decoration: line-through;
+}
+
+.color-new {
+    color: var(--green)!important;
+}
+
+#panel {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: "panel-aside panel-content";
+    grid-gap: 20px;
+}
+
+@media (max-width: 776px) {
+    #panel {
+        grid-template-columns: 1fr;
+        grid-template-areas: "panel-aside" "panel-content";
+    }
+}
+
+
+/*Особистий кабінет */
+
+#panel h1 {
+    color: var(--dark);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 15px 0 25px;
+}
+
+#panel h2 {
+    color: var(--dark);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 15px 0 10px;
+}
+
+#panel h4 {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 0 10px;
+}
+
+@media (max-width: 400px) {
+    #panel h4 {
+        text-align: center;
+    }
+}
+
+
+/* sidebar */
+
+#panel-aside {
+    grid-area: panel-aside;
+}
+
+
+/* aside menu */
+
+.levus-aside-menu,
+.levus-aside-menu ul {
+    display: block;
+    border: 1px solid var(--tv-bg-2);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.levus-aside-menu li {
+    display: block;
+    border-top: 1px solid var(--tv-bg-2);
+}
+
+.levus-aside-menu li:first-child {
+    border: none;
+}
+
+.levus-aside-menu li a {
+    display: block;
+    text-decoration: none;
+    padding: 10px 5px;
+    color: var(--dark);
+}
+
+.levus-aside-menu li a:hover {
+    color: var(--first);
+}
+
+.levus-aside-menu .parent {
+    position: relative;
+    overflow: hidden;
+}
+
+.levus-aside-menu .parent>ul {
+    padding: 0;
+    max-height: 0;
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    -webkit-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    -webkit-transition: max-height .1s, transform .1s;
+    transition: max-height .1s, transform .1s;
+}
+
+.levus-aside-menu .parent.open>ul {
+    max-height: 100%;
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    -webkit-transition: max-height .2s, transform .2s;
+    transition: max-height .2s, transform .2s;
+}
+
+.levus-aside-menu .parent li a {
+    padding-left: 20px;
+}
+
+.levus-aside-menu .parent span {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 38px;
+    height: 38px;
+    background: var(--tv-bg-2);
+    cursor: pointer;
+}
+
+.levus-aside-menu .parent span::before {
+    content: '+';
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.levus-aside-menu .parent.open span::before {
+    content: '-';
+}
+
+
+/* content */
+
+#panel #panel-content {
+    grid-area: panel-content;
+}
+
+#panel-content p {
+    line-height: 1.6;
+}
+
+#panel section {
+    border: 1px solid var(--tv-bg-2);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    transition: border 0.5s;
+    background: var(--panel);
+}
+
+#panel section:last-child {
+    margin: 0;
+}
+
+#panel section ul {
+    display: grid;
+    margin: 12px 0;
+    padding-top: 8px;
+    border-top: 1px solid var(--tv-bg-2);
+    align-items: center;
+}
+
+#panel section ul:first-of-type {
+    border: none;
+}
+
+
+/* grids */
+
+
+/* default */
+
+#panel section ul,
+#panel section ul.standard {
+    grid-template-columns: 300px 1fr;
+}
+
+#panel section ul.plus1 {
+    grid-template-columns: 300px repeat(2, 1fr);
+}
+
+#panel section ul.plus2 {
+    grid-template-columns: 300px repeat(3, 1fr);
+}
+
+#panel section ul.plus3 {
+    grid-template-columns: 240px repeat(4, 1fr);
+}
+
+
+/* 
+  ** блок для тарифів: 1 LI -- 240 по лівому краю, 2 LI чорний і по правому краю, 3 LI зелений і по лівому 
+  ** .rate-tv -- кнопки тарифа
+  ** .rate-tv-data -- дані тарифа
+*/
+
+#panel section ul.rate-tv {
+    grid-template-columns: 240px repeat(2, 1fr);
+    grid-gap: 5px;
+}
+
+
+/* блок з полем пароля та кнопками  */
+
+#panel section ul.approve {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "li-1 li-1 li-1" "li-2 li-3 li-4";
+    grid-gap: 5px 10px;
+}
+
+@media (max-width: 776px) {
+    #panel section ul,
+    #panel section ul.standard {
+        grid-template-columns: auto 1fr;
+    }
+    #panel section ul.plus1 {
+        grid-template-columns: auto repeat(2, 1fr);
+    }
+    #panel section ul.plus2 {
+        grid-template-columns: auto repeat(3, 1fr);
+    }
+    #panel section ul.plus3 {
+        grid-template-columns: auto repeat(4, 1fr);
+    }
+    #panel section ul.rate-tv {
+        grid-template-columns: auto repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 400px) {
+    #panel section ul,
+    #panel section ul.standard {
+        grid-template-columns: 1fr;
+    }
+    #panel section ul.plus1 {
+        grid-template-columns: 1fr;
+    }
+    #panel section ul.plus2 {
+        grid-template-columns: 1fr;
+    }
+    #panel section ul.plus3 {
+        grid-template-columns: 1fr;
+    }
+    #panel section ul.rate-tv {
+        grid-template-columns: 100px repeat(2, 1fr);
+    }
+    /**/
+    #panel section ul.approve {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "li-1 li-1" "li-3 li-3" "li-2 li-4";
+    }
+}
+
+#panel section ul li {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    color: var(--dark);
+    padding: 5px;
+    text-align: left;
+}
+
+@media (max-width: 400px) {
+    #panel section ul li {
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 400px) {
+    #panel section ul li,
+    #panel section ul li:first-child {
+        text-align: center;
+    }
+}
+
+#panel section li:not(:first-child) a,
+#panel section li:not(:first-child) span {
+    margin: 0 5px;
+}
+
+#panel section li strong {
+    font-size: 18px;
+}
+
+
+/* центрування тексту */
+
+#panel section ul.center li {
+    text-align: center;
+}
+
+
+/* старий тариф -- чорним */
+
+#panel section ul.rate-tv li:nth-child(1) {
+    font-style: italic;
+}
+
+@media(max-width: 400px) {
+    #panel section ul.rate-tv li:nth-child(1) {
+        text-align: right;
+    }
+}
+
+#panel section ul.rate-tv li:nth-child(2) {
+    text-align: right;
+}
+
+
+/* новий тарийф, до порівняння -- зеленим */
+
+#panel section ul.rate-tv li:nth-child(3) {
+    text-align: left;
+    color: var(--green);
+    border-left: 1px dashed var(--tv-bg-2);
+    padding-left: 10px;
+}
+
+
+/* блок з полем пароля та кнопками  */
+
+#panel section ul.approve li:nth-child(1) {
+    grid-area: li-1;
+    text-align: center;
+}
+
+#panel section ul.approve li:nth-child(2) {
+    grid-area: li-2;
+}
+
+#panel section ul.approve li:nth-child(3) {
+    grid-area: li-3;
+}
+
+#panel section ul.approve li:nth-child(4) {
+    grid-area: li-4;
+}
+
+
+/* кнопки так/ні */
+
+#panel button {
+    border: none;
+    padding: 10px;
+    text-align: center;
+    color: var(--light);
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+/* horizontal blocks */
+
+.block-5,
+.block-5-border {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.block-5-border {
+    align-items: stretch;
+}
+
+@media(max-width: 996px) {
+    .block-5,
+    .block-5-border {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media(max-width: 776px) {
+    .block-5,
+    .block-5-border {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 500px) {
+    .block-5,
+    .block-5-border {
+        grid-template-columns: 1fr;
+    }
+}
+
+.block-4,
+.block-4-border {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.block-4-border {
+    align-items: stretch;
+}
+
+@media(max-width: 996px) {
+    .block-4,
+    .block-4-border {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 776px) {
+    .block-4,
+    .block-4-border {
+        grid-template-columns: 1fr;
+    }
+}
+
+.block-3,
+.block-3-border {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.block-3-border {
+    align-items: stretch;
+}
+
+@media(max-width: 996px) {
+    .block-3,
+    .block-3-border {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 776px) {
+    .block-3,
+    .block-3-border {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* -border */
+
+.block-5 a,
+.block-4 a,
+.block-3 a {
+    display: block;
+    color: var(--dark);
+    text-decoration: underline;
+    padding: 20px 10px;
+}
+
+.block-5 a:hover,
+.block-4 a:hover,
+.block-3 a:hover {
+    color: var(--second);
+    text-decoration: none;
+}
+
+
+/* +border */
+
+.block-5-border a,
+.block-4-border a,
+.block-3-border a {
+    display: block;
+    text-decoration: none;
+    padding: 20px 10px;
+    border-radius: 5px;
+    color: var(--second);
+    border: 1px solid var(--second);
+}
+
+.block-5-border a:hover,
+.block-4-border a:hover,
+.block-3-border a:hover {
+    color: var(--dark);
+    border-color: var(--dark);
+}
+
+
+/* lists */
+
+#panel section.list {
+    display: block;
+    margin: 0 0 20px;
+}
+
+#panel section.list ul {
+    display: block;
+    margin: 0;
+}
+
+#panel section.list a,
+#panel section.list ul li a {
+    display: block;
+    margin: 10px 0;
+    color: var(--dark);
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+#panel section.list a:hover,
+#panel section.list ul li a:hover {
+    color: var(--second);
+    text-decoration: none;
+}
+
+#panel section.list ul li a::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border: 1px solid var(--dark);
+    margin-right: 5px;
+}
+
+#panel section.list ul li a:hover::before {
+    border-color: var(--second);
+}
+
+
+/* історія платежів */
+
+.pay-list {
+    display: grid;
+    grid-template-columns: 1fr 2fr repeat(2, 1fr) 2fr;
+    grid-gap: 10px;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+
+/* panel inputs*/
+
+#panel input[type="text"],
+#panel input[type="password"] {
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    margin: 5px 0;
+    font-size: 14px;
+    color: var(--gray);
+    background: var(--lightly);
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+    outline: none;
+}
+
+#panel input[type="number"] {
+    display: inline-block;
+    padding: 10px 12px;
+    margin: 5px;
+    font-size: 14px;
+    color: var(--gray);
+    background: var(--lightly);
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+    outline: none;
+    text-align: center;
+}
+
+#panel input[type="submit"] {
+    display: inline-block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: var(--light);
+    background: var(--rate-bg-button);
+    border-radius: 5px;
+    border: none;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+#panel input[type="submit"]:hover {
+    background: var(--green);
+}
+
+#panel input[type="text"]:focus,
+#panel input[type="password"]:focus,
+#panel input[type="number"]:focus {
+    border: 1px solid var(--first);
+    background: var(--light);
+}
+
+
+/* текст у вигляді цитати */
+
+#panel .quotes {
+    padding: 50px;
+    font-style: italic;
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.8;
+}
+
+@media(max-width: 400px) {
+    #panel .quotes {
+        padding: 20px;
+    }
+}
+
+
+/**/
+
+#panel .notice {
+    display: block;
+    border: 1px solid var(--green);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px 0;
+    color: var(--green);
+    text-align: center;
+    font-weight: bold;
+}
+
+#panel .notice.error {
+    border-color: var(--red);
+    color: var(--red);
+}
+
+
+/* кнопки для вибору тарифа */
+
+#rate-tv-buttons {
+    display: flex;
+}
+
+#rate-tv-buttons p {
+    display: inline-block;
+    margin: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--first);
+    text-align: center;
+    border: 1px solid var(--tv-bg-2);
+    border-radius: 3px;
+}
+
+
+/* старий тариф */
+
+#rate-tv-buttons p.current {
+    color: var(--gray);
+}
+
+
+/* тариф, на який клікнули */
+
+#rate-tv-buttons p.active {
+    color: var(--green);
+    font-weight: bold;
+    border-color: var(--green);
+}
+
+#rate-tv-buttons p span {
+    display: block;
+    font-size: 12px;
+}
+
+
+/* перемикачі */
+
+#panel-content label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+}
+
+#panel-content input[type="radio"] {
+    display: none;
+}
+
+#panel-content input[type="radio"]:checked~label {
+    color: var(--green);
+    border-color: var(--green);
+}

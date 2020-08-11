@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>AFTER - змінити пакет</title>
+    <title>змінити пакет</title>
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,7 @@
     <!-- <link rel="stylesheet" href="https://wenet.lviv.ua/site/templates/css/style.css"> -->
     <link rel="stylesheet" href="css/style.css">
 
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <!-- <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
@@ -24,7 +24,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"> -->
 
     <style>
          :root {
@@ -45,14 +45,6 @@
 </head>
 
 <body>
-    <div id="form-confirm">
-        <form>
-            <button class="red-button">Вімінити</button>
-            <input type="text" placeholder="Введіть пароль, щоб підтвердити">
-            <button class="green-button">Прийняти зміни (Змінити тариф на ... )</button>
-        </form>
-    </div>
-    <!-- #form-confirm -->
 
     <header id="top">
         <div class="wrap">
@@ -91,7 +83,7 @@
             </ul>
         </div>
     </div>
-    <!-- <div class="wrap"> -->
+
     <main id="page" role="main" class="panel-wrapper">
 
         <section id="panel">
@@ -140,41 +132,62 @@
                 <section>
                     <ul>
                         <li>Оберіть тариф:</li>
-                        <li id="rate-buttons">
-                            <!-- <select name="packet-id">
-                                <option value="4505">Ефір</option>
-                                <option value="4508">Преміум</option>
-                                <option value="4511">VIP HD</option>
-                            </select> -->
-                            <a href="" class="current" title="Поточний">Ефір</a>
-                            <a href="" class="active" title="Новий тариф">Преміум</a>
-                            <a href="" title="Новий тариф">Новини</a>
-                            <a href="" title="Новий тариф">VIP HD</a>
+                        <li id="rate-tv-buttons">
+                            <p class="current" title="Поточний">
+                                Базовий
+                                <span>50 Mb/100 грн</span>
+                            </p>
+                            <p class="active" title="Новий тариф">
+                                Преміум
+                                <span>50 Mb/100 грн</span>
+                            </p>
+                            <p title="Новий тариф">
+                                Новини
+                                <span>50 Mb/100 грн</span>
+                            </p>
+                            <p title="Новий тариф">
+                                VIP HD
+                                <span>50 Mb/100 грн</span>
+                            </p>
                         </li>
                     </ul>
+
+                    <div id="rate-tv-data">
+                        <ul class="rate-tv">
+                            <li>Назва: </li>
+                            <li>Новини</li>
+                            <li>Ефір</li>
+                        </ul>
+                        <ul class="rate-tv">
+                            <li>Абонплата: </li>
+                            <li><b>0</b> грн.</li>
+                            <li><b>0</b> грн.</li>
+                        </ul>
+                        <ul class="rate-tv">
+                            <li>Доступно пристроїв: </li>
+                            <li><b>3</b></li>
+                            <li><b>3</b></li>
+                        </ul>
+                    </div>
+
+                    <ul class="plus1">
+                        <li>Тип зміни: </li>
+                        <li><input type="radio" name="change-date" id="approve-next-month"> <label for="approve-next-month">Змінити з наступного місяця</label></li>
+                        <li><input type="radio" name="change-date" id="approve-now"> <label for="approve-now">Змінити негайно</label></li>
+                    </ul>
+
+                    <p class="quotes">Ваша облікова дата зняття абонплати <b> 05.09.2020</b>. Цей період менший періоду надання платної послуги <b>ОмегаTV Ефір</b>. Для надання послуги у повному обсязі, необхідно зробити пролонгацію основної послуги <b>LV-070Mbps-100 (Базовий)</b>на
+                        <b>1</b> днів. Вартість пролонгації: 3.23 грн.</p>
+
+                    <ul class="approve">
+                        <li>Для підтвердження зміни послуги "Зміна тарифу" введіть пароль та натисніть "Підтвердити"</li>
+                        <li><button class="background-red">Відмінити</button></li>
+                        <li><input type="password" placeholder="пароль в особистий кабінет"></li>
+                        <li><button class="background-green">Підтвердити</button></li>
+                    </ul>
                 </section>
 
-                <h4>Порівняння тарифу</h4>
                 <section>
-                    <ul class="plus1 center">
-                        <li>Назва: </li>
-                        <li class="color-old">Новини</li>
-                        <li class="color-new">Ефір</li>
-                    </ul>
-                    <ul class="plus1 center">
-                        <li>Абонплата: </li>
-                        <li class="color-old"><b>0</b> грн.</li>
-                        <li class="color-new"><b>0</b> грн.</li>
-                    </ul>
-                    <ul class="plus1 center">
-                        <li>Доступно пристроїв: </li>
-                        <li class="color-old"><b>3</b></li>
-                        <li class="color-new"><b>3</b></li>
-                    </ul>
-                </section>
-
-                <section>
-                    <p>Ваша облікова дата зняття абонплати <b> 05.09.2020</b>. Цей період менший періоду надання платної послуги <b>ОмегаTV Ефір</b>. Для надання послуги у повному обсязі, необхідно зробити пролонгацію основної послуги <b>LV-070Mbps-100 (Базовий)</b>                        на <b>1</b> днів. Вартість пролонгації: 3.23 грн.</p>
                 </section>
 
             </div>
@@ -244,9 +257,6 @@
     <script src="https://my.wenet.lviv.ua/cabinet.js"></script> -->
 
     <!-- add -->
-    <script src="https://lvivduncan.github.io/levus-fadescroll/js/levus-fadescroll.js"></script>
-    <script src="https://lvivduncan.github.io/levus-aside-menu/js/levus-aside-menu.js"></script>
-
     <script src="js/script.js"></script>
 
 </body>

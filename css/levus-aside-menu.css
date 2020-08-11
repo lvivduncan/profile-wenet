@@ -1,0 +1,74 @@
+.levus-aside-menu,
+.levus-aside-menu ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.levus-aside-menu li {
+    display: block;
+}
+
+.levus-aside-menu li a {
+    display: block;
+    text-decoration: none;
+    padding: 10px 5px;
+}
+
+
+/* li з вкладеними підпунктами */
+
+.levus-aside-menu .parent {
+    position: relative;
+    overflow: hidden;
+}
+
+.levus-aside-menu .parent>ul {
+    max-height: 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    -webkit-transition: max-height .1s, transform .1s;
+    transition: max-height .1s, transform .1s;
+}
+
+.levus-aside-menu .parent span.open~ul {
+    max-height: 100%;
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    -webkit-transition: max-height .2s, transform .2s;
+    transition: max-height .2s, transform .2s;
+}
+
+.levus-aside-menu .parent li a {
+    padding-left: 20px;
+}
+
+
+/* кнопка розкривання підпунктів */
+
+.levus-aside-menu .parent span {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.levus-aside-menu .parent span::before {
+    content: '+';
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.levus-aside-menu .parent span.open::before {
+    content: '-';
+}
