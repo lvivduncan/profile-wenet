@@ -7,10 +7,12 @@ packetID.addEventListener('change', () => {
     confirm.classList.add('open');
 });
 
-redButton.addEventListener('click', () => {
+redButton.addEventListener('click', (e) => {
+    e.preventDefault();
     confirm.classList.remove('open');
 });
 
-greenButton.addEventListener('click', () => {
+greenButton.addEventListener('click', (e) => {
+    e.preventDefault();
     confirm.classList.remove('open');
 });

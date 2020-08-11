@@ -3779,6 +3779,18 @@ body.compensate-for-scrollbar {
 }
 
 
+/* 2 кольори для тарифів -- старий і новий */
+
+.color-old {
+    color: var(--lightgray)!important;
+    text-decoration: line-through;
+}
+
+.color-new {
+    color: var(--green)!important;
+}
+
+
 /* лінк під табличкою */
 
 .table-data-under-link {
@@ -4632,13 +4644,14 @@ label {
 #form-confirm {
     position: fixed;
     left: 0;
-    top: 0;
+    bottom: 0;
     z-index: 1000;
-    background: var(--first);
-    color: #000;
-    padding: 50px 0;
+    /* background: var(--first); */
+    background: var(--light);
+    /* color: #000; */
+    /* padding: 50px 0; */
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     display: none;
 }
 
@@ -4675,6 +4688,26 @@ label {
     background: var(--green);
     color: var(--light);
     cursor: pointer;
+}
+
+
+/* кнопки для вибору тарифа */
+
+#rate-buttons {
+    display: flex;
+}
+
+#rate-buttons a {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 10px 15px;
+    text-decoration: none;
+    background: var(--gray);
+    color: var(--light);
+}
+
+#rate-buttons a.current {
+    background: var(--green);
 }
 
 
