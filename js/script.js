@@ -80,57 +80,57 @@ fadeScroll('#levus-fadescroll', 600, 800);
 }
 
 // сторінка зміни тарифу ТБ
-const buttons = document.querySelectorAll('#rate-tv-buttons p');
+{
+    const buttons = document.querySelectorAll('#rate-tv-buttons p');
 
-// колонки
-const data = document.querySelectorAll('#rate-tv-data ul li:nth-child(3)');
-const length = data.length;
+    // колонки
+    const data = document.querySelectorAll('#rate-tv-data ul li:nth-child(3)');
+    const length = data.length;
 
-// console.log(length)
+    // блоки з даними
+    const type = document.querySelector('#rate-tv-type');
+    const quotes = document.querySelector('#rate-tv-quotes');
+    const approve = document.querySelector('#rate-tv-approve');
 
-// блоки з даними
-const type = document.querySelector('#rate-tv-type');
-const quotes = document.querySelector('#rate-tv-quotes');
-const approve = document.querySelector('#rate-tv-approve');
+    // ховаємо 3 блоки
+    type.style.display = quotes.style.display = approve.style.display = 'none';
 
-// ховаємо 3 блоки
-type.style.display = quotes.style.display = approve.style.display = 'none';
-
-buttons.forEach((button, i) => {
-
-
-    button.addEventListener('click', () => {
-        if (i !== 0) {
-
-            buttons.forEach((item, k) => {
-                if (k !== 0) {
-                    item.className = '';
-                }
-            });
-
-            button.className = 'active';
-
-            data.forEach(item => {
-                [...item.children].forEach(child => child.style.display = 'none');
-                item.children[i - 1].style.display = 'block';
-            });
-
-            type.style.display = quotes.style.display = approve.style.display = '';
+    buttons.forEach((button, i) => {
 
 
-        } else {
-            buttons.forEach((item, k) => {
-                if (k !== 0) {
-                    item.className = '';
-                }
-            });
+        button.addEventListener('click', () => {
+            if (i !== 0) {
 
-            data.forEach(item => [...item.children].forEach(child => child.style.display = 'none'));
+                buttons.forEach((item, k) => {
+                    if (k !== 0) {
+                        item.className = '';
+                    }
+                });
 
-            type.style.display = quotes.style.display = approve.style.display = 'none';
-        }
+                button.className = 'active';
+
+                data.forEach(item => {
+                    [...item.children].forEach(child => child.style.display = 'none');
+                    item.children[i - 1].style.display = 'block';
+                });
+
+                type.style.display = quotes.style.display = approve.style.display = '';
+
+
+            } else {
+                buttons.forEach((item, k) => {
+                    if (k !== 0) {
+                        item.className = '';
+                    }
+                });
+
+                data.forEach(item => [...item.children].forEach(child => child.style.display = 'none'));
+
+                type.style.display = quotes.style.display = approve.style.display = 'none';
+            }
+
+        });
+
 
     });
-
-
-});
+}
