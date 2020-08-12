@@ -137,7 +137,7 @@
                                 Базовий
                                 <span>50 Mb/100 грн</span>
                             </p>
-                            <p class="active" title="Новий тариф">
+                            <p title="Новий тариф">
                                 Преміум
                                 <span>50 Mb/100 грн</span>
                             </p>
@@ -154,42 +154,64 @@
 
                     <div id="rate-tv-data">
                         <ul class="rate-tv">
-                            <li>Назва: </li>
-                            <li>Новини</li>
-                            <li>Ефір</li>
+                            <li>Назва тарифа: </li>
+                            <li><b>Базовий</b></li>
+                            <li>
+                                <p><b>Преміум</b></p>
+                                <p><b>Новини</b></p>
+                                <p><b>VIP HD</b></p>
+                            </li>
                         </ul>
                         <ul class="rate-tv">
                             <li>Абонплата: </li>
-                            <li><b>0</b> грн.</li>
-                            <li><b>0</b> грн.</li>
+                            <li><b>100</b> грн/міс</li>
+                            <li>
+                                <p><b>120</b> грн/міс</p>
+                                <p><b>140</b> грн/міс</p>
+                                <p><b>160</b> грн/міс</p>
+                            </li>
                         </ul>
                         <ul class="rate-tv">
                             <li>Доступно пристроїв: </li>
-                            <li><b>3</b></li>
-                            <li><b>3</b></li>
+                            <li><b>1</b></li>
+                            <li>
+                                <p><b>3</b></p>
+                                <p><b>5</b></p>
+                                <p><b>7</b></p>
+                            </li>
+                        </ul>
+                        <ul class="rate-tv">
+                            <li>Використано пристроїв: </li>
+                            <li><b>1</b></li>
+                            <li>
+                                <p><b>0</b></p>
+                                <p><b>0</b></p>
+                                <p><b>0</b></p>
+                            </li>
+                        </ul>
+                        <ul class="rate-tv">
+                            <li>Дійсний до: </li>
+                            <li><b>20-09-2020</b></li>
+
                         </ul>
                     </div>
 
-                    <ul class="plus1">
+                    <ul class="plus1" id="rate-tv-type">
                         <li>Тип зміни: </li>
-                        <li><input type="radio" name="change-date" id="approve-next-month"> <label for="approve-next-month">Змінити з наступного місяця</label></li>
+                        <li><input type="radio" name="change-date" id="approve-next-month" checked> <label for="approve-next-month">Змінити з наступного місяця</label></li>
                         <li><input type="radio" name="change-date" id="approve-now"> <label for="approve-now">Змінити негайно</label></li>
                     </ul>
 
-                    <p class="quotes">Ваша облікова дата зняття абонплати <b> 05.09.2020</b>. Цей період менший періоду надання платної послуги <b>ОмегаTV Ефір</b>. Для надання послуги у повному обсязі, необхідно зробити пролонгацію основної послуги <b>LV-070Mbps-100 (Базовий)</b>на
+                    <p class="quotes" id="rate-tv-quotes">Ваша облікова дата зняття абонплати <b> 05.09.2020</b>. Цей період менший періоду надання платної послуги <b>ОмегаTV Ефір</b>. Для надання послуги у повному обсязі, необхідно зробити пролонгацію основної послуги <b>LV-070Mbps-100 (Базовий)</b>на
                         <b>1</b> днів. Вартість пролонгації: 3.23 грн.</p>
 
-                    <ul class="approve">
+                    <ul class="approve" id="rate-tv-approve">
                         <li>Для підтвердження зміни послуги "Зміна тарифу" введіть пароль та натисніть "Підтвердити"</li>
-                        <li><button class="background-red">Відмінити</button></li>
+                        <li><button class="red">Відмінити</button></li>
                         <li><input type="password" placeholder="пароль в особистий кабінет"></li>
-                        <li><button class="background-green">Підтвердити</button></li>
+                        <li><button class="green">Підтвердити</button></li>
                     </ul>
                 </section>
-
-                <section>
-                </section>
-
             </div>
         </section>
     </main>
@@ -199,7 +221,8 @@
     <footer role="contentinfo" id="footer">
         <div class="wrap">
             <div id="footer-contacts">
-                <h3 class="title">Контакти</h3>
+                <!-- <h3 class="title">Контакти</h3> -->
+                <h3>Контакти</h3>
                 <div class="footer-contacts">
                     <div class="footer-contact">
                         <h4>Львів / Самбір / Жовківський р-н.</h4>

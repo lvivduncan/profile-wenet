@@ -25,7 +25,9 @@
     --second: rgb(51, 122, 183);
     --green: #1e8f16;
     --dark-green: #14740d;
+    --light-green: #76e46e;
     --red: rgba(179, 20, 20, 1);
+    --light-red: #ff9d9d;
     --purpur: rgb(143, 4, 219);
     --gold: #b39906;
     --tv-bg: rgba(66, 165, 245, 0.1);
@@ -3791,14 +3793,6 @@ body.compensate-for-scrollbar {
 
 .color-gold {
     color: var(--gold) !important;
-}
-
-.background-green {
-    background: var(--green)!important;
-}
-
-.background-red {
-    background: var(--red)!important;
 }
 
 

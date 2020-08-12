@@ -367,7 +367,24 @@
     color: var(--light);
     width: 100%;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 3px;
+}
+
+
+/* buttons color */
+
+#panel button.green {
+    background: var(--light-green)!important;
+    border: 1px solid var(--green);
+    color: var(--green);
+    /* color: var(--light); */
+}
+
+#panel button.red {
+    background: var(--light-red)!important;
+    border: 1px solid var(--red);
+    color: var(--red);
+    /* color: var(--light); */
 }
 
 
@@ -665,29 +682,40 @@
     cursor: pointer;
     color: var(--first);
     text-align: center;
-    border: 1px solid var(--tv-bg-2);
+    border: 1px solid var(--first);
     border-radius: 3px;
+    background: var(--tv-bg-3);
+    /* color: var(--light); */
+    color: var(--dark);
+    font-weight: 600;
 }
 
 
 /* старий тариф */
 
 #rate-tv-buttons p.current {
-    color: var(--gray);
+    /* background: var(--lightgray); */
+    background: var(--tv-bg-2);
+    /* border-color: var(--gray); */
+    border-color: var(--lightgray);
 }
 
 
 /* тариф, на який клікнули */
 
 #rate-tv-buttons p.active {
-    color: var(--green);
-    font-weight: bold;
+    /* color: var(--green); */
+    /* font-weight: bold; */
+    /* border-color: var(--green); */
+    background: var(--light-green);
+    /* color: var(--light); */
     border-color: var(--green);
 }
 
 #rate-tv-buttons p span {
     display: block;
     font-size: 12px;
+    font-weight: 400;
 }
 
 
@@ -701,6 +729,19 @@
     border-radius: 3px;
 }
 
+#panel-content label::before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    position: relative;
+    top: 2px;
+}
+
+#panel-content label::after {
+    content: '?';
+}
+
 #panel-content input[type="radio"] {
     display: none;
 }
@@ -708,4 +749,33 @@
 #panel-content input[type="radio"]:checked~label {
     color: var(--green);
     border-color: var(--green);
+}
+
+#panel-content input[type="radio"]:checked~label::before {
+    content: '';
+    background: url(../images/check.svg);
+}
+
+#panel-content input[type="radio"]:checked~label::after {
+    content: '';
+}
+
+
+/* ховаємо додаткові тарифи */
+
+#rate-tv-data ul li:nth-child(3) p {
+    margin: 0;
+    line-height: normal;
+    display: none;
+}
+
+
+/* класи показати/сховати */
+
+.none {
+    display: none!important;
+}
+
+.block {
+    display: block!important;
 }
