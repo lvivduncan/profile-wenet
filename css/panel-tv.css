@@ -1,4 +1,4 @@
-/* 3-4-08-2020 -- 11-08-2020*/
+/* 3-4-08-2020 -- 14-08-2020*/
 
 .panel-wrapper {
     padding: 35px 0 75px!important;
@@ -51,7 +51,6 @@
 }
 
 #panel h4 {
-    /* font-size: 16px; */
     font-size: 13px;
     font-weight: 400;
     margin: 0 0 10px;
@@ -216,13 +215,7 @@
     display: grid;
     margin: 12px 0;
     padding-top: 8px;
-    /* border-top: 1px solid var(--tv-bg-2); */
     align-items: center;
-}
-
-#panel section ul li:first-child {
-    /* border: none; */
-    /* font-weight: bold; */
 }
 
 
@@ -265,7 +258,8 @@
 /* блок з полем пароля та кнопками  */
 
 #panel section ul.approve {
-    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas: "li-1 li-1 li-1" "li-2 li-3 li-4";
     grid-gap: 5px 10px;
 }
@@ -316,7 +310,6 @@
 #panel section ul li {
     display: block;
     width: 100%;
-    /* font-size: 14px; */
     font-size: 13px;
     color: var(--dark);
     padding: 0 5px;
@@ -411,14 +404,12 @@
     background: var(--light-green)!important;
     border: 1px solid var(--green);
     color: var(--green);
-    /* color: var(--light); */
 }
 
 #panel button.red {
     background: var(--light-red)!important;
     border: 1px solid var(--red);
     color: var(--red);
-    /* color: var(--light); */
 }
 
 
@@ -719,8 +710,6 @@
     border: 1px solid var(--first);
     border-radius: 3px;
     /* background: var(--tv-bg-3); */
-    /* color: var(--light); */
-    /* color: var(--dark); */
     color: var(--first);
     font-weight: 600;
 }
@@ -729,9 +718,7 @@
 /* старий тариф */
 
 #rate-tv-buttons p.current {
-    /* background: var(--lightgray); */
-    /* background: var(--tv-bg-2); */
-    /* border-color: var(--gray); */
+    background: var(--tv-bg-2);
     border-color: var(--lightgray);
     color: var(--dark);
 }
@@ -740,11 +727,7 @@
 /* тариф, на який клікнули */
 
 #rate-tv-buttons p.active {
-    /* color: var(--green); */
-    /* font-weight: bold; */
-    /* border-color: var(--green); */
     /* background: var(--light-green); */
-    /* color: var(--light); */
     border-color: var(--green);
     color: var(--green);
 }
@@ -753,6 +736,26 @@
     display: block;
     font-size: 12px;
     font-weight: 400;
+}
+
+
+/* ховаємо додаткові тарифи */
+
+#rate-tv-data {
+    border-top: 1px solid var(--tv-bg-2);
+}
+
+#rate-tv-data ul li:nth-child(3) p {
+    margin: 0;
+    line-height: normal;
+    display: none;
+}
+
+
+/* тип зміни */
+
+#rate-tv-type {
+    border-top: 1px solid var(--tv-bg-2);
 }
 
 
@@ -795,26 +798,6 @@
 
 #panel-content input[type="radio"]:checked~label::after {
     content: '';
-}
-
-
-/* ховаємо додаткові тарифи */
-
-#rate-tv-data {
-    border-top: 1px solid var(--tv-bg-2);
-}
-
-#rate-tv-data ul li:nth-child(3) p {
-    margin: 0;
-    line-height: normal;
-    display: none;
-}
-
-
-/* тип зміни */
-
-#rate-tv-type {
-    border-top: 1px solid var(--tv-bg-2);
 }
 
 
