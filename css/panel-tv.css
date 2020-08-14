@@ -401,13 +401,11 @@
 /* buttons color */
 
 #panel button.green {
-    background: var(--light-green)!important;
     border: 1px solid var(--green);
     color: var(--green);
 }
 
 #panel button.red {
-    background: var(--light-red)!important;
     border: 1px solid var(--red);
     color: var(--red);
 }
@@ -709,7 +707,6 @@
     text-align: center;
     border: 1px solid var(--first);
     border-radius: 3px;
-    /* background: var(--tv-bg-3); */
     color: var(--first);
     font-weight: 600;
 }
@@ -727,7 +724,6 @@
 /* тариф, на який клікнули */
 
 #rate-tv-buttons p.active {
-    /* background: var(--light-green); */
     border-color: var(--green);
     color: var(--green);
 }
