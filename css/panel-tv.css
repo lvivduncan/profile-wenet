@@ -718,9 +718,10 @@
     text-align: center;
     border: 1px solid var(--first);
     border-radius: 3px;
-    background: var(--tv-bg-3);
+    /* background: var(--tv-bg-3); */
     /* color: var(--light); */
-    color: var(--dark);
+    /* color: var(--dark); */
+    color: var(--first);
     font-weight: 600;
 }
 
@@ -729,9 +730,10 @@
 
 #rate-tv-buttons p.current {
     /* background: var(--lightgray); */
-    background: var(--tv-bg-2);
+    /* background: var(--tv-bg-2); */
     /* border-color: var(--gray); */
     border-color: var(--lightgray);
+    color: var(--dark);
 }
 
 
@@ -741,9 +743,10 @@
     /* color: var(--green); */
     /* font-weight: bold; */
     /* border-color: var(--green); */
-    background: var(--light-green);
+    /* background: var(--light-green); */
     /* color: var(--light); */
     border-color: var(--green);
+    color: var(--green);
 }
 
 #rate-tv-buttons p span {
