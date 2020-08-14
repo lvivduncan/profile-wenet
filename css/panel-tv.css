@@ -97,6 +97,18 @@
 }
 
 
+/* дійсний */
+
+#aside-valid {
+    border: 1px solid var(--tv-bg-2);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    text-align: center;
+}
+
+
 /* aside menu */
 
 .levus-aside-menu,
