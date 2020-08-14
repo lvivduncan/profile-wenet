@@ -85,6 +85,8 @@
 
 #aside-price a {
     color: var(--first);
+    position: relative;
+    top: 3px;
 }
 
 #aside-price b {
