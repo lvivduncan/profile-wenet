@@ -73,39 +73,35 @@
 
 /* гроші на рахунку */
 
-#aside-price {
+#aside-balance {
     border: 1px solid var(--tv-bg-2);
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 10px;
     font-size: 13px;
-    display: flex;
-    justify-content: space-between;
 }
 
-#aside-price a {
+#aside-balance p {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+#aside-balance a {
     color: var(--first);
     position: relative;
     top: 3px;
 }
 
-#aside-price b {
+#aside-balance b {
     color: var(--green);
     font-weight: 800;
     font-size: 18px;
     padding-left: 5px;
 }
 
-
-/* дійсний */
-
-#aside-valid {
-    border: 1px solid var(--tv-bg-2);
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 10px;
-    font-size: 13px;
-    text-align: center;
+#aside-balance strong {
+    font-weight: 500;
 }
 
 
