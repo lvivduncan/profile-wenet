@@ -222,7 +222,7 @@
 
 #panel section ul li:first-child {
     /* border: none; */
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 
@@ -258,6 +258,7 @@
 #panel section ul.rate-tv {
     grid-template-columns: 240px repeat(2, 1fr);
     grid-gap: 5px;
+    margin: 6px 0;
 }
 
 
