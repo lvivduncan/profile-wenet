@@ -808,6 +808,20 @@
 }
 
 
+/* тип зміни */
+
+#rate-tv-type {
+    border-top: 1px solid var(--tv-bg-2);
+}
+
+
+/* підтвердження */
+
+#rate-tv-approve {
+    border-top: 1px solid var(--tv-bg-2);
+}
+
+
 /* класи показати/сховати */
 
 .none {
