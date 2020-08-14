@@ -208,12 +208,12 @@
     display: grid;
     margin: 12px 0;
     padding-top: 8px;
-    border-top: 1px solid var(--tv-bg-2);
+    /* border-top: 1px solid var(--tv-bg-2); */
     align-items: center;
 }
 
 #panel section ul:first-of-type {
-    border: none;
+    /* border: none; */
 }
 
 
@@ -342,13 +342,6 @@
     text-align: center;
 }
 
-
-/* старий тариф -- чорним */
-
-#panel section ul.rate-tv li:nth-child(1) {
-    /* font-style: italic; */
-}
-
 @media(max-width: 400px) {
     #panel section ul.rate-tv li:nth-child(1) {
         text-align: left;
@@ -365,7 +358,6 @@
 #panel section ul.rate-tv li:nth-child(3) {
     text-align: left;
     color: var(--green);
-    /* border-left: 1px dashed var(--tv-bg-2); */
     padding-left: 10px;
 }
 
@@ -794,6 +786,10 @@
 
 
 /* ховаємо додаткові тарифи */
+
+#rate-tv-data {
+    border-top: 1px solid var(--tv-bg-2);
+}
 
 #rate-tv-data ul li:nth-child(3) p {
     margin: 0;
