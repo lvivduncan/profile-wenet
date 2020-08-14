@@ -1,4 +1,4 @@
-/* 3-4-08-2020 -- 11-08-2020*/
+/* 3-4-08-2020 -- 14-08-2020*/
 
 .panel-wrapper {
     padding: 35px 0 75px!important;
@@ -51,7 +51,6 @@
 }
 
 #panel h4 {
-    /* font-size: 16px; */
     font-size: 13px;
     font-weight: 400;
     margin: 0 0 10px;
@@ -216,13 +215,7 @@
     display: grid;
     margin: 12px 0;
     padding-top: 8px;
-    /* border-top: 1px solid var(--tv-bg-2); */
     align-items: center;
-}
-
-#panel section ul li:first-child {
-    /* border: none; */
-    /* font-weight: bold; */
 }
 
 
@@ -316,7 +309,6 @@
 #panel section ul li {
     display: block;
     width: 100%;
-    /* font-size: 14px; */
     font-size: 13px;
     color: var(--dark);
     padding: 0 5px;
@@ -411,14 +403,12 @@
     background: var(--light-green)!important;
     border: 1px solid var(--green);
     color: var(--green);
-    /* color: var(--light); */
 }
 
 #panel button.red {
     background: var(--light-red)!important;
     border: 1px solid var(--red);
     color: var(--red);
-    /* color: var(--light); */
 }
 
 
@@ -719,7 +709,6 @@
     border: 1px solid var(--first);
     border-radius: 3px;
     background: var(--tv-bg-3);
-    /* color: var(--light); */
     color: var(--dark);
     font-weight: 600;
 }
@@ -728,9 +717,7 @@
 /* старий тариф */
 
 #rate-tv-buttons p.current {
-    /* background: var(--lightgray); */
     background: var(--tv-bg-2);
-    /* border-color: var(--gray); */
     border-color: var(--lightgray);
 }
 
@@ -738,11 +725,7 @@
 /* тариф, на який клікнули */
 
 #rate-tv-buttons p.active {
-    /* color: var(--green); */
-    /* font-weight: bold; */
-    /* border-color: var(--green); */
     background: var(--light-green);
-    /* color: var(--light); */
     border-color: var(--green);
 }
 
@@ -750,48 +733,6 @@
     display: block;
     font-size: 12px;
     font-weight: 400;
-}
-
-
-/* перемикачі */
-
-#panel-content label {
-    cursor: pointer;
-    display: inline-block;
-    padding: 5px;
-    border: 1px solid transparent;
-    border-radius: 3px;
-}
-
-#panel-content label::before {
-    content: '';
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    position: relative;
-    top: 2px;
-}
-
-#panel-content label::after {
-    content: '?';
-}
-
-#panel-content input[type="radio"] {
-    display: none;
-}
-
-#panel-content input[type="radio"]:checked~label {
-    color: var(--green);
-    border-color: var(--green);
-}
-
-#panel-content input[type="radio"]:checked~label::before {
-    content: '';
-    background: url(../images/check.svg);
-}
-
-#panel-content input[type="radio"]:checked~label::after {
-    content: '';
 }
 
 
@@ -812,6 +753,27 @@
 
 #rate-tv-type {
     border-top: 1px solid var(--tv-bg-2);
+}
+
+
+/* перемикачі */
+
+#panel-content label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px;
+    border: 1px solid var(--first);
+    border-radius: 3px;
+    background: var(--tv-bg-3);
+}
+
+#panel-content input[type="radio"] {
+    display: none;
+}
+
+#panel-content input[type="radio"]:checked~label {
+    background: var(--light-green);
+    border-color: var(--green);
 }
 
 
