@@ -258,7 +258,7 @@
 #panel section ul.rate-tv {
     grid-template-columns: 240px repeat(2, 1fr);
     grid-gap: 5px;
-    margin: 6px 0;
+    margin: 3px 0;
 }
 
 
