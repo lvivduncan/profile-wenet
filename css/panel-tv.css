@@ -69,6 +69,10 @@
     grid-area: panel-aside;
 }
 
+#panel-aside aside {
+    background: var(--panel);
+}
+
 
 /* гроші на рахунку */
 
