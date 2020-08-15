@@ -392,6 +392,7 @@
     padding: 10px;
     text-align: center;
     color: var(--light);
+    background: transparent;
     width: 100%;
     cursor: pointer;
     border-radius: 3px;
