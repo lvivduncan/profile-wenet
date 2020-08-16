@@ -828,8 +828,43 @@ history-payment
     /* options */
 }
 
+#panel #history-payment ul {
+    display: grid;
+    grid-template-columns: 1fr 2fr repeat(2, 1fr) 2fr;
+    grid-gap: 5px;
+}
+
+#history-payment ul li:nth-child(1) {
+    /**/
+}
+
+#history-payment ul li:nth-child(2) {
+    /**/
+}
+
+#history-payment ul li:nth-child(3) {
+    /**/
+}
+
+#history-payment ul li:nth-child(4) {
+    /**/
+}
+
+#history-payment ul li:nth-child(5) {
+    /**/
+}
+
 #history-payment li small {
     display: block;
+}
+
+#panel #history-payment-head {
+    /* text-align: center; */
+    color: var(--lightgray);
+}
+
+#panel #history-payment-head li {
+    color: var(--lightgray);
 }
 
 
@@ -838,7 +873,9 @@ history-payment
 @media(max-width: 776px) {
     #history-payment ul {
         grid-template-columns: 1fr!important;
-        margin: 0 0 15px!important;
+        padding: 0 0 10px;
+        margin: 0 0 10px!important;
+        border-bottom: 1px solid var(--lightgray);
     }
     #history-payment ul li {
         margin: 0 0 10px!important;
