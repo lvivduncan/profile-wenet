@@ -818,3 +818,51 @@
 .block {
     display: block!important;
 }
+
+
+/* ////////////
+history-payment
+//////////// */
+
+#history-payment {
+    /* options */
+}
+
+#history-payment li small {
+    display: block;
+}
+
+
+/* на малому екрані додаємо before зі заголовками */
+
+@media(max-width: 776px) {
+    #history-payment ul {
+        grid-template-columns: 1fr!important;
+        margin: 0 0 15px!important;
+    }
+    #history-payment ul li {
+        margin: 0 0 10px!important;
+    }
+    #history-payment-head {
+        display: none!important;
+    }
+    #history-payment li::before {
+        display: block;
+        color: var(--lightgray);
+    }
+    #history-payment li:nth-child(1)::before {
+        content: 'Дата, час: ';
+    }
+    #history-payment li:nth-child(2)::before {
+        content: 'Тип платежу: ';
+    }
+    #history-payment li:nth-child(3)::before {
+        content: 'До платежу (грн): ';
+    }
+    #history-payment li:nth-child(4)::before {
+        content: 'Сума (грн): ';
+    }
+    #history-payment li:nth-child(5)::before {
+        content: 'Примітка: ';
+    }
+}

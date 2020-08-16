@@ -93,7 +93,7 @@ fadeScroll('#levus-fadescroll', 600, 800);
     const approve = document.querySelector('#rate-tv-approve');
 
     // ховаємо 3 блоки
-    type.style.display = quotes.style.display = approve.style.display = 'none';
+    type && (type.style.display = quotes.style.display = approve.style.display = 'none');
 
     buttons.forEach((button, i) => {
 
