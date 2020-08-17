@@ -1,19 +1,19 @@
 /* 3-4-08-2020 -- 14-08-2020*/
 
 .panel-wrapper {
-    padding: 35px 0 75px!important;
+    padding: 35px 0 75px !important;
 }
 
 
 /* 2 кольори для тарифів -- старий і новий */
 
 .color-old {
-    color: var(--lightgray)!important;
+    color: var(--lightgray) !important;
     text-decoration: line-through;
 }
 
 .color-new {
-    color: var(--green)!important;
+    color: var(--green) !important;
 }
 
 #panel {
@@ -66,7 +66,7 @@
     float: right;
 }
 
-@media(max-width: 500px) {
+@media (max-width: 500px) {
     #panel h4 span {
         float: none;
         display: block;
@@ -161,16 +161,16 @@
     transform-origin: top;
     -webkit-transform: rotateX(90deg);
     transform: rotateX(90deg);
-    -webkit-transition: max-height .1s, transform .1s;
-    transition: max-height .1s, transform .1s;
+    -webkit-transition: max-height 0.1s, transform 0.1s;
+    transition: max-height 0.1s, transform 0.1s;
 }
 
 .levus-aside-menu .parent.open>ul {
     max-height: 100%;
     -webkit-transform: rotateX(0);
     transform: rotateX(0);
-    -webkit-transition: max-height .2s, transform .2s;
-    transition: max-height .2s, transform .2s;
+    -webkit-transition: max-height 0.2s, transform 0.2s;
+    transition: max-height 0.2s, transform 0.2s;
 }
 
 .levus-aside-menu .parent li a {
@@ -189,7 +189,7 @@
 }
 
 .levus-aside-menu .parent span::before {
-    content: '+';
+    content: "+";
     color: black;
     position: absolute;
     top: 50%;
@@ -199,7 +199,7 @@
 }
 
 .levus-aside-menu .parent.open span::before {
-    content: '-';
+    content: "-";
 }
 
 
@@ -360,7 +360,7 @@
     text-align: center;
 }
 
-@media(max-width: 400px) {
+@media (max-width: 400px) {
     #panel section ul.rate-tv li:nth-child(1) {
         text-align: left;
     }
@@ -443,21 +443,21 @@
     align-items: stretch;
 }
 
-@media(max-width: 996px) {
+@media (max-width: 996px) {
     .block-5,
     .block-5-border {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media(max-width: 776px) {
+@media (max-width: 776px) {
     .block-5,
     .block-5-border {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media(max-width: 500px) {
+@media (max-width: 500px) {
     .block-5,
     .block-5-border {
         grid-template-columns: 1fr;
@@ -478,14 +478,14 @@
     align-items: stretch;
 }
 
-@media(max-width: 996px) {
+@media (max-width: 996px) {
     .block-4,
     .block-4-border {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media(max-width: 776px) {
+@media (max-width: 776px) {
     .block-4,
     .block-4-border {
         grid-template-columns: 1fr;
@@ -506,14 +506,14 @@
     align-items: stretch;
 }
 
-@media(max-width: 996px) {
+@media (max-width: 996px) {
     .block-3,
     .block-3-border {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media(max-width: 776px) {
+@media (max-width: 776px) {
     .block-3,
     .block-3-border {
         grid-template-columns: 1fr;
@@ -589,7 +589,7 @@
 }
 
 #panel section.list ul li a::before {
-    content: '';
+    content: "";
     width: 10px;
     height: 10px;
     display: inline-block;
@@ -682,7 +682,7 @@
     line-height: 1.8;
 }
 
-@media(max-width: 400px) {
+@media (max-width: 400px) {
     #panel .quotes {
         padding: 20px;
     }
@@ -782,7 +782,7 @@
 }
 
 #panel-content label::before {
-    content: '';
+    content: "";
     display: inline-block;
     width: 18px;
     height: 18px;
@@ -791,7 +791,7 @@
 }
 
 #panel-content label::after {
-    content: '?';
+    content: "?";
 }
 
 #panel-content input[type="radio"] {
@@ -804,12 +804,12 @@
 }
 
 #panel-content input[type="radio"]:checked~label::before {
-    content: '';
+    content: "";
     background: url(../images/check.svg);
 }
 
 #panel-content input[type="radio"]:checked~label::after {
-    content: '';
+    content: "";
 }
 
 
@@ -823,11 +823,11 @@
 /* класи показати/сховати */
 
 .none {
-    display: none!important;
+    display: none !important;
 }
 
 .block {
-    display: block!important;
+    display: block !important;
 }
 
 
@@ -838,12 +838,12 @@ history-payment
 #panel #history-payment ul {
     display: grid;
     grid-template-columns: 1fr 2fr repeat(2, 1fr) 2fr;
-    grid-template-areas: 'history-payment-1 history-payment-1 history-payment-1 history-payment-1 history-payment-1' 'history-payment-2 history-payment-3 history-payment-4 history-payment-5 history-payment-6';
+    grid-template-areas: "history-payment-1 history-payment-1 history-payment-1 history-payment-1 history-payment-1" "history-payment-2 history-payment-3 history-payment-4 history-payment-5 history-payment-6";
     grid-gap: 5px;
     padding-bottom: 12px;
     margin: 0;
     padding-top: 0;
-    transition: background .5s;
+    transition: background 0.5s;
 }
 
 #panel #history-payment ul:hover {
@@ -889,11 +889,6 @@ history-payment
 }
 
 
-/* #panel #history-payment li:nth-child(4) small {
-    margin: 5px 0 0;
-} */
-
-
 /* залишок */
 
 #panel #history-payment li:nth-child(5) {
@@ -924,15 +919,14 @@ history-payment
 #panel #history-payment-head {
     color: var(--lightgray);
     /* history-payment-head-1 -- горизонтальний блок відсутній */
-    grid-template-areas: 'history-payment-head-2 history-payment-head-3 history-payment-head-4 history-payment-head-5 history-payment-head-6'!important;
-    padding: 0!important;
-    /* margin: 0!important; */
-    border: none!important;
-    grid-gap: 0 5px!important;
+    grid-template-areas: "history-payment-head-2 history-payment-head-3 history-payment-head-4 history-payment-head-5 history-payment-head-6" !important;
+    padding: 0 !important;
+    border: none !important;
+    grid-gap: 0 5px !important;
 }
 
 #panel #history-payment-head:hover {
-    background: none!important;
+    background: none !important;
 }
 
 #panel #history-payment-head li {
@@ -941,8 +935,8 @@ history-payment
 
 #panel #history-payment-head li:nth-child(1) {
     grid-area: history-payment-head-2;
-    background: none!important;
-    border: none!important;
+    background: none !important;
+    border: none !important;
 }
 
 #panel #history-payment-head li:nth-child(2) {
@@ -967,48 +961,37 @@ history-payment
 
 /* на малому екрані додаємо before зі заголовками */
 
-@media(max-width: 776px) {
+@media (max-width: 776px) {
     #panel #history-payment ul {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "history-payment-1 history-payment-1" "history-payment-3 history-payment-2" "history-payment-4 history-payment-4" "history-payment-5 history-payment-5" "history-payment-6 history-payment-6";
         padding: 0 0 10px;
-        margin: 0 0 10px!important;
-    }
-    #history-payment ul li {
-        margin: 0 0 10px!important;
+        margin: 0 0 10px !important;
     }
     #history-payment-head {
-        display: none!important;
+        display: none !important;
     }
     #history-payment li::before {
         display: block;
-        color: var(--lightgray);
+        float: left;
     }
-    #history-payment li:nth-child(1)::before {
-        content: 'Дата: ';
+    #panel #history-payment li:nth-child(2) {
+        text-align: right;
     }
-    #history-payment li:nth-child(2)::before {
-        content: 'Час: ';
-    }
-    #history-payment li:nth-child(3)::before {
-        content: 'Тип платежу: ';
+    #panel #history-payment li:nth-child(3) {
+        text-align: left;
     }
     #history-payment li:nth-child(4)::before {
-        content: 'До платежу (грн): ';
+        content: "Сума (грн): ";
     }
     #history-payment li:nth-child(5)::before {
-        content: 'Сума (грн): ';
+        content: "Залишок (грн): ";
     }
     #history-payment li:nth-child(6)::before {
-        content: 'Примітка: ';
+        content: "Примітка: ";
     }
-}
-
-@media(max-width: 500px) {
-    #panel #history-payment ul {
-        grid-template-areas: 'history-payment-1' 'history-payment-2' 'history-payment-3' 'history-payment-4' 'history-payment-5' 'history-payment-6';
-        border-bottom: none;
-    }
-    #panel #history-payment ul li {
-        text-align: center;
+    #panel #history-payment li:nth-child(6) {
+        padding-left: 5px;
+        text-align: right;
     }
 }
