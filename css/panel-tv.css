@@ -862,6 +862,8 @@ history-payment
     background: var(--tv-bg-2);
     font-size: 13px;
     font-weight: 500;
+    border-top: 1px solid var(--panel-border);
+    border-bottom: 1px solid var(--panel-border);
 }
 
 
@@ -883,6 +885,11 @@ history-payment
 
 #panel #history-payment li:nth-child(4) {
     grid-area: history-payment-4;
+    text-align: right;
+}
+
+#panel #history-payment li:nth-child(4) small {
+    /* text-align: center; */
 }
 
 
@@ -890,6 +897,11 @@ history-payment
 
 #panel #history-payment li:nth-child(5) {
     grid-area: history-payment-5;
+    text-align: right;
+}
+
+#panel #history-payment li:nth-child(5) small {
+    /* text-align: center; */
 }
 
 
@@ -916,6 +928,7 @@ history-payment
     grid-template-areas: 'history-payment-head-2 history-payment-head-3 history-payment-head-4 history-payment-head-5 history-payment-head-6'!important;
     padding: 0!important;
     margin: 0!important;
+    border: none!important;
     grid-gap: 0 5px!important;
 }
 
@@ -929,7 +942,8 @@ history-payment
 
 #panel #history-payment-head li:nth-child(1) {
     grid-area: history-payment-head-2;
-    background: none;
+    background: none!important;
+    border: none!important;
 }
 
 #panel #history-payment-head li:nth-child(2) {

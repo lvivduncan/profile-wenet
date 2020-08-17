@@ -31,10 +31,12 @@
     --purpur: rgb(143, 4, 219);
     --gold: #b39906;
     --tv-bg: rgba(66, 165, 245, 0.1);
-    --tv-bg-2: rgba(204, 204, 204, 0.3);
+    /* --tv-bg-2: rgba(204, 204, 204, 0.3); */
+    --tv-bg-2: #ebebeb;
     --tv-bg-3: rgba(66, 165, 245, 0.5);
     --tv-border: rgba(66, 165, 245, 1);
     --panel: rgba(250, 250, 250, .5);
+    --panel-border: #dbdbdb;
 }
 
 *,
