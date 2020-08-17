@@ -841,7 +841,7 @@ history-payment
     grid-template-areas: 'history-payment-1 history-payment-1 history-payment-1 history-payment-1 history-payment-1' 'history-payment-2 history-payment-3 history-payment-4 history-payment-5 history-payment-6';
     grid-gap: 5px;
     padding-bottom: 12px;
-    margin: 0 0 12px;
+    margin: 0;
     padding-top: 0;
     transition: background .5s;
 }
@@ -888,9 +888,10 @@ history-payment
     text-align: right;
 }
 
-#panel #history-payment li:nth-child(4) small {
-    /* text-align: center; */
-}
+
+/* #panel #history-payment li:nth-child(4) small {
+    margin: 5px 0 0;
+} */
 
 
 /* залишок */
@@ -900,9 +901,10 @@ history-payment
     text-align: right;
 }
 
-#panel #history-payment li:nth-child(5) small {
-    /* text-align: center; */
-}
+
+/* #panel #history-payment li:nth-child(5) small {
+    margin: 5px 0 0;
+} */
 
 
 /* примітка */
@@ -917,6 +919,7 @@ history-payment
 
 #panel #history-payment li small {
     display: block;
+    margin: 5px 0 0;
 }
 
 
@@ -927,7 +930,7 @@ history-payment
     /* history-payment-head-1 -- горизонтальний блок відсутній */
     grid-template-areas: 'history-payment-head-2 history-payment-head-3 history-payment-head-4 history-payment-head-5 history-payment-head-6'!important;
     padding: 0!important;
-    margin: 0!important;
+    /* margin: 0!important; */
     border: none!important;
     grid-gap: 0 5px!important;
 }
