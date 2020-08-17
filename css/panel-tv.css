@@ -911,6 +911,7 @@ history-payment
 
 #panel #history-payment li:nth-child(6) {
     grid-area: history-payment-6;
+    padding-left: 10px;
 }
 
 #panel #history-payment li b {
