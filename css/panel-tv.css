@@ -905,6 +905,10 @@ history-payment
     grid-template-areas: 'history-payment-head-2 history-payment-head-3 history-payment-head-4 history-payment-head-5 history-payment-head-6'!important;
 }
 
+#panel #history-payment-head:hover {
+    background: none!important;
+}
+
 #panel #history-payment-head li {
     color: var(--lightgray);
 }
