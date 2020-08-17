@@ -824,60 +824,121 @@
 history-payment
 //////////// */
 
-#history-payment {
-    /* options */
-}
-
 #panel #history-payment ul {
     display: grid;
     grid-template-columns: 1fr 2fr repeat(2, 1fr) 2fr;
+    grid-template-areas: 'history-payment-1 history-payment-1 history-payment-1 history-payment-1 history-payment-1' 'history-payment-2 history-payment-3 history-payment-4 history-payment-5 history-payment-6';
     grid-gap: 5px;
-    border-bottom: 1px solid var(--tv-bg-2);
+    /* border-bottom: 1px solid var(--tv-bg-2); */
     padding-bottom: 12px;
+    padding-top: 0;
+    transition: background .5s;
 }
 
-#history-payment ul li:nth-child(1) {
-    /**/
+#panel #history-payment ul:hover {
+    background: var(--tv-bg-2);
 }
 
-#history-payment ul li:nth-child(2) {
-    /**/
+#panel #history-payment li {
+    padding: 5px;
 }
 
-#history-payment ul li:nth-child(3) {
-    /**/
+
+/* на всю ширину */
+
+#panel #history-payment li:nth-child(1) {
+    grid-area: history-payment-1;
+    background: var(--tv-bg-2);
+    font-size: 13px;
+    font-weight: 500;
 }
 
-#history-payment ul li:nth-child(4) {
-    /**/
+
+/* час */
+
+#panel #history-payment li:nth-child(2) {
+    grid-area: history-payment-2;
 }
 
-#history-payment ul li:nth-child(5) {
-    /**/
+
+/* опис */
+
+#panel #history-payment li:nth-child(3) {
+    grid-area: history-payment-3;
 }
 
-#history-payment li small {
+
+/* сума */
+
+#panel #history-payment li:nth-child(4) {
+    grid-area: history-payment-4;
+}
+
+
+/* залишок */
+
+#panel #history-payment li:nth-child(5) {
+    grid-area: history-payment-5;
+}
+
+
+/* примітка */
+
+#panel #history-payment li:nth-child(6) {
+    grid-area: history-payment-6;
+}
+
+#panel #history-payment li b {
+    font-weight: 500;
+}
+
+#panel #history-payment li small {
     display: block;
 }
 
+
+/* у заголовка інше розташування */
+
 #panel #history-payment-head {
-    /* text-align: center; */
     color: var(--lightgray);
+    /* history-payment-head-1 -- горизонтальний блок відсутній */
+    grid-template-areas: 'history-payment-head-2 history-payment-head-3 history-payment-head-4 history-payment-head-5 history-payment-head-6'!important;
 }
 
 #panel #history-payment-head li {
     color: var(--lightgray);
 }
 
+#panel #history-payment-head li:nth-child(1) {
+    grid-area: history-payment-head-2;
+    background: none;
+}
+
+#panel #history-payment-head li:nth-child(2) {
+    grid-area: history-payment-head-3;
+}
+
+#panel #history-payment-head li:nth-child(3) {
+    grid-area: history-payment-head-4;
+}
+
+#panel #history-payment-head li:nth-child(4) {
+    grid-area: history-payment-head-5;
+}
+
+#panel #history-payment-head li:nth-child(5) {
+    grid-area: history-payment-head-6;
+}
+
 
 /* на малому екрані додаємо before зі заголовками */
 
 @media(max-width: 776px) {
-    #history-payment ul {
-        grid-template-columns: 1fr!important;
+    #panel #history-payment ul {
+        grid-template-columns: 1fr;
         padding: 0 0 10px;
         margin: 0 0 10px!important;
-        border-bottom: 1px solid var(--lightgray);
+        /* border-bottom: 1px solid var(--tv-bg-2); */
     }
     #history-payment ul li {
         margin: 0 0 10px!important;
@@ -890,18 +951,31 @@ history-payment
         color: var(--lightgray);
     }
     #history-payment li:nth-child(1)::before {
-        content: 'Дата, час: ';
+        content: 'Дата: ';
     }
     #history-payment li:nth-child(2)::before {
-        content: 'Тип платежу: ';
+        content: 'Час: ';
     }
     #history-payment li:nth-child(3)::before {
-        content: 'До платежу (грн): ';
+        content: 'Тип платежу: ';
     }
     #history-payment li:nth-child(4)::before {
-        content: 'Сума (грн): ';
+        content: 'До платежу (грн): ';
     }
     #history-payment li:nth-child(5)::before {
+        content: 'Сума (грн): ';
+    }
+    #history-payment li:nth-child(6)::before {
         content: 'Примітка: ';
+    }
+}
+
+@media(max-width: 500px) {
+    #panel #history-payment ul {
+        grid-template-areas: 'history-payment-1' 'history-payment-2' 'history-payment-3' 'history-payment-4' 'history-payment-5' 'history-payment-6';
+        border-bottom: none;
+    }
+    #panel #history-payment ul li {
+        text-align: center;
     }
 }
