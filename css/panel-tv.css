@@ -56,9 +56,20 @@
     margin: 0 0 10px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
     #panel h4 {
         text-align: center;
+    }
+}
+
+#panel h4 span {
+    float: right;
+}
+
+@media(max-width: 500px) {
+    #panel h4 span {
+        float: none;
+        display: block;
     }
 }
 
@@ -903,6 +914,9 @@ history-payment
     color: var(--lightgray);
     /* history-payment-head-1 -- горизонтальний блок відсутній */
     grid-template-areas: 'history-payment-head-2 history-payment-head-3 history-payment-head-4 history-payment-head-5 history-payment-head-6'!important;
+    padding: 0!important;
+    margin: 0!important;
+    grid-gap: 0 5px!important;
 }
 
 #panel #history-payment-head:hover {
