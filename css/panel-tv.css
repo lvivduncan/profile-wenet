@@ -832,8 +832,8 @@ history-payment
     display: grid;
     grid-template-columns: 1fr 2fr repeat(2, 1fr) 2fr;
     grid-gap: 5px;
-    border-bottom: 1px solid var(--panel);
-    padding-bottom: 6px;
+    border-bottom: 1px solid var(--tv-bg-2);
+    padding-bottom: 12px;
 }
 
 #history-payment ul li:nth-child(1) {
