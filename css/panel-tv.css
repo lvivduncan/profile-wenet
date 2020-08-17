@@ -840,8 +840,8 @@ history-payment
     grid-template-columns: 1fr 2fr repeat(2, 1fr) 2fr;
     grid-template-areas: 'history-payment-1 history-payment-1 history-payment-1 history-payment-1 history-payment-1' 'history-payment-2 history-payment-3 history-payment-4 history-payment-5 history-payment-6';
     grid-gap: 5px;
-    /* border-bottom: 1px solid var(--tv-bg-2); */
     padding-bottom: 12px;
+    margin: 0 0 12px;
     padding-top: 0;
     transition: background .5s;
 }
@@ -956,7 +956,6 @@ history-payment
         grid-template-columns: 1fr;
         padding: 0 0 10px;
         margin: 0 0 10px!important;
-        /* border-bottom: 1px solid var(--tv-bg-2); */
     }
     #history-payment ul li {
         margin: 0 0 10px!important;
