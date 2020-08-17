@@ -902,16 +902,11 @@ history-payment
 }
 
 
-/* #panel #history-payment li:nth-child(5) small {
-    margin: 5px 0 0;
-} */
-
-
 /* примітка */
 
 #panel #history-payment li:nth-child(6) {
     grid-area: history-payment-6;
-    padding-left: 10px;
+    padding-left: 20px;
 }
 
 #panel #history-payment li b {
@@ -966,7 +961,7 @@ history-payment
 #panel #history-payment-head li:nth-child(5) {
     grid-area: history-payment-head-6;
     text-align: left;
-    padding-left: 10px;
+    padding-left: 20px;
 }
 
 
