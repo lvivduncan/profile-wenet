@@ -847,7 +847,7 @@ history-payment
 }
 
 #panel #history-payment ul:hover {
-    background: var(--tv-bg-2);
+    background: var(--panel-hover);
 }
 
 #panel #history-payment li {
