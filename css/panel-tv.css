@@ -520,6 +520,27 @@
     }
 }
 
+.block-2,
+.block-2-border {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.block-2-border {
+    align-items: stretch;
+}
+
+@media (max-width: 776px) {
+    .block-2,
+    .block-2-border {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 /* -border */
 
