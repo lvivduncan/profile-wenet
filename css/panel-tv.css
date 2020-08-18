@@ -436,6 +436,11 @@
     color: var(--red);
 }
 
+#panel button.blue {
+    border: 1px solid var(--first);
+    color: var(--first);
+}
+
 
 /* horizontal blocks */
 
