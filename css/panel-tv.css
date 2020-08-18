@@ -4,6 +4,12 @@
     padding: 35px 0 75px !important;
 }
 
+#panel hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid var(--tv-bg-2);
+}
+
 
 /* 2 кольори для тарифів -- старий і новий */
 
@@ -17,7 +23,7 @@
 }
 
 .color-empty {
-    color: var(--gray)!important;
+    color: var(--gray) !important;
 }
 
 #panel {
@@ -597,7 +603,7 @@
     padding: 3px 5px;
 }
 
-@media(max-width: 776px) {
+@media (max-width: 776px) {
     #panel section.block-flex {
         flex-wrap: wrap;
     }
@@ -615,7 +621,7 @@
     color: var(--dark);
 }
 
-@media(max-width: 776px) {
+@media (max-width: 776px) {
     #panel section.block-flex a {
         width: 100%;
     }
