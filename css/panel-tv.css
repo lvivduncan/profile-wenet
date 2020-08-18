@@ -16,6 +16,10 @@
     color: var(--green) !important;
 }
 
+.color-empty {
+    color: var(--gray)!important;
+}
+
 #panel {
     display: grid;
     grid-template-columns: 1fr 3fr;
