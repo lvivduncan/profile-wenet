@@ -1074,3 +1074,26 @@ history-payment
         text-align: right;
     }
 }
+
+
+/*/////////////
+service-tv.html
+/////////////*/
+
+#service-tv-header {
+    margin-bottom: 6px!important;
+    padding-bottom: 6px!important;
+    border-bottom: 1px solid var(--tv-bg-2);
+}
+
+#service-tv-content {
+    margin-bottom: 6px!important;
+    padding-bottom: 6px!important;
+    border-bottom: 1px solid var(--tv-bg-2);
+}
+
+#service-tv-playlist {
+    margin-top: 6px!important;
+    padding-top: 6px!important;
+    border-top: 1px solid var(--tv-bg-2);
+}

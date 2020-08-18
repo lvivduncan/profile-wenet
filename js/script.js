@@ -79,7 +79,7 @@ fadeScroll('#levus-fadescroll', 600, 800);
 
 }
 
-// сторінка зміни тарифу ТБ
+// зміна тарифу ТБ
 {
     const buttons = document.querySelectorAll('#rate-tv-buttons p');
 
@@ -92,11 +92,13 @@ fadeScroll('#levus-fadescroll', 600, 800);
     const quotes = document.querySelector('#rate-tv-quotes');
     const approve = document.querySelector('#rate-tv-approve');
 
+    // кнопка відміни (1 кнопка!)
+    const back = document.querySelector('#rate-tv-approve button');
+
     // ховаємо 3 блоки
     type && (type.style.display = quotes.style.display = approve.style.display = 'none');
 
     buttons.forEach((button, i) => {
-
 
         button.addEventListener('click', () => {
             if (i !== 0) {
@@ -132,6 +134,35 @@ fadeScroll('#levus-fadescroll', 600, 800);
         });
 
 
+    });
+
+    // змінити тариф
+    const serviceTvChange = document.getElementById('service-tv-change');
+
+    // блок з інформацією про поточний тариф
+    const serviceTvContent = document.getElementById('service-tv-content');
+
+    // блок з порівнянням тарифів
+    const serviceTvContentChange = document.getElementById('service-tv-content-change');
+    serviceTvContentChange && (serviceTvContentChange.style.display = 'none');
+
+    // блок з підключенням додаткового жевайса
+    const serviceTvDevice = document.getElementById('service-tv-device');
+
+    // блок зі списком девайсяв
+    const serviceTvPlaylist = document.getElementById('service-tv-playlist');
+
+    serviceTvChange && serviceTvChange.addEventListener('click', e => {
+        e.preventDefault();
+        serviceTvContent.style.display = serviceTvDevice.style.display = serviceTvPlaylist.style.display = 'none';
+        serviceTvContentChange.style.display = '';
+    });
+
+    // клік на червоні кнопці (відміна) закриває порівнняня
+    back.addEventListener('click', e => {
+        e.preventDefault();
+        serviceTvContent.style.display = serviceTvDevice.style.display = serviceTvPlaylist.style.display = '';
+        serviceTvContentChange.style.display = 'none';
     });
 }
 

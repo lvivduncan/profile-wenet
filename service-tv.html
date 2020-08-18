@@ -144,47 +144,119 @@
 
                 <h4>IP-телебачення</h4>
                 <section>
-                    <ul class="plus1">
+                    <ul class="plus1" id="service-tv-header">
                         <li>Omega-TV1:</li>
                         <li class="color-empty">Послуга підключена</li>
                         <li><a href="" class="color-red">Відключити</a></li>
                     </ul>
 
-                    <hr>
+                    <!-- <hr> -->
 
-                    <ul class="plus1">
-                        <li>Тариф:</li>
-                        <li><b>Новини</b></li>
-                        <li><a href="">Змінити</a></li>
-                    </ul>
-                    <ul>
-                        <li>Абонплата:</li>
-                        <li><b>0</b> грн.</li>
-                    </ul>
-                    <ul>
-                        <li>Доступно пристроїв:</li>
-                        <li><b>3</b></li>
-                    </ul>
-                    <ul>
-                        <li>Використано пристроїв:</li>
-                        <li><b>0</b></li>
-                    </ul>
-                    <ul>
-                        <li>Дійсний до:</li>
-                        <li>10.08.2020</li>
-                    </ul>
+                    <div id="service-tv-content">
+                        <ul class="plus1">
+                            <li>Тариф:</li>
+                            <li><b>Новини</b></li>
+                            <li><a href="" id="service-tv-change">Змінити</a></li>
+                        </ul>
+                        <ul>
+                            <li>Абонплата:</li>
+                            <li><b>0</b> грн.</li>
+                        </ul>
+                        <ul>
+                            <li>Доступно пристроїв:</li>
+                            <li><b>3</b></li>
+                        </ul>
+                        <ul>
+                            <li>Використано пристроїв:</li>
+                            <li><b>0</b></li>
+                        </ul>
+                        <ul>
+                            <li>Дійсний до:</li>
+                            <li>10.08.2020</li>
+                        </ul>
+                    </div>
 
-                    <hr>
 
-                    <ul class="plus1">
+                    <div id="service-tv-content-change">
+                        <ul>
+                            <li><b>Оберіть тариф:</b></li>
+                            <li id="rate-tv-buttons">
+                                <p class="current" title="Поточний">
+                                    Новини
+                                    <span>50 Mb/100 грн</span>
+                                </p>
+                                <p title="Новий тариф">
+                                    Преміум
+                                    <span>50 Mb/100 грн</span>
+                                </p>
+                                <p title="Новий тариф">
+                                    Новини
+                                    <span>50 Mb/100 грн</span>
+                                </p>
+                                <p title="Новий тариф">
+                                    VIP HD
+                                    <span>50 Mb/100 грн</span>
+                                </p>
+                            </li>
+                        </ul>
+
+                        <div id="rate-tv-data">
+                            <ul class="rate-tv">
+                                <li>Назва тарифа: </li>
+                                <li><b>Новини</b></li>
+                                <li>
+                                    <p><b>Преміум</b></p>
+                                    <p><b>Новини</b></p>
+                                    <p><b>VIP HD</b></p>
+                                </li>
+                            </ul>
+                            <ul class="rate-tv">
+                                <li>Абонплата: </li>
+                                <li><b>100</b> <small>грн/міс</small></li>
+                                <li>
+                                    <p><b>120</b> <small>грн/міс</small></p>
+                                    <p><b>140</b> <small>грн/міс</small></p>
+                                    <p><b>160</b> <small>грн/міс</small></p>
+                                </li>
+                            </ul>
+                            <ul class="rate-tv">
+                                <li>Доступно пристроїв: </li>
+                                <li><b>1</b></li>
+                                <li>
+                                    <p><b>3</b></p>
+                                    <p><b>5</b></p>
+                                    <p><b>7</b></p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <ul class="plus1" id="rate-tv-type">
+                            <li><b>Тип зміни:</b> </li>
+                            <li><input type="radio" name="change-date" id="approve-next-month" checked> <label for="approve-next-month">Змінити з наступного місяця</label></li>
+                            <li><input type="radio" name="change-date" id="approve-now"> <label for="approve-now">Змінити негайно</label></li>
+                        </ul>
+
+                        <p class="quotes" id="rate-tv-quotes">Ваша облікова дата зняття абонплати <b> 05.09.2020</b>. Цей період менший періоду надання платної послуги <b>ОмегаTV Ефір</b>. Для надання послуги у повному обсязі, необхідно зробити пролонгацію основної послуги <b>LV-070Mbps-100 (Базовий)</b>на
+                            <b>1</b> днів. Вартість пролонгації: 3.23 грн.</p>
+
+                        <ul class="approve" id="rate-tv-approve">
+                            <li>Для підтвердження зміни послуги "Зміна тарифу" введіть пароль та натисніть "Підтвердити"</li>
+                            <li><button class="red">Відмінити</button></li>
+                            <li><input type="password" placeholder="пароль в особистий кабінет"></li>
+                            <li><button class="green">Підтвердити</button></li>
+                        </ul>
+
+                    </div>
+
+
+
+                    <ul class="plus1" id="service-tv-device">
                         <li>Додати пристій: </li>
                         <li><button class="blue">Код активації для нового присторою</button></li>
                         <li><button class="blue">Плейлист для нового пристрою</button></li>
                     </ul>
 
-                    <hr>
-
-                    <ul class="plus1">
+                    <ul class="plus1" id="service-tv-playlist">
                         <li>UNIQID: <b>097CA15709563237</b></li>
                         <li><a href="">Завантажити плейлист</a></li>
                         <li><a href="" class="color-red">Видалити</a></li>
