@@ -443,6 +443,57 @@
 }
 
 
+/* якщо не кнопка, яле тре оформити, як кнопку */
+
+.button-green {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--green);
+    text-align: center;
+    border: 1px solid var(--green);
+    border-radius: 3px;
+    color: var(--green);
+    font-weight: 600;
+    line-height: 1.6;
+    font-size: 13px;
+}
+
+.button-blue {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--first);
+    text-align: center;
+    border: 1px solid var(--first);
+    border-radius: 3px;
+    color: var(--first);
+    font-weight: 600;
+    line-height: 1.6;
+    font-size: 13px;
+}
+
+.button-gray {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--dark);
+    text-align: center;
+    border: 1px solid var(--dark);
+    border-radius: 3px;
+    color: var(--dark);
+    font-weight: 600;
+    line-height: 1.6;
+    font-size: 13px;
+}
+
+
 /* horizontal blocks */
 
 .block-5,
@@ -796,6 +847,7 @@
 #rate-tv-buttons p {
     display: inline-block;
     margin: 5px;
+    padding: 5px;
     text-decoration: none;
     cursor: pointer;
     color: var(--first);

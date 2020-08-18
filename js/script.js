@@ -95,6 +95,25 @@ fadeScroll('#levus-fadescroll', 600, 800);
     // кнопка відміни (1 кнопка!)
     const back = document.querySelector('#rate-tv-approve button');
 
+
+
+    // змінити тариф
+    const serviceTvChange = document.getElementById('service-tv-change');
+
+    // блок з інформацією про поточний тариф
+    const serviceTvContent = document.getElementById('service-tv-content');
+
+    // блок з порівнянням тарифів
+    const serviceTvContentChange = document.getElementById('service-tv-content-change');
+    serviceTvContentChange && (serviceTvContentChange.style.display = 'none');
+
+    // блок з підключенням додаткового жевайса
+    const serviceTvDevice = document.getElementById('service-tv-device');
+
+    // блок зі списком девайсяв
+    const serviceTvPlaylist = document.getElementById('service-tv-playlist');
+
+
     // ховаємо 3 блоки
     type && (type.style.display = quotes.style.display = approve.style.display = 'none');
 
@@ -120,15 +139,20 @@ fadeScroll('#levus-fadescroll', 600, 800);
 
 
             } else {
-                buttons.forEach((item, k) => {
-                    if (k !== 0) {
-                        item.className = '';
-                    }
-                });
+                // buttons.forEach((item, k) => {
+                //     if (k !== 0) {
+                //         item.className = '';
+                //     }
+                // });
 
-                data.forEach(item => [...item.children].forEach(child => child.style.display = 'none'));
+                // data.forEach(item => [...item.children].forEach(child => child.style.display = 'none'));
 
-                type.style.display = quotes.style.display = approve.style.display = 'none';
+                // type.style.display = quotes.style.display = approve.style.display = 'none';
+
+
+                serviceTvContent.style.display = serviceTvDevice.style.display = serviceTvPlaylist.style.display = '';
+                serviceTvContentChange.style.display = 'none';
+
             }
 
         });
@@ -136,21 +160,6 @@ fadeScroll('#levus-fadescroll', 600, 800);
 
     });
 
-    // змінити тариф
-    const serviceTvChange = document.getElementById('service-tv-change');
-
-    // блок з інформацією про поточний тариф
-    const serviceTvContent = document.getElementById('service-tv-content');
-
-    // блок з порівнянням тарифів
-    const serviceTvContentChange = document.getElementById('service-tv-content-change');
-    serviceTvContentChange && (serviceTvContentChange.style.display = 'none');
-
-    // блок з підключенням додаткового жевайса
-    const serviceTvDevice = document.getElementById('service-tv-device');
-
-    // блок зі списком девайсяв
-    const serviceTvPlaylist = document.getElementById('service-tv-playlist');
 
     serviceTvChange && serviceTvChange.addEventListener('click', e => {
         e.preventDefault();
