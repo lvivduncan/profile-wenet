@@ -274,7 +274,6 @@
 /* блок з полем пароля та кнопками  */
 
 #panel section ul.approve {
-    /* grid-template-columns: repeat(3, 1fr); */
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas: "li-1 li-1 li-1" "li-2 li-3 li-4";
     grid-gap: 5px 10px;

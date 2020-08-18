@@ -12,7 +12,7 @@
     <!-- <link rel="stylesheet" href="https://wenet.lviv.ua/site/templates/css/style.css"> -->
     <link rel="stylesheet" href="css/style.css">
 
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <!-- <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
@@ -24,7 +24,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"> -->
 
     <style>
          :root {
@@ -144,13 +144,27 @@
                     <p>Коли надсилати повідомлення?</p>
                     <ul>
                         <li>
-                            <select name="time">
-                                <option value="1">Зранку</option>
-                                <option value="2">Обід</option>
-                                <option value="3">Вечір</option>
-                            </select>
+                            <!-- спени мусять бути -->
+                            <span>
+                                <input type="radio" name="change-time" id="approve-morning" checked>
+                                <label for="approve-morning">Зранку</label>
+                            </span>
+                            <span>
+                                <input type="radio" name="change-time" id="approve-afternoon">
+                                <label for="approve-afternoon">Обід</label>
+                            </span>
+                            <span>
+                                <input type="radio" name="change-time" id="approve-evening">
+                                <label for="approve-evening">Вечір</label>
+                            </span>
                         </li>
                         <li>За: <input type="number" name="intv" value="1" min="1" max="3"> днів до припинення надання послуги.</li>
+                    </ul>
+                    <ul class="approve" id="approve-service-sms">
+                        <li>Для підтвердження зміни налаштувань послуги "СМС-сповіщення" введіть пароль та натисніть "Підтвердити"</li>
+                        <li><button class="red">Відмінити</button></li>
+                        <li><input type="password" placeholder="пароль в особистий кабінет"></li>
+                        <li><button class="green">Підтвердити</button></li>
                     </ul>
                 </section>
 

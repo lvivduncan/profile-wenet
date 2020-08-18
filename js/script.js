@@ -134,3 +134,19 @@ fadeScroll('#levus-fadescroll', 600, 800);
 
     });
 }
+
+// service-sms.html
+{
+    const approveServiceSms = document.getElementById('approve-service-sms');
+    approveServiceSms.style.display = 'none';
+    const changeTime = document.getElementsByName('change-time');
+    const intv = document.getElementsByName('intv')[0];
+
+    console.log(changeTime)
+
+    changeTime.forEach(item => item.addEventListener('change', () => approveServiceSms.style.display = ''));
+    // changeTime.addEventListener('change', () => approveServiceSms.style.dispay = '');
+    intv.addEventListener('change', () => approveServiceSms.style.display = '');
+
+    approveServiceSms.children[1].firstChild.addEventListener('click', () => approveServiceSms.style.display = 'none');
+}
