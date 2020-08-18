@@ -241,6 +241,7 @@
     display: grid;
     margin: 3px 0;
     padding-top: 8px;
+    padding-bottom: 8px;
     align-items: center;
 }
 
