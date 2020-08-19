@@ -848,7 +848,7 @@
 #rate-tv-buttons p,
 #rate-tv-buttons a {
     display: inline-block;
-    margin: 0 10px 0 0!important;
+    /* margin: 0 10px 0 0!important; */
     padding: 7px 6px;
     text-decoration: none;
     cursor: pointer;
@@ -1162,8 +1162,17 @@ service-tv.html
     text-align: right;
 }
 
+#service-tv-content .current {
+    margin-right: 0!important;
+    border-color: var(--lightgray);
+}
+
 #service-tv-playlist {
     margin-top: 6px!important;
     padding-top: 6px!important;
     border-top: 1px solid var(--tv-bg-2);
+}
+
+#service-tv-content-change {
+    padding-top: 3px;
 }
