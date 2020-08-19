@@ -848,8 +848,8 @@
 #rate-tv-buttons p,
 #rate-tv-buttons a {
     display: inline-block;
-    /* margin: 0 10px 0 0!important; */
-    padding: 7px 6px;
+    margin: 0 10px 0 0!important;
+    padding: 4px 6px;
     text-decoration: none;
     cursor: pointer;
     color: var(--first);
@@ -868,7 +868,7 @@
     background: var(--tv-bg-2);
     border-color: var(--lightgray);
     color: var(--dark);
-    margin: 0!important;
+    /* margin: 0!important; */
 }
 
 
@@ -887,9 +887,11 @@
     font-weight: 400;
 }
 
+
+/* 
 #rate-tv-buttons li:nth-child(2) {
     text-align: right;
-}
+} */
 
 
 /* ховаємо додаткові тарифи */
