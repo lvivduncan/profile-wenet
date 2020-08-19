@@ -102,17 +102,20 @@ fadeScroll('#levus-fadescroll', 600, 800);
 
     // блок з інформацією про поточний тариф
     const serviceTvContent = document.getElementById('service-tv-content');
+    serviceTvContent && (serviceTvContent.style.display = 'none');
 
     // блок з порівнянням тарифів
     const serviceTvContentChange = document.getElementById('service-tv-content-change');
-    serviceTvContentChange && (serviceTvContentChange.style.display = 'none');
+    // по дефолту активне має бути!
+    // serviceTvContentChange && (serviceTvContentChange.style.display = 'none');
 
     // блок з підключенням додаткового жевайса
     const serviceTvDevice = document.getElementById('service-tv-device');
+    serviceTvDevice && (serviceTvDevice.style.display = 'none');
 
     // блок зі списком девайсяв
     const serviceTvPlaylist = document.getElementById('service-tv-playlist');
-
+    serviceTvPlaylist && (serviceTvPlaylist.style.display = 'none');
 
     // ховаємо 3 блоки
     type && (type.style.display = quotes.style.display = approve.style.display = 'none');
@@ -141,17 +144,6 @@ fadeScroll('#levus-fadescroll', 600, 800);
 
 
             } else {
-                // buttons.forEach((item, k) => {
-                //     if (k !== 0) {
-                //         item.className = '';
-                //     }
-                // });
-
-                // data.forEach(item => [...item.children].forEach(child => child.style.display = 'none'));
-
-                // type.style.display = quotes.style.display = approve.style.display = 'none';
-
-
                 serviceTvContent.style.display = serviceTvDevice.style.display = serviceTvPlaylist.style.display = '';
                 serviceTvContentChange.style.display = 'none';
 
