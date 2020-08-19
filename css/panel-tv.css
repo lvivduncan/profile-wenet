@@ -841,13 +841,15 @@
 /* кнопки для вибору тарифа */
 
 #rate-tv-buttons {
-    display: flex;
+    /* display: flex; */
+    /* grid-template-columns: 240px repeat(2, 1fr)!important; */
 }
 
-#rate-tv-buttons p {
+#rate-tv-buttons p,
+#rate-tv-buttons a {
     display: inline-block;
-    margin: 5px;
-    padding: 5px;
+    margin: 0 10px 0 0!important;
+    padding: 7px 6px;
     text-decoration: none;
     cursor: pointer;
     color: var(--first);
@@ -861,25 +863,32 @@
 
 /* старий тариф */
 
-#rate-tv-buttons p.current {
+#rate-tv-buttons p.current,
+#rate-tv-buttons a.current {
     background: var(--tv-bg-2);
     border-color: var(--lightgray);
     color: var(--dark);
-    margin-left: 162px;
+    margin: 0!important;
 }
 
 
 /* тариф, на який клікнули */
 
-#rate-tv-buttons p.active {
+#rate-tv-buttons p.active,
+#rate-tv-buttons a.active {
     border-color: var(--green);
     color: var(--green);
 }
 
-#rate-tv-buttons p span {
+#rate-tv-buttons p span,
+#rate-tv-buttons a span {
     display: block;
     font-size: 12px;
     font-weight: 400;
+}
+
+#rate-tv-buttons li:nth-child(2) {
+    text-align: right;
 }
 
 
@@ -887,6 +896,10 @@
 
 #rate-tv-data {
     border-top: 1px solid var(--tv-bg-2);
+}
+
+#rate-tv-data ul {
+    grid-template-columns: 300px repeat(2, 1fr)!important;
 }
 
 #rate-tv-data ul li:nth-child(3) p {
@@ -1143,6 +1156,10 @@ service-tv.html
     margin-bottom: 6px!important;
     padding-bottom: 6px!important;
     border-bottom: 1px solid var(--tv-bg-2);
+}
+
+#service-tv-content li:nth-child(2) {
+    text-align: right;
 }
 
 #service-tv-playlist {

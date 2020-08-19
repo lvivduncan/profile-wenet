@@ -81,7 +81,7 @@ fadeScroll('#levus-fadescroll', 600, 800);
 
 // зміна тарифу ТБ
 {
-    const buttons = document.querySelectorAll('#rate-tv-buttons p');
+    const buttons = document.querySelectorAll('#rate-tv-buttons a');
 
     // колонки
     const data = document.querySelectorAll('#rate-tv-data ul li:nth-child(3)');
@@ -119,7 +119,9 @@ fadeScroll('#levus-fadescroll', 600, 800);
 
     buttons.forEach((button, i) => {
 
-        button.addEventListener('click', () => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+
             if (i !== 0) {
 
                 buttons.forEach((item, k) => {
