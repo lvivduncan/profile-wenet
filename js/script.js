@@ -168,7 +168,7 @@ fadeScroll('#levus-fadescroll', 600, 800);
         serviceTvContentChange.style.display = 'none';
     });
 }
-
+/* 
 // service-sms.html
 {
     const approveServiceSms = document.getElementById('approve-service-sms');
@@ -182,7 +182,7 @@ fadeScroll('#levus-fadescroll', 600, 800);
 
     approveServiceSms && approveServiceSms.children[1].firstChild.addEventListener('click', () => approveServiceSms.style.display = 'none');
 }
-
+ */
 // pay.html
 {
     // кнопки
@@ -197,4 +197,45 @@ fadeScroll('#levus-fadescroll', 600, 800);
         selectQuotes.forEach(item => item.style.display = 'none');
         selectQuotes[i].style.display = '';
     }))
+}
+
+// all-services.html
+{
+    const allServices = document.querySelector('#all-services');
+    // усі кнопки увімкнення-вимкнення
+    const turns = allServices && allServices.querySelectorAll('.turn');
+    // усі підписи "підключено/не підключено"
+    const checks = allServices && allServices.querySelectorAll('.service-check');
+    // усі форми підтвердження
+    const approves = allServices && allServices.querySelectorAll('.approve');
+    // ховаємо усі форми підтвердження
+    approves && approves.forEach(approve => approve.style.display = 'none');
+    // кнокпи відміни
+    const closeButtons = allServices && allServices.querySelectorAll('button.red');
+    // кнопки підтвердження
+    const approveButtons = allServices && allServices.querySelectorAll('button.green');
+    // клік на кнопці "підключити/відключити"
+    turns && turns.forEach((turn, i) => turn.addEventListener('click', function(e) {
+        e.preventDefault();
+        // ховаємо всі
+        approves.forEach(approve =>  approves[i] !== i && (approve.style.display = 'none'));
+        // показуємо наш
+        approves[i].style.display = '';
+    }));
+    // закриваємо форму
+    closeButtons && closeButtons.forEach(button => button.addEventListener('click', function(e) {
+        e.preventDefault();
+        this.parentNode.parentNode.style.display = 'none';
+    }));
+    // підтвердження 
+    approveButtons && approveButtons.forEach((button, i) => button.addEventListener('click', function(e) {
+        e.preventDefault();
+        this.parentNode.parentNode.style.display = 'none';
+    
+        // міняємо класи (підписи)
+        checks[i].classList.toggle('color-gray');
+        turns[i].classList.toggle('turn-on');
+        
+        // TODO: потрібно додати перевірку на правильність ведення пароля
+    }));
 }

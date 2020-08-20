@@ -135,86 +135,148 @@
                 <h4>Усі послуги</h4>
                 <section id="all-services">
                     <!-- послуга 1 -->
-                    <ul class="head">
-                        <li>IP-адреса</li>
-                        <li><span class="color-gray">Послугу не підключено</span></li>
-                        <li><a href="">Підключити</a></li>
-                    </ul>
-                    <ul>
-                        <li>Абонплата</li>
-                        <li><b>70</b> грн/міс</li>
-                        <li></li>
-                        
-                        <li>Ваша айпі-адреса</li>
-                        <li>172.0.0.1</li>
-                        <li></li>
-                    </ul>
-                    <!-- послуга 1 -->
+                    <div class="service">
+                        <ul class="head">
+                            <li>IP-адреса</li>
+                            <li><span class="service-check color-gray"></span></li>
+                            <li><a href="" class="turn turn-on"></a></li>
+                        </ul>
+                        <ul>
+                            <li>Абонплата</li>
+                            <li><b>70</b> грн/міс</li>
+                            <li></li>
+                            
+                            <li>Ваша айпі-адреса</li>
+                            <li>172.0.0.1</li>
+                            <li></li>
+                        </ul>
+
+
+                        <ul class="approve">
+                            <li>Для підтвердження зміни послуги введіть пароль та натисніть "Підтвердити"</li>
+                            <li><button class="red">Відмінити</button></li>
+                            <li><input type="password" placeholder="пароль в особистий кабінет"></li>
+                            <li><button class="green">Підтвердити</button></li>
+                        </ul>
+                    </div>
 
                     <!-- послуга 2 -->
-                    <ul class="head">
-                        <li>SMS-нагадування</li>
-                        <li><span class="color-green">Послугу підключено</span></li>
-                        <li><a href="">Відключити</a></li>
-                    </ul>
-                    <ul>
-                        <li>Абонплата</li>
-                        <li><b>0</b> грн/міс</li>
-                        <li></li>
-                        
-                        <li>Номер телефону</li>
-                        <li><input type="text" value="(067) 123-45-67"></li>
-                        <li><a href="">Змінити</a></li>
-                        
-                        <li>Період нагадування</li>
-                        <li id="change-time" class="panel-check">
-                            <span>
-                                <input type="radio" name="change-time" id="change-time-morning" checked><label for="change-time-morning">Ранок</label>
-                            </span>
-                            <span>
-                                <input type="radio" name="change-time" id="change-time-afternoon"><label for="change-time-afternoon">Обід</label>
-                            </span>
-                            <span>
-                                <input type="radio" name="change-time" id="change-time-evening"><label for="change-time-evening">Вечір</label>
-                            </span>
-                        </li>
-                        <li></li>
+                    <div class="service">
+                        <ul class="head">
+                            <li>SMS-нагадування</li>
+                            <li><span class="service-check"></span></li>
+                            <li><a href="" class="turn"></a></li>
+                        </ul>
+                        <ul>
+                            <li>Абонплата</li>
+                            <li><b>0</b> грн/міс</li>
+                            <li></li>
+                            
+                            <li>Номер телефону</li>
+                            <li><input type="text" value="(067) 123-45-67"></li>
+                            <li><a href="">Змінити</a></li>
+                            
+                            <li>Період нагадування</li>
+                            <li id="change-time" class="panel-check">
+                                <span>
+                                    <input type="radio" name="change-time" id="change-time-morning" checked><label for="change-time-morning">Ранок</label>
+                                </span>
+                                <span>
+                                    <input type="radio" name="change-time" id="change-time-afternoon"><label for="change-time-afternoon">Обід</label>
+                                </span>
+                                <span>
+                                    <input type="radio" name="change-time" id="change-time-evening"><label for="change-time-evening">Вечір</label>
+                                </span>
+                            </li>
+                            <li><a href="">Змінити</a></li>
+    
+                            <li>Днів до припинення надання послуг</li>
+                            <li><input type="number" min="1" value="3"></li>
+                            <li></li>
+                        </ul>
 
-                        <li>Днів до припинення надання послуг</li>
-                        <li><input type="number" min="1" value="3"></li>
-                        <li></li>
-                    </ul>
-                    <!-- послуга 2 -->
+                        <ul class="approve">
+                            <li>Для підтвердження зміни послуги введіть пароль та натисніть "Підтвердити"</li>
+                            <li><button class="red">Відмінити</button></li>
+                            <li><input type="password" placeholder="пароль в особистий кабінет"></li>
+                            <li><button class="green">Підтвердити</button></li>
+                        </ul>
+                    </div>
 
                     <!-- послуга 3 -->
-                    <ul class="head">
-                        <li>Послуга 3</li>
-                        <li><span class="color-gray">Послугу не підключено</span></li>
-                        <li><a href="">Підключити</a></li>
-                    </ul>
-                    <ul>
-                        <li>Опис</li>
-                        <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam nam quod doloribus?</li>
-                        <li></li>
+                    <div class="service">
+                        <ul class="head">
+                            <li>Послуга 3</li>
+                            <li><span class="service-check color-gray"></span></li>
+                            <li><a href="" class="turn turn-on"></a></li>
+                        </ul>
+                        <ul>
+                            <li>Опис</li>
+                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam nam quod doloribus?</li>
+                            <li></li>
+    
+                            <li>Абонплата</li>
+                            <li><b>70</b> грн/міс</li>
+                            <li></li>
+                        </ul>
 
-                        <li>Абонплата</li>
-                        <li><b>70</b> грн/міс</li>
-                        <li></li>
-                    </ul>
-                    <!-- послуга 3 -->
+                        <ul class="approve">
+                            <li>Для підтвердження зміни послуги введіть пароль та натисніть "Підтвердити"</li>
+                            <li><button class="red">Відмінити</button></li>
+                            <li><input type="password" placeholder="пароль в особистий кабінет"></li>
+                            <li><button class="green">Підтвердити</button></li>
+                        </ul>
+                    </div>
 
                     <!-- послуга 4 -->
-                    <ul class="head">
-                        <li>Послуга 4</li>
-                        <li><span class="color-gray">Послугу не підключено</span></li>
-                        <li><a href="">Підключити</a></li>
-                    </ul>
-                    <ul>
-                        <li>Абонплата</li>
-                        <li><b>70</b> грн/міс</li>
-                        <li></li>
-                    </ul>
-                    <!-- послуга 3 -->
+                    <div class="service">
+                        <ul class="head">
+                            <li>Послуга 4</li>
+                            <li><span class="service-check color-gray"></span></li>
+                            <li><a href="" class="turn turn-on"></a></li>
+                        </ul>
+                        <ul>
+                            <li>Опис</li>
+                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam nam quod doloribus?</li>
+                            <li></li>
+
+                            <li>Абонплата</li>
+                            <li><b>70</b> грн/міс</li>
+                            <li></li>
+                        </ul>
+
+                        <ul class="approve">
+                            <li>Для підтвердження зміни послуги введіть пароль та натисніть "Підтвердити"</li>
+                            <li><button class="red">Відмінити</button></li>
+                            <li><input type="password" placeholder="пароль в особистий кабінет"></li>
+                            <li><button class="green">Підтвердити</button></li>
+                        </ul>
+                    </div>
+
+                    <!-- послуга 5 -->
+                    <div class="service">
+                        <ul class="head">
+                            <li>Послуга 5</li>
+                            <li><span class="service-check color-gray"></span></li>
+                            <li><a href="" class="turn turn-on"></a></li>
+                        </ul>
+                        <ul>
+                            <li>Опис</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus asperiores facilis assumenda voluptatem eos neque possimus modi aperiam rem? Officiis!</li>
+                            <li></li>
+
+                            <li>Абонплата</li>
+                            <li><b>0</b> грн/міс</li>
+                            <li></li>
+                        </ul>
+
+                        <ul class="approve">
+                            <li>Для підтвердження зміни послуги введіть пароль та натисніть "Підтвердити"</li>
+                            <li><button class="red">Відмінити</button></li>
+                            <li><input type="password" placeholder="пароль в особистий кабінет"></li>
+                            <li><button class="green">Підтвердити</button></li>
+                        </ul>
+                    </div>
                     
                 </section>
             </div>

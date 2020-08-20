@@ -1381,3 +1381,41 @@ all-services.html
   content: "";
   background: url(../images/check.svg);
 }
+
+/* підключити/відключити */
+.turn {
+  color: var(--red);
+}
+
+.turn::before{
+  content: 'Відключити';
+  display: inline-block;
+}
+
+/* відключити (підсвітка зелена) */
+.turn-on{
+  color: var(--green);
+}
+
+.turn-on::before{
+  content: 'Підключити';
+}
+
+/* послуга підключена */
+.service-check{
+  color: var(--green);
+}
+
+.service-check::before{
+  content: 'Послугу підключено';
+  display: inline-block;
+}
+
+/* послуга НЕ підключена */
+.service-check.color-gray{
+  color: var(--lightgray);
+}
+
+.service-check.color-gray::before{
+  content: 'Послугу не підключено';
+}
