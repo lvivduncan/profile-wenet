@@ -891,6 +891,12 @@ todo: перевірити де використовується!
   grid-template-columns: 300px repeat(2, 1fr) !important;
 }
 
+@media(max-width: 500px){
+    #rate-tv-data ul {
+        grid-template-columns: auto repeat(2, 1fr) !important;
+      }
+}
+
 #rate-tv-data ul li:nth-child(3) p {
   margin: 0;
   line-height: normal;
