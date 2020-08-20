@@ -255,20 +255,20 @@
 
 /* default */
 
-#panel section ul,
-#panel section ul.standard {
+#panel ul,
+#panel ul.standard {
   grid-template-columns: 300px 1fr;
 }
 
-#panel section ul.plus1 {
+#panel ul.plus1 {
   grid-template-columns: 300px repeat(2, 1fr);
 }
 
-#panel section ul.plus2 {
+#panel ul.plus2 {
   grid-template-columns: 300px repeat(3, 1fr);
 }
 
-#panel section ul.plus3 {
+#panel ul.plus3 {
   grid-template-columns: 240px repeat(4, 1fr);
 }
 
@@ -278,7 +278,7 @@
   ** .rate-tv-data -- дані тарифа
 */
 
-#panel section ul.rate-tv {
+#panel ul.rate-tv {
   grid-template-columns: 240px repeat(2, 1fr);
   grid-gap: 5px;
   margin: 3px 0;
@@ -286,56 +286,56 @@
 
 /* блок з полем пароля та кнопками  */
 
-#panel section ul.approve {
+#panel ul.approve {
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-areas: "li-1 li-1 li-1" "li-2 li-3 li-4";
   grid-gap: 5px 10px;
 }
 
 @media (max-width: 776px) {
-  #panel section ul,
-  #panel section ul.standard {
+  #panel ul,
+  #panel ul.standard {
     grid-template-columns: auto 1fr;
   }
-  #panel section ul.plus1 {
+  #panel ul.plus1 {
     grid-template-columns: auto repeat(2, 1fr);
   }
-  #panel section ul.plus2 {
+  #panel ul.plus2 {
     grid-template-columns: auto repeat(3, 1fr);
   }
-  #panel section ul.plus3 {
+  #panel ul.plus3 {
     grid-template-columns: auto repeat(4, 1fr);
   }
-  #panel section ul.rate-tv {
+  #panel ul.rate-tv {
     grid-template-columns: auto repeat(2, 1fr);
   }
 }
 
 @media (max-width: 400px) {
-  #panel section ul,
-  #panel section ul.standard {
+  #panel ul,
+  #panel ul.standard {
     grid-template-columns: 1fr;
   }
-  #panel section ul.plus1 {
+  #panel ul.plus1 {
     grid-template-columns: 1fr;
   }
-  #panel section ul.plus2 {
+  #panel ul.plus2 {
     grid-template-columns: 1fr;
   }
-  #panel section ul.plus3 {
+  #panel ul.plus3 {
     grid-template-columns: 1fr;
   }
-  #panel section ul.rate-tv {
+  #panel ul.rate-tv {
     grid-template-columns: 100px repeat(2, 1fr);
   }
   /**/
-  #panel section ul.approve {
+  #panel ul.approve {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "li-1 li-1" "li-3 li-3" "li-2 li-4";
   }
 }
 
-#panel section ul li {
+#panel ul li {
   display: block;
   width: 100%;
   font-size: 13px;
@@ -345,14 +345,14 @@
 }
 
 @media (max-width: 400px) {
-  #panel section ul li {
+  #panel ul li {
     margin: 5px 0;
   }
 }
 
 @media (max-width: 400px) {
-  #panel section ul li,
-  #panel section ul li:first-child {
+  #panel ul li,
+  #panel ul li:first-child {
     text-align: center;
   }
 }
@@ -365,29 +365,29 @@ todo: перевірити де використовується!
   margin: 0 5px;
 } */
 
-#panel section li strong {
+#panel li strong {
   font-size: 18px;
 }
 
 /* центрування тексту */
 
-#panel section ul.center li {
+#panel ul.center li {
   text-align: center;
 }
 
 @media (max-width: 400px) {
-  #panel section ul.rate-tv li:nth-child(1) {
+  #panel ul.rate-tv li:nth-child(1) {
     text-align: left;
   }
 }
 
-#panel section ul.rate-tv li:nth-child(2) {
+#panel ul.rate-tv li:nth-child(2) {
   text-align: right;
 }
 
 /* новий тарийф, до порівняння -- зеленим */
 
-#panel section ul.rate-tv li:nth-child(3) {
+#panel ul.rate-tv li:nth-child(3) {
   text-align: left;
   color: var(--green);
   padding-left: 10px;
@@ -395,20 +395,20 @@ todo: перевірити де використовується!
 
 /* блок з полем пароля та кнопками  */
 
-#panel section ul.approve li:nth-child(1) {
+#panel ul.approve li:nth-child(1) {
   grid-area: li-1;
   text-align: center;
 }
 
-#panel section ul.approve li:nth-child(2) {
+#panel ul.approve li:nth-child(2) {
   grid-area: li-2;
 }
 
-#panel section ul.approve li:nth-child(3) {
+#panel ul.approve li:nth-child(3) {
   grid-area: li-3;
 }
 
-#panel section ul.approve li:nth-child(4) {
+#panel ul.approve li:nth-child(4) {
   grid-area: li-4;
 }
 
@@ -1268,4 +1268,26 @@ pay.html
 #select-rate{
     padding: 6px 0;
     border-bottom: 1px solid var(--tv-bg-2);
+}
+
+/* у цьому блоці списки оптитмізовані інакше */
+@media(max-width: 776px){
+    #select-rate ul.plus1 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #select-rate ul.plus1 li:nth-child(1){
+        text-align: left;    
+    }
+    #select-rate ul.plus1 li:nth-child(2){
+        text-align: center;
+    }
+    #select-rate ul.plus1 li:nth-child(3){
+        text-align: right;
+    }
+}
+
+@media(max-width: 400px){
+    /* #select-rate ul.plus1 {
+        grid-template-columns: auto repeat(2, 1fr);
+    } */
 }
