@@ -1204,7 +1204,7 @@ pay.html
   grid-gap: 5px;
   padding-top: 6px!important;
   padding-bottom: 6px!important;
-  border-bottom: 1px solid var(--tv-bg-2);
+  /* border-bottom: 1px solid var(--tv-bg-2); */
 }
 
 
