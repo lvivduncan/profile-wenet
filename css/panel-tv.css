@@ -25,16 +25,20 @@
   color: var(--gray) !important;
 }
 
-.text-center{
-    text-align: center!important;
+.color-gray {
+  color: var(--lightgray) !important;
 }
 
-.text-left{
-    text-align: left!important;
+.text-center {
+  text-align: center !important;
 }
 
-.text-right{
-    text-align: right!important;
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
 }
 
 #panel {
@@ -891,10 +895,10 @@ todo: перевірити де використовується!
   grid-template-columns: 300px repeat(2, 1fr) !important;
 }
 
-@media(max-width: 500px){
-    #rate-tv-data ul {
-        grid-template-columns: auto repeat(2, 1fr) !important;
-      }
+@media (max-width: 500px) {
+  #rate-tv-data ul {
+    grid-template-columns: auto repeat(2, 1fr) !important;
+  }
 }
 
 #rate-tv-data ul li:nth-child(3) p {
@@ -908,7 +912,7 @@ todo: перевірити де використовується!
 #rate-tv-type {
   border-top: 1px solid var(--tv-bg-2);
 }
-
+/* 
 #rate-tv-type label {
   cursor: pointer;
   display: inline-block;
@@ -938,7 +942,7 @@ todo: перевірити де використовується!
 #rate-tv-type input[type="radio"]:checked ~ label::before {
   content: "";
   background: url(../images/check.svg);
-}
+} */
 
 /* #rate-tv-type input[type="radio"]:checked~label::after {
     content: "";
@@ -1006,28 +1010,28 @@ todo: перевірити де використовується!
 history-payment
 //////////// */
 
-#panel #history-payment ul {
+#history-payment ul {
   display: grid;
   grid-template-columns: 1fr 2fr repeat(2, 1fr) 2fr;
   grid-template-areas: "history-payment-1 history-payment-1 history-payment-1 history-payment-1 history-payment-1" "history-payment-2 history-payment-3 history-payment-4 history-payment-5 history-payment-6";
   grid-gap: 5px;
   padding-bottom: 12px;
-  margin: 0;
+  margin: 0!important;
   padding-top: 0;
   transition: background 0.5s;
 }
 
-#panel #history-payment ul:hover {
+#history-payment ul:hover {
   background: var(--panel-hover);
 }
 
-#panel #history-payment li {
-  padding: 5px;
+#history-payment li {
+  padding: 5px!important;
 }
 
 /* на всю ширину */
 
-#panel #history-payment li:nth-child(1) {
+#history-payment li:nth-child(1) {
   grid-area: history-payment-1;
   background: var(--tv-bg-2);
   font-size: 13px;
@@ -1038,49 +1042,49 @@ history-payment
 
 /* час */
 
-#panel #history-payment li:nth-child(2) {
+#history-payment li:nth-child(2) {
   grid-area: history-payment-2;
 }
 
 /* опис */
 
-#panel #history-payment li:nth-child(3) {
+#history-payment li:nth-child(3) {
   grid-area: history-payment-3;
 }
 
 /* сума */
 
-#panel #history-payment li:nth-child(4) {
+#history-payment li:nth-child(4) {
   grid-area: history-payment-4;
   text-align: right;
 }
 
 /* залишок */
 
-#panel #history-payment li:nth-child(5) {
+#history-payment li:nth-child(5) {
   grid-area: history-payment-5;
   text-align: right;
 }
 
 /* примітка */
 
-#panel #history-payment li:nth-child(6) {
+#history-payment li:nth-child(6) {
   grid-area: history-payment-6;
-  padding-left: 30px;
+  padding-left: 30px!important;
 }
 
-#panel #history-payment li b {
+#history-payment li b {
   font-weight: 500;
 }
 
-#panel #history-payment li small {
+#history-payment li small {
   display: block;
   margin: 5px 0 0;
 }
 
 /* у заголовка інше розташування */
 
-#panel #history-payment-head {
+#history-payment-head {
   color: var(--lightgray);
   /* history-payment-head-1 -- горизонтальний блок відсутній */
   grid-template-areas: "history-payment-head-2 history-payment-head-3 history-payment-head-4 history-payment-head-5 history-payment-head-6" !important;
@@ -1089,43 +1093,43 @@ history-payment
   grid-gap: 0 5px !important;
 }
 
-#panel #history-payment-head:hover {
+#history-payment-head:hover {
   background: none !important;
 }
 
-#panel #history-payment-head li {
-  color: var(--lightgray);
+#history-payment-head li {
+  color: var(--lightgray)!important;
 }
 
-#panel #history-payment-head li:nth-child(1) {
+#history-payment-head li:nth-child(1) {
   grid-area: history-payment-head-2;
   background: none !important;
   border: none !important;
 }
 
-#panel #history-payment-head li:nth-child(2) {
+#history-payment-head li:nth-child(2) {
   grid-area: history-payment-head-3;
 }
 
-#panel #history-payment-head li:nth-child(3) {
+#history-payment-head li:nth-child(3) {
   grid-area: history-payment-head-4;
   text-align: right;
 }
 
-#panel #history-payment-head li:nth-child(4) {
+#history-payment-head li:nth-child(4) {
   grid-area: history-payment-head-5;
 }
 
-#panel #history-payment-head li:nth-child(5) {
+#history-payment-head li:nth-child(5) {
   grid-area: history-payment-head-6;
   text-align: left;
-  padding-left: 30px;
+  padding-left: 30px!important;
 }
 
 /* на малому екрані додаємо before зі заголовками */
 
 @media (max-width: 776px) {
-  #panel #history-payment ul {
+  #history-payment ul {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "history-payment-1 history-payment-1" "history-payment-3 history-payment-2" "history-payment-4 history-payment-4" "history-payment-5 history-payment-5" "history-payment-6 history-payment-6";
     padding: 0 0 10px;
@@ -1138,10 +1142,10 @@ history-payment
     display: block;
     float: left;
   }
-  #panel #history-payment li:nth-child(2) {
+  #history-payment li:nth-child(2) {
     text-align: right;
   }
-  #panel #history-payment li:nth-child(3) {
+  #history-payment li:nth-child(3) {
     text-align: left;
   }
   #history-payment li:nth-child(4)::before {
@@ -1153,7 +1157,7 @@ history-payment
   #history-payment li:nth-child(6)::before {
     content: "Примітка: ";
   }
-  #panel #history-payment li:nth-child(6) {
+  #history-payment li:nth-child(6) {
     padding-left: 5px;
     text-align: right;
   }
@@ -1199,36 +1203,34 @@ pay.html
 ///// */
 
 #select-pay {
-  display: grid!important;
-  grid-template-columns: repeat(4,1fr);
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 5px;
-  padding-top: 6px!important;
-  padding-bottom: 6px!important;
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
   /* border-bottom: 1px solid var(--tv-bg-2); */
 }
 
-
-@media(max-width: 776px){
-    #select-pay {
-        grid-template-columns: repeat(2,1fr);
-    }
+@media (max-width: 776px) {
+  #select-pay {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-@media(max-width: 400px){
-    #select-pay {
-        grid-template-columns: 1fr;
-    }
+@media (max-width: 400px) {
+  #select-pay {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* блоки з кнопками */
-#select-pay > span{
+#select-pay > span {
   font-size: 13px;
   display: flex;
   align-items: stretch;
   align-content: center;
   justify-content: center;
 }
-
 
 #select-pay label {
   font-size: 13px;
@@ -1257,43 +1259,125 @@ pay.html
 
 /* описи */
 #select-quotes {
-    padding: 6px 0;
-    border-bottom: 1px solid var(--tv-bg-2);
+  padding: 6px 0;
+  border-bottom: 1px solid var(--tv-bg-2);
 }
 
-#select-quotes div{
-    font-size: 13px;
+#select-quotes div {
+  font-size: 13px;
 }
 
-#select-quotes .text-center{
-    padding-left: 20px;
-    padding-right: 20px;
+#select-quotes .text-center {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* тариф */
-#select-rate{
-    padding: 6px 0;
-    border-bottom: 1px solid var(--tv-bg-2);
+#select-rate {
+  padding: 6px 0;
+  border-bottom: 1px solid var(--tv-bg-2);
 }
 
 /* у цьому блоці списки оптитмізовані інакше */
-@media(max-width: 776px){
-    #select-rate ul.plus1 {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    #select-rate ul.plus1 li:nth-child(1){
-        text-align: left;    
-    }
-    #select-rate ul.plus1 li:nth-child(2){
-        text-align: center;
-    }
-    #select-rate ul.plus1 li:nth-child(3){
-        text-align: right;
-    }
+@media (max-width: 776px) {
+  #select-rate ul.plus1 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #select-rate ul.plus1 li:nth-child(1) {
+    text-align: left;
+  }
+  #select-rate ul.plus1 li:nth-child(2) {
+    text-align: center;
+  }
+  #select-rate ul.plus1 li:nth-child(3) {
+    text-align: right;
+  }
 }
 
-@media(max-width: 400px){
-    /* #select-rate ul.plus1 {
+@media (max-width: 400px) {
+  /* #select-rate ul.plus1 {
         grid-template-columns: auto repeat(2, 1fr);
     } */
+}
+
+/* //////////////
+all-services.html
+////////////// */
+
+#all-services{
+  padding: 6px!important;
+}
+
+#all-services ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+  transition: background 0.5s;
+}
+
+#all-services ul:hover {
+  background: var(--panel-hover);
+}
+
+#all-services ul.head,
+#all-services ul.head:hover {
+  background: var(--tv-bg-2);
+  font-size: 13px;
+  font-weight: 500;
+  border-top: 1px solid var(--panel-border);
+  border-bottom: 1px solid var(--panel-border);
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin: 6px 0;
+}
+
+#all-services li {
+  padding: 5px;
+}
+
+#all-services input{
+  width: 100%;
+}
+
+#all-services li b {
+  font-weight: 500;
+}
+
+#all-services li small {
+  display: block;
+  margin: 5px 0 0;
+}
+
+
+
+/* чекбокси юзаються у 2 шаблонах -- виніс в окремий клас */
+.panel-check label {
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+}
+
+.panel-check label::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  position: relative;
+  top: 2px;
+}
+
+.panel-check input[type="radio"] {
+  display: none;
+}
+
+.panel-check input[type="radio"]:checked ~ label {
+  color: var(--green);
+  border-color: var(--green);
+}
+
+.panel-check input[type="radio"]:checked ~ label::before {
+  content: "";
+  background: url(../images/check.svg);
 }
