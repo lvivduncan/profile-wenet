@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="qgyYomFZea8uMtJ1axkPwXzk8ZlLy_dU7tiHSOoH-WY" />
 
-    <<!-- <link rel="stylesheet" href="https://wenet.lviv.ua/site/templates/css/style.css"> -->
+    <!-- <link rel="stylesheet" href="https://wenet.lviv.ua/site/templates/css/style.css"> -->
         <link rel="stylesheet" href="css/style.css">
 
         <!-- <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
@@ -82,12 +82,16 @@
             </ul>
         </div>
     </div>
-    <!-- <div class="wrap"> -->
+
     <main id="page" role="main" class="panel-wrapper">
 
         <section id="panel">
             <div id="panel-aside">
                 <h1>Особистий кабінет</h1>
+                <aside id="aside-balance">
+                    <p><span>Ваш баланс: <b>270</b> грн</span> <a href="">Поповнити</a></p>
+                    <p>Дійсний до: <strong>20-09-2020</strong></p>
+                </aside>
                 <aside id="aside-nav">
                     <ul class="levus-aside-menu">
                         <li><a href="#main" class="current">Головна</a></li>
@@ -126,60 +130,85 @@
                 </aside>
             </div>
 
-            <div id="panel-content">
+            <div id="panel-content">   
 
-                <h4>Оберіть спосіб поповнення (оформив блоками)</h4>
-                <section class="block-3">
-                    <a href="">Миттєвий платіж LiqPay (банківська картка)</a>
-                    <a href="">Поповнення ваучером</a>
-                    <a href="">Регулярний платіж</a>
-                    <a href="">Миттєві поповнення</a>
-                    <a href="">Банківські реквізити</a>
-                </section>
-
-                <h4>Оберіть спосіб поповнення (блоками з бордером в 1 рядок без переносу)</h4>
-                <section class="block-flex">
-                    <a href="">Миттєвий платіж LiqPay (банківська картка)</a>
-                    <a href="">Поповнення ваучером</a>
-                    <a href="">Регулярний платіж</a>
-                    <a href="">Миттєві поповнення</a>
-                    <a href="">Банківські реквізити</a>
-                </section>
-
-                <h4>Оберіть спосіб поповнення (блоками з бордером)</h4>
-                <section class="block-3-border">
-                    <a href="">Миттєвий платіж LiqPay (банківська картка)</a>
-                    <a href="">Поповнення ваучером</a>
-                    <a href="">Регулярний платіж</a>
-                    <a href="">Миттєві поповнення</a>
-                    <a href="">Банківські реквізити</a>
-                </section>
-
-                <h4>Оберіть спосіб поповнення (списком)</h4>
-                <section class="list">
-                    <a href="">Миттєвий платіж LiqPay (банківська картка)</a>
-                    <a href="">Поповнення ваучером</a>
-                    <a href="">Регулярний платіж</a>
-                    <a href="">Миттєві поповнення</a>
-                    <a href="">Банківські реквізити</a>
-                </section>
-
-                <h4>Оберіть спосіб поповнення (списком з маркером)</h4>
-                <section class="list">
-                    <ul>
-                        <li><a href="">Миттєвий платіж LiqPay (банківська картка)</a></li>
-                        <li><a href="">Поповнення ваучером</a></li>
-                        <li><a href="">Регулярний платіж</a></li>
-                        <li><a href="">Миттєві поповнення</a></li>
-                        <li><a href="">Банківські реквізити</a></li>
-                    </ul>
+                <!-- <h4>Оберіть спосіб поповнення</h4> -->
+                <section>
+                    <!-- <div id="select-pay"> -->
+                        <ul>
+                            <li>Оберіть спосіб поповнення:</li>
+                            <li id="select-pay">
+                                <span><input type="radio" name="select-pay" id="select-pay-1"><label for="select-pay-1">Платіж LiqPay</label></span>
+                                <span><input type="radio" name="select-pay" id="select-pay-2"><label for="select-pay-2">Поповнення ваучером</label></span>
+                                <span><input type="radio" name="select-pay" id="select-pay-3"><label for="select-pay-3">Регулярний платіж</label></span>
+                                <span><input type="radio" name="select-pay" id="select-pay-5"><label for="select-pay-5">Банківські реквізити</label></span>  
+                                
+                            </li>
+                        </ul>                        
+                    <!-- </div> -->
+                    <div id="select-quotes">
+                        <div>
+                            <p class="color-red"><b>Миттєвий платіж LiqPay</b> Ваша облікова дата зняття абонплати 05.09.2020. Цей період менший періоду надання платної послуги ОмегаTV Ефір. Для надання послуги у повному обсязі, необхідно зробити пролонгацію основної послуги LV-070Mbps-100 (Базовий)на 1 днів. Вартість пролонгації: 3.23 грн.
+                            </p>
+                            
+                            <p class="text-center">Поцентровано: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero accusantium aut officiis repellat minus quis unde quod commodi maxime! Ab atque dignissimos veritatis minima vitae quasi quia ut, explicabo minus.</p>
+                            <ul class="plus1">
+                                <li>Сума поповнення (грн)</li>
+                                <li><input type="text" name="" id="" value="510"></li>
+                                <li><button class="blue">Поповнити</button></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p><b>Поповнення ваучером</b>  Ваша облікова дата зняття абонплати 05.09.2020. Цей період менший періоду надання платної послуги ОмегаTV Ефір. Для надання послуги у повному обсязі, необхідно зробити пролонгацію основної послуги LV-070Mbps-100 (Базовий)на 1 днів. Вартість пролонгації: 3.23 грн.
+                            </p>
+                            <ul class="plus1">
+                                <li>Код ваучера</li>
+                                <li><input type="text" name="" id=""></li>
+                                <li><button class="blue">Поповнити</button></li>
+                            </ul>
+                            <p>Рекомендована сума платежу 200 грн</p>
+                        </div>
+                        <div>
+                            <p><b>Регулярний платіж</b> Ваша облікова дата зняття абонплати 05.09.2020. Цей період менший періоду надання платної послуги ОмегаTV Ефір. Для надання послуги у повному обсязі, необхідно зробити пролонгацію основної послуги LV-070Mbps-100 (Базовий)на 1 днів. Вартість пролонгації: 3.23 грн.
+                            </p>
+                        </div>
+                        <div>
+                            <p><b>Банківські реквізити</b> Ваша облікова дата зняття абонплати 05.09.2020. Цей період менший періоду надання платної послуги ОмегаTV Ефір. Для надання послуги у повному обсязі, необхідно зробити пролонгацію основної послуги LV-070Mbps-100 (Базовий)на 1 днів. Вартість пролонгації: 3.23 грн.
+                            </p>
+                        </div> 
+                    </div> 
+                    <div id="select-rate">
+                        <ul class="plus1">
+                            <li>Інтернет</li>
+                            <li>Оптимальний</li>
+                            <li><b>100</b> грн</li>
+                        </ul>
+                        <ul class="plus1">
+                            <li>ІР-адреса</li>
+                            <li>172.0.0.1</li>
+                            <li><b>200</b> грн</li>
+                        </ul>
+                        <ul class="plus1">
+                            <li>Телебачення</li>
+                            <li>Новини</li>
+                            <li><b>0</b></li>
+                        </ul>
+                        <ul class="plus1">
+                            <li>Послуга кредит</li>
+                            <li><span class="color-red">протерміновано</span></li>
+                            <li><b>10</b> грн</li>
+                        </ul>
+                        <ul class="plus1">
+                            <li>Разом</li>
+                            <li></li>
+                            <li><b>666</b> грн</li>
+                        </ul>
+                    </div>
                 </section>
 
             </div>
         </section>
     </main>
-    <!-- </div> -->
-
 
     <footer role="contentinfo" id="footer">
         <div class="wrap">

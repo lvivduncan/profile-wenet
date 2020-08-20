@@ -162,7 +162,7 @@ fadeScroll('#levus-fadescroll', 600, 800);
     });
 
     // клік на червоні кнопці (відміна) закриває порівнняня
-    back.addEventListener('click', e => {
+    back && back.addEventListener('click', e => {
         e.preventDefault();
         serviceTvContent.style.display = serviceTvDevice.style.display = serviceTvPlaylist.style.display = '';
         serviceTvContentChange.style.display = 'none';
@@ -181,4 +181,20 @@ fadeScroll('#levus-fadescroll', 600, 800);
     intv && intv.addEventListener('change', () => approveServiceSms.style.display = '');
 
     approveServiceSms && approveServiceSms.children[1].firstChild.addEventListener('click', () => approveServiceSms.style.display = 'none');
+}
+
+// pay.html
+{
+    // кнопки
+    const selectPay = document.querySelectorAll('#select-pay label');
+    // пояснення до кнопок
+    const selectQuotes = document.querySelectorAll('#select-quotes div');
+
+    // ховаємо дані
+    selectQuotes.forEach(item => item.style.display = 'none');
+
+    selectPay.forEach((item, i) => item.addEventListener('click', () => {
+        selectQuotes.forEach(item => item.style.display = 'none');
+        selectQuotes[i].style.display = '';
+    }))
 }
