@@ -1307,7 +1307,7 @@ all-services.html
 #all-services{
   padding: 6px!important;
 }
-
+/* 
 #all-services ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1317,10 +1317,14 @@ all-services.html
 
 #all-services ul:hover {
   background: var(--panel-hover);
-}
+} */
 
 #all-services ul.head,
 #all-services ul.head:hover {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+
   background: var(--tv-bg-2);
   font-size: 13px;
   font-weight: 500;
@@ -1348,6 +1352,46 @@ all-services.html
   margin: 5px 0 0;
 }
 
+#all-services .description{
+  margin: 10px 5px;
+  font-size: 13px;
+}
+
+/* блок з даними, зліва -- дані, справа кнопка "змінити" */
+#all-services .service-data{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+}
+
+#all-services .service-data.off{
+  display: none;
+}
+
+/* дані зліва */
+#all-services .service-data ul{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 5px;
+}
+
+/* форми підтвердження */
+#all-services .approve{}
+#all-services .approve.off{
+  display: none;
+}
+
+
+
+/* блок з кнопкою "змінити" */
+.service-change{
+
+}
+
+.service-change a{
+  font-size: 13px;
+  padding: 5px;
+}
 
 
 /* чекбокси юзаються у 2 шаблонах -- виніс в окремий клас */
@@ -1393,11 +1437,11 @@ all-services.html
 }
 
 /* відключити (підсвітка зелена) */
-.turn-on{
+.turn.off{
   color: var(--green);
 }
 
-.turn-on::before{
+.turn.off::before{
   content: 'Підключити';
 }
 
@@ -1412,10 +1456,15 @@ all-services.html
 }
 
 /* послуга НЕ підключена */
-.service-check.color-gray{
+.service-check.off{
   color: var(--lightgray);
 }
 
-.service-check.color-gray::before{
+.service-check.off::before{
   content: 'Послугу не підключено';
+}
+
+/* ховаємо опис */
+.description.off{
+  display: none;
 }

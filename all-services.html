@@ -134,23 +134,32 @@
 
                 <h4>Усі послуги</h4>
                 <section id="all-services">
+
                     <!-- послуга 1 -->
                     <div class="service">
                         <ul class="head">
                             <li>IP-адреса</li>
-                            <li><span class="service-check color-gray"></span></li>
-                            <li><a href="" class="turn turn-on"></a></li>
-                        </ul>
-                        <ul>
-                            <li>Абонплата</li>
-                            <li><b>70</b> грн/міс</li>
-                            <li></li>
-                            
-                            <li>Ваша айпі-адреса</li>
-                            <li>172.0.0.1</li>
-                            <li></li>
+                            <li><span class="service-check off"></span></li>
+                            <li><a href="" class="turn off"></a></li>
                         </ul>
 
+                        <!-- опис неактивної послуги  -->
+                        <div class="description">
+                            <p><b>IP-адреса.</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit iure nam reiciendis beatae inventore, ab labore iusto magni porro incidunt earum asperiores odit maiores quae quidem, possimus nemo hic rerum! <b>Ціна:</b> 10 грн/міс</p>
+                        </div>
+
+                        <div class="service-data off">
+                            <ul>
+                                <li>Абонплата</li>
+                                <li><b>70</b> грн/міс</li>                            
+                                
+                                <li>Ваша айпі-адреса</li>
+                                <li>172.0.0.1</li>
+                            </ul>
+                            <div class="service-change">
+                                <a href="">Змінити</a>
+                            </div>
+                        </div>                       
 
                         <ul class="approve">
                             <li>Для підтвердження зміни послуги введіть пароль та натисніть "Підтвердити"</li>
@@ -164,36 +173,44 @@
                     <div class="service">
                         <ul class="head">
                             <li>SMS-нагадування</li>
-                            <li><span class="service-check"></span></li>
-                            <li><a href="" class="turn"></a></li>
+                            <li><span class="service-check off"></span></li>
+                            <li><a href="" class="turn off"></a></li>
                         </ul>
-                        <ul>
-                            <li>Абонплата</li>
-                            <li><b>0</b> грн/міс</li>
-                            <li></li>
-                            
-                            <li>Номер телефону</li>
-                            <li><input type="text" value="(067) 123-45-67"></li>
-                            <li><a href="">Змінити</a></li>
-                            
-                            <li>Період нагадування</li>
-                            <li id="change-time" class="panel-check">
-                                <span>
-                                    <input type="radio" name="change-time" id="change-time-morning" checked><label for="change-time-morning">Ранок</label>
-                                </span>
-                                <span>
-                                    <input type="radio" name="change-time" id="change-time-afternoon"><label for="change-time-afternoon">Обід</label>
-                                </span>
-                                <span>
-                                    <input type="radio" name="change-time" id="change-time-evening"><label for="change-time-evening">Вечір</label>
-                                </span>
-                            </li>
-                            <li><a href="">Змінити</a></li>
-    
-                            <li>Днів до припинення надання послуг</li>
-                            <li><input type="number" min="1" value="3"></li>
-                            <li></li>
-                        </ul>
+
+                        <!-- опис неактивної послуги  -->
+                        <div class="description">
+                            <p><b>Послуга 5.</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit iure nam reiciendis beatae inventore, ab labore iusto magni porro incidunt earum asperiores odit maiores quae quidem, possimus nemo hic rerum! <b>Ціна:</b> 10 грн/міс</p>
+                        </div>
+
+                        <!-- дані -->
+                        <div class="service-data off">
+                            <ul>
+                                <li>Абонплата</li>
+                                <li><b>0</b> грн/міс</li>
+                                
+                                <li>Номер телефону</li>
+                                <li><input type="text" placeholder="(067) 123-45-67"></li>
+                                
+                                <li>Період нагадування</li>
+                                <li id="change-time" class="panel-check">
+                                    <span>
+                                        <input type="radio" name="change-time" id="change-time-morning" checked><label for="change-time-morning">Ранок</label>
+                                    </span>
+                                    <span>
+                                        <input type="radio" name="change-time" id="change-time-afternoon"><label for="change-time-afternoon">Обід</label>
+                                    </span>
+                                    <span>
+                                        <input type="radio" name="change-time" id="change-time-evening"><label for="change-time-evening">Вечір</label>
+                                    </span>
+                                </li>
+                                
+                                <li>Днів до припинення надання послуг</li>
+                                <li><input type="number" min="1" value="3"></li>
+                            </ul>
+                            <div class="service-change">
+                                <a href="">Змінити</a>
+                            </div>
+                        </div>
 
                         <ul class="approve">
                             <li>Для підтвердження зміни послуги введіть пароль та натисніть "Підтвердити"</li>
@@ -207,18 +224,31 @@
                     <div class="service">
                         <ul class="head">
                             <li>Послуга 3</li>
-                            <li><span class="service-check color-gray"></span></li>
-                            <li><a href="" class="turn turn-on"></a></li>
+                            <li><span class="service-check off"></span></li>
+                            <li><a href="" class="turn off"></a></li>
                         </ul>
-                        <ul>
-                            <li>Опис</li>
-                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam nam quod doloribus?</li>
-                            <li></li>
-    
-                            <li>Абонплата</li>
-                            <li><b>70</b> грн/міс</li>
-                            <li></li>
-                        </ul>
+                        
+                        <!-- опис неактивної послуги  -->
+                        <div class="description">
+                            <p><b>Послуга 3.</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore aliquid voluptate ea. Totam, maxime explicabo ut illo ab assumenda perferendis vel odio itaque adipisci sapiente consequatur fuga facilis fugit iure, quisquam, est autem laboriosam ducimus voluptate praesentium animi? Quas provident repudiandae illum esse sapiente placeat ab, ipsam numquam ex mollitia! <b>Ціна:</b> 10 грн/міс</p>
+                        </div>
+
+                        <!-- обовязковий блок з описами -->
+                        <div class="service-data off">
+                            <ul>
+                                <li>Param1</li>
+                                <li>Param2</li>
+                                <li>Param1</li>
+                                <li>Param2</li>
+                                <li>Param1</li>
+                                <li>Param2</li>
+                                <li>Param1</li>
+                                <li>Param2</li>
+                            </ul>
+                            <div class="service-change">
+                                <a href="">Змінити</a>
+                            </div>
+                        </div>
 
                         <ul class="approve">
                             <li>Для підтвердження зміни послуги введіть пароль та натисніть "Підтвердити"</li>
@@ -232,18 +262,25 @@
                     <div class="service">
                         <ul class="head">
                             <li>Послуга 4</li>
-                            <li><span class="service-check color-gray"></span></li>
-                            <li><a href="" class="turn turn-on"></a></li>
+                            <li><span class="service-check off"></span></li>
+                            <li><a href="" class="turn off"></a></li>
                         </ul>
-                        <ul>
-                            <li>Опис</li>
-                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam nam quod doloribus?</li>
-                            <li></li>
+                        
+                        <!-- опис неактивної послуги  -->
+                        <div class="description">
+                            <p><b>Послуга 4.</b> Ducimus temporibus ea incidunt esse dolore praesentium quis repellendus placeat sit repellat sapiente doloremque, et minima corrupti dolores vel itaque architecto! Quasi quae error quibusdam corrupti, blanditiis ipsa et expedita laboriosam hic nemo facilis totam. Illo porro laborum excepturi voluptatibus veniam error quo ut culpa quas quisquam, asperiores eligendi labore delectus quaerat minima molestias, sunt magni officiis voluptatem modi, tempore explicabo ullam! Quaerat soluta, nostrum fuga facilis ducimus accusantium. Officiis incidunt quam maiores. <b>Ціна:</b> 10 грн/міс</p>
+                        </div>
 
-                            <li>Абонплата</li>
-                            <li><b>70</b> грн/міс</li>
-                            <li></li>
-                        </ul>
+                        <!-- обовязковий блок з описами -->
+                        <div class="service-data off">
+                            <ul>
+                                <li>Param1</li>
+                                <li>Param2</li>
+                            </ul>
+                            <div class="service-change">
+                                <a href="">Змінити</a>
+                            </div>
+                        </div>
 
                         <ul class="approve">
                             <li>Для підтвердження зміни послуги введіть пароль та натисніть "Підтвердити"</li>
@@ -257,18 +294,25 @@
                     <div class="service">
                         <ul class="head">
                             <li>Послуга 5</li>
-                            <li><span class="service-check color-gray"></span></li>
-                            <li><a href="" class="turn turn-on"></a></li>
+                            <li><span class="service-check off"></span></li>
+                            <li><a href="" class="turn off"></a></li>
                         </ul>
-                        <ul>
-                            <li>Опис</li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus asperiores facilis assumenda voluptatem eos neque possimus modi aperiam rem? Officiis!</li>
-                            <li></li>
+                        
+                        <!-- опис неактивної послуги  -->
+                        <div class="description">
+                            <p><b>Послуга 5.</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit iure nam reiciendis beatae inventore, ab labore iusto magni porro incidunt earum asperiores odit maiores quae quidem, possimus nemo hic rerum! <b>Ціна:</b> 10 грн/міс</p>
+                        </div>
 
-                            <li>Абонплата</li>
-                            <li><b>0</b> грн/міс</li>
-                            <li></li>
-                        </ul>
+                        <!-- обовязковий блок з описами -->
+                        <div class="service-data off">
+                            <ul>
+                                <li>Param1</li>
+                                <li>Param2</li>
+                            </ul>
+                            <div class="service-change">
+                                <a href="">Змінити</a>
+                            </div>
+                        </div>
 
                         <ul class="approve">
                             <li>Для підтвердження зміни послуги введіть пароль та натисніть "Підтвердити"</li>

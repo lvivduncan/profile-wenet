@@ -206,35 +206,72 @@ fadeScroll('#levus-fadescroll', 600, 800);
     const turns = allServices && allServices.querySelectorAll('.turn');
     // усі підписи "підключено/не підключено"
     const checks = allServices && allServices.querySelectorAll('.service-check');
+    // усі блоки з описом неактивної послуги
+    const description = allServices && allServices.querySelectorAll('.description');
+    // усі блоки з детальними описами послуги
+    const serviceData = allServices && allServices.querySelectorAll('.service-data');
+
     // усі форми підтвердження
     const approves = allServices && allServices.querySelectorAll('.approve');
     // ховаємо усі форми підтвердження
-    approves && approves.forEach(approve => approve.style.display = 'none');
+    approves && approves.forEach(approve => approve.classList.add('off'));
+
     // кнокпи відміни
     const closeButtons = allServices && allServices.querySelectorAll('button.red');
     // кнопки підтвердження
     const approveButtons = allServices && allServices.querySelectorAll('button.green');
+
     // клік на кнопці "підключити/відключити"
-    turns && turns.forEach((turn, i) => turn.addEventListener('click', function(e) {
+    turns && turns.forEach((turn, i) => turn.addEventListener('click', e => {
         e.preventDefault();
+
+        // кладемо тимчасове значення
+        // const approve = approves[i].classList.contains('off');
+        
         // ховаємо всі
-        approves.forEach(approve =>  approves[i] !== i && (approve.style.display = 'none'));
-        // показуємо наш
-        approves[i].style.display = '';
+        // approves.forEach(approve => approves[i] !== i && (approve.classList.add('off')));
+
+        // показуємо або хваємо наш
+        // approve === true ? approves[i].classList.remove('off') : approves[i].classList.add('off');
+        
+
+        approves[i].classList.toggle('off');
+        // міняємо клас у блока з описом 
+        description[i].classList.toggle('off');
+        // ховаємо/показуємо розлогі дані
+        serviceData[i].classList.toggle('off');
     }));
+
     // закриваємо форму
-    closeButtons && closeButtons.forEach(button => button.addEventListener('click', function(e) {
+    closeButtons && closeButtons.forEach((button, i) => button.addEventListener('click', e => {
         e.preventDefault();
-        this.parentNode.parentNode.style.display = 'none';
+       
+        approves[i].classList.toggle('off');
+        // міняємо клас у блока з описом 
+        description[i].classList.toggle('off');
+        // ховаємо/показуємо розлогі дані
+        serviceData[i].classList.toggle('off');
     }));
+
     // підтвердження 
-    approveButtons && approveButtons.forEach((button, i) => button.addEventListener('click', function(e) {
+    approveButtons && approveButtons.forEach((button, i) => button.addEventListener('click', e => {
         e.preventDefault();
-        this.parentNode.parentNode.style.display = 'none';
+
+        approves[i].classList.add('off');
     
+        // поточний стан
+        // const check = checks[i].classList.contains('off');
+
         // міняємо класи (підписи)
-        checks[i].classList.toggle('color-gray');
-        turns[i].classList.toggle('turn-on');
+        checks[i].classList.toggle('off');
+        turns[i].classList.toggle('off');
+        // serviceData[i].classList.toggle('off');
+
+        // if (check === true) {
+        //     serviceData[i].classList.remove('off');
+        // } else {
+        //     serviceData[i].classList.add('off');
+        // }
         
         // TODO: потрібно додати перевірку на правильність ведення пароля
     }));
