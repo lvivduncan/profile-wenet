@@ -857,6 +857,22 @@ todo: перевірити де використовується!
   font-weight: 600;
 }
 
+@media(max-width: 776px){
+  #rate-tv-buttons a {
+    /* display: inline-block; */
+    margin: 5px !important;
+    /* padding: 4px 6px;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--first);
+    text-align: center;
+    border: 1px solid var(--first);
+    border-radius: 3px;
+    color: var(--first);
+    font-weight: 600; */
+  }
+}
+
 /* старий тариф */
 
 #rate-tv-buttons p.current,
@@ -908,6 +924,17 @@ todo: перевірити де використовується!
   line-height: normal;
   display: none;
 }
+
+/* центруємо 2 і 3 колонку (дані для порівняння) */
+@media(max-width: 776px){
+  #panel #rate-tv-data li:nth-child(2),
+  #panel #rate-tv-data li:nth-child(3){
+    text-align: center;
+    padding: 5px 0;
+  }
+}
+
+
 
 /* тип зміни */
 
