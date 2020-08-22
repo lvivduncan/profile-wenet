@@ -332,7 +332,7 @@
   #panel ul.rate-tv {
     grid-template-columns: 100px repeat(2, 1fr);
   }
-  /**/
+
   #panel ul.approve {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "li-1 li-1" "li-3 li-3" "li-2 li-4";
@@ -816,7 +816,9 @@ todo: перевірити де використовується!
   }
 }
 
-/**/
+/*
+нотіси будуть використовуватися?
+*/
 
 #panel .notice {
   display: block;
@@ -833,6 +835,43 @@ todo: перевірити де використовується!
 #panel .notice.error {
   border-color: var(--red);
   color: var(--red);
+}
+
+/* cтартова - стилізація тільки на мобільних */
+@media(max-width: 400px){
+  #panel .home-panel ul.plus1 li:nth-child(1){
+    grid-area: nth-child-1;
+  }
+  #panel .home-panel ul.plus1 li:nth-child(2){
+    grid-area: nth-child-2;
+  }
+  #panel .home-panel ul.plus1 li:nth-child(3){
+    grid-area: nth-child-3;
+  }
+
+  #panel .home-panel ul{
+    grid-template-columns: repeat(2,1fr);
+  }
+  #panel .home-panel ul li{
+    text-align: right;
+  }
+  #panel .home-panel ul li:first-child{
+    text-align: left;
+  }
+
+  #panel .home-panel ul.plus1{
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: 'nth-child-1 nth-child-1' 'nth-child-2 nth-child-3';
+  }
+  #panel .home-panel ul.plus1 li:nth-child(1){
+    text-align: center;
+  }
+  #panel .home-panel ul.plus1 li:nth-child(2){
+    text-align: left;
+  }
+  #panel .home-panel ul.plus1 li:nth-child(3){
+    text-align: right;
+  }
 }
 
 /* кнопки для вибору тарифа */
