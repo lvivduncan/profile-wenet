@@ -1357,42 +1357,43 @@ all-services.html
   font-size: 13px;
 }
 
-/* блок з даними, зліва -- дані, справа кнопка "змінити" */
-#all-services .service-data{
+/* блок з даними, зліва -- дані, справа кнопка "змінити".  */
+#all-services .service-data-edit{
   display: grid;
   grid-template-columns: 2fr 1fr;
   align-items: center;
 }
 
-#all-services .service-data.off{
+#all-services .service-data-edit.off{
   display: none;
 }
 
 /* дані зліва */
-#all-services .service-data ul{
+#all-services .service-data-edit ul{
   display: grid;
   grid-template-columns: repeat(2,1fr);
   grid-gap: 5px;
 }
 
+/* якщо дані тре зробити неактивні для змін */
+#all-services .service-data-edit ul.non-edit{
+  pointer-events: none;
+}
+
 /* форми підтвердження */
-#all-services .approve{}
 #all-services .approve.off{
   display: none;
 }
 
-
-
 /* блок з кнопкою "змінити" */
-.service-change{
-
-}
-
 .service-change a{
   font-size: 13px;
   padding: 5px;
 }
 
+.service-change a.off{
+  display: none;
+}
 
 /* чекбокси юзаються у 2 шаблонах -- виніс в окремий клас */
 .panel-check label {

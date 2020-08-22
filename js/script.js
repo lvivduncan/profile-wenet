@@ -85,7 +85,7 @@ fadeScroll('#levus-fadescroll', 600, 800);
 
     // колонки
     const data = document.querySelectorAll('#rate-tv-data ul li:nth-child(3)');
-    const length = data.length;
+    const length = data.length; // ніде не юзається?
 
     // блоки з даними
     const type = document.querySelector('#rate-tv-type');
@@ -209,7 +209,11 @@ fadeScroll('#levus-fadescroll', 600, 800);
     // усі блоки з описом неактивної послуги
     const description = allServices && allServices.querySelectorAll('.description');
     // усі блоки з детальними описами послуги
-    const serviceData = allServices && allServices.querySelectorAll('.service-data');
+    const serviceDataEdit = allServices && allServices.querySelectorAll('.service-data-edit');
+    // усі блоки, які можуть ставати неактивними
+    const editable = allServices && allServices.querySelectorAll('.service-data-edit ul');
+    // усі кнопки "редагувати (змінити)"
+    const edits = allServices && allServices.querySelectorAll('.service-change a');
 
     // усі форми підтвердження
     const approves = allServices && allServices.querySelectorAll('.approve');
@@ -225,21 +229,11 @@ fadeScroll('#levus-fadescroll', 600, 800);
     turns && turns.forEach((turn, i) => turn.addEventListener('click', e => {
         e.preventDefault();
 
-        // кладемо тимчасове значення
-        // const approve = approves[i].classList.contains('off');
-        
-        // ховаємо всі
-        // approves.forEach(approve => approves[i] !== i && (approve.classList.add('off')));
-
-        // показуємо або хваємо наш
-        // approve === true ? approves[i].classList.remove('off') : approves[i].classList.add('off');
-        
-
         approves[i].classList.toggle('off');
         // міняємо клас у блока з описом 
         description[i].classList.toggle('off');
         // ховаємо/показуємо розлогі дані
-        serviceData[i].classList.toggle('off');
+        serviceDataEdit[i].classList.toggle('off');
     }));
 
     // закриваємо форму
@@ -250,29 +244,42 @@ fadeScroll('#levus-fadescroll', 600, 800);
         // міняємо клас у блока з описом 
         description[i].classList.toggle('off');
         // ховаємо/показуємо розлогі дані
-        serviceData[i].classList.toggle('off');
+        serviceDataEdit[i].classList.toggle('off');
     }));
 
+    // 
+    // кнопка повинна перевіряти, чи не юзається "редагувати"!
+    //
     // підтвердження 
     approveButtons && approveButtons.forEach((button, i) => button.addEventListener('click', e => {
         e.preventDefault();
 
         approves[i].classList.add('off');
-    
-        // поточний стан
-        // const check = checks[i].classList.contains('off');
 
-        // міняємо класи (підписи)
-        checks[i].classList.toggle('off');
-        turns[i].classList.toggle('off');
-        // serviceData[i].classList.toggle('off');
+        // кнопка "редагувати (змінити)" true/false
+        console.log(edits[i].classList.contains('off'))
 
-        // if (check === true) {
-        //     serviceData[i].classList.remove('off');
-        // } else {
-        //     serviceData[i].classList.add('off');
-        // }
+        if (edits[i].classList.contains('off') !== false) {
+            // міняємо класи (підписи)
+            checks[i].classList.toggle('off');
+            turns[i].classList.toggle('off');
+            edits[i].classList.toggle('off');
+        }
+
+        // робимо блоки  активними/неактивними для змін
+        editable[i].classList.toggle('non-edit');
         
         // TODO: потрібно додати перевірку на правильність ведення пароля
+    }));
+
+    // клік на кнопці "редагувати"
+    edits.forEach((edit,i) => edit.addEventListener('click', e => {
+        e.preventDefault();
+
+        // робимо блоки активними/неактивними для змін
+        editable[i].classList.toggle('non-edit');
+
+        // кнопки підтвердження
+        approves[i].classList.toggle('off');
     }));
 }
