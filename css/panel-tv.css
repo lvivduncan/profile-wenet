@@ -888,11 +888,6 @@ todo: перевірити де використовується!
   font-weight: 400;
 }
 
-/* 
-#rate-tv-buttons li:nth-child(2) {
-    text-align: right;
-} */
-
 /* ховаємо додаткові тарифи */
 
 #rate-tv-data {
@@ -1196,6 +1191,12 @@ service-tv.html
   margin-bottom: 6px !important;
   padding-bottom: 6px !important;
   border-bottom: 1px solid var(--tv-bg-2);
+}
+
+@media(max-width: 400px){
+  #service-tv-content li{
+    text-align: center!important;
+  }
 }
 
 #service-tv-content li:nth-child(2) {
