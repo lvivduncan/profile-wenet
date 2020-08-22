@@ -1375,10 +1375,51 @@ all-services.html
   grid-gap: 5px;
 }
 
+
+
 /* якщо дані тре зробити неактивні для змін */
 #all-services .service-data-edit ul.non-edit{
   pointer-events: none;
 }
+
+/* поле телефона */
+#all-services .service-data-edit ul.non-edit #change-phone input{
+  padding: 0;
+  margin-left: 0;
+  background: transparent;
+  border: none;
+  font-size: 13px;
+  text-align: left;
+}
+
+/* поле з кількістю днів */
+#all-services .service-data-edit ul.non-edit #change-days input{
+  padding: 0;
+  margin-left: 0;
+  background: transparent;
+  border: none;
+  font-size: 13px;
+  text-align: left;
+}
+
+#all-services .service-data-edit ul.non-edit #change-time input:not(:checked)~label {
+  display: none;
+}
+
+#all-services .service-data-edit ul.non-edit #change-time input~label {
+  border: none;
+  color: var(--dark);
+  padding-left: 0;
+}
+
+#all-services .service-data-edit ul.non-edit #change-time input~label::before {
+  display: none;
+}
+
+
+
+
+
 
 /* форми підтвердження */
 #all-services .approve.off{

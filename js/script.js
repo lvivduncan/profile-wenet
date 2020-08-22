@@ -215,6 +215,10 @@ fadeScroll('#levus-fadescroll', 600, 800);
     // усі кнопки "редагувати (змінити)"
     const edits = allServices && allServices.querySelectorAll('.service-change a');
 
+    // масив, в який кладемо статус послуги
+    const status = [];
+    edits.forEach(item => status.push(false));
+
     // усі форми підтвердження
     const approves = allServices && allServices.querySelectorAll('.approve');
     // ховаємо усі форми підтвердження
@@ -247,27 +251,30 @@ fadeScroll('#levus-fadescroll', 600, 800);
         serviceDataEdit[i].classList.toggle('off');
     }));
 
-    // 
-    // кнопка повинна перевіряти, чи не юзається "редагувати"!
-    //
     // підтвердження 
     approveButtons && approveButtons.forEach((button, i) => button.addEventListener('click', e => {
         e.preventDefault();
 
         approves[i].classList.add('off');
 
-        // якщо послуга підключена, то прапорці не міняємо, а просто закриваємо форму з кнопками
-        if (edits[i].classList.contains('off') !== false) {
-            // міняємо класи (підписи)
-            checks[i].classList.toggle('off');
-            turns[i].classList.toggle('off');
-            edits[i].classList.toggle('off');
-        }
+        if (status[i] === false) {
+            if (edits[i].classList.contains('off') !== false) {
+                checks[i].classList.remove('off');
+                turns[i].classList.remove('off');  
+            } else{
+                checks[i].classList.add('off');
+                turns[i].classList.add('off');  
+            }
+        } 
 
+        // кнопка редагування
+        edits[i].classList.toggle('off');
+        
         // робимо блоки  активними/неактивними для змін
         editable[i].classList.toggle('non-edit');
         
         // TODO: потрібно додати перевірку на правильність ведення пароля
+
     }));
 
     // клік на кнопці "редагувати"
@@ -279,5 +286,10 @@ fadeScroll('#levus-fadescroll', 600, 800);
 
         // кнопки підтвердження
         approves[i].classList.toggle('off');
+
+        // ховаємо кнопку "редагувати"
+        edits[i].classList.toggle('off');
+
+        status[i] != status[i];
     }));
 }
