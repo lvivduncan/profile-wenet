@@ -256,9 +256,7 @@ fadeScroll('#levus-fadescroll', 600, 800);
 
         approves[i].classList.add('off');
 
-        // кнопка "редагувати (змінити)" true/false
-        console.log(edits[i].classList.contains('off'))
-
+        // якщо послуга підключена, то прапорці не міняємо, а просто закриваємо форму з кнопками
         if (edits[i].classList.contains('off') !== false) {
             // міняємо класи (підписи)
             checks[i].classList.toggle('off');
