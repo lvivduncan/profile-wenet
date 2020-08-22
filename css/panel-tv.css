@@ -857,19 +857,9 @@ todo: перевірити де використовується!
   font-weight: 600;
 }
 
-@media(max-width: 776px){
+@media(max-width: 996px){
   #rate-tv-buttons a {
-    /* display: inline-block; */
     margin: 5px !important;
-    /* padding: 4px 6px;
-    text-decoration: none;
-    cursor: pointer;
-    color: var(--first);
-    text-align: center;
-    border: 1px solid var(--first);
-    border-radius: 3px;
-    color: var(--first);
-    font-weight: 600; */
   }
 }
 
