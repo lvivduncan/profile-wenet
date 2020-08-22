@@ -1119,13 +1119,32 @@ service-tv.html
 }
 
 @media(max-width: 400px){
-  #service-tv-content li{
-    text-align: center!important;
+  #service-tv-content ul{
+    grid-template-columns: repeat(2,1fr);
   }
 }
 
 #service-tv-content li:nth-child(2) {
   text-align: center;
+}
+
+@media(max-width: 776px){
+  #service-tv-content ul li:nth-child(2) {
+    text-align: right;
+    white-space: nowrap;
+  }
+  #service-tv-content a{
+    margin: 0;
+  }
+}
+
+@media(max-width: 400px){
+  #service-tv-content ul li:first-child{
+    text-align: left;
+  }
+  #service-tv-content ul li:nth-child(2) {
+    text-align: right;
+  }
 }
 
 #service-tv-content .current {
