@@ -845,7 +845,7 @@ todo: перевірити де використовується!
 #rate-tv-buttons p,
 #rate-tv-buttons a {
   display: inline-block;
-  margin: 0 10px 0 0 !important;
+  margin: 0 5px 0 !important;
   padding: 4px 6px;
   text-decoration: none;
   cursor: pointer;
@@ -908,6 +908,10 @@ todo: перевірити де використовується!
   margin: 0;
   line-height: normal;
   display: none;
+}
+
+#rate-tv-data ul.rate-tv li:nth-child(3){
+  padding-left: 0;
 }
 
 /* центруємо 2 і 3 колонку (дані для порівняння) */
@@ -1121,7 +1125,7 @@ service-tv.html
 }
 
 #service-tv-content li:nth-child(2) {
-  text-align: right;
+  text-align: center;
 }
 
 #service-tv-content .current {
