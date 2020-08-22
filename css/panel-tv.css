@@ -1385,7 +1385,7 @@ all-services.html
 /* поле телефона */
 #all-services .service-data-edit ul.non-edit #change-phone input{
   padding: 0;
-  margin-left: 0;
+  margin: 0;
   background: transparent;
   border: none;
   font-size: 13px;
@@ -1409,7 +1409,7 @@ all-services.html
 #all-services .service-data-edit ul.non-edit #change-time input~label {
   border: none;
   color: var(--dark);
-  padding-left: 0;
+  padding: 0;
 }
 
 #all-services .service-data-edit ul.non-edit #change-time input~label::before {
