@@ -919,90 +919,11 @@ todo: перевірити де використовується!
   }
 }
 
-
-
 /* тип зміни */
 
 #rate-tv-type {
   border-top: 1px solid var(--tv-bg-2);
 }
-/* 
-#rate-tv-type label {
-  cursor: pointer;
-  display: inline-block;
-  padding: 5px;
-  border: 1px solid transparent;
-  border-radius: 3px;
-}
-
-#rate-tv-type label::before {
-  content: "";
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  position: relative;
-  top: 2px;
-}
-
-#rate-tv-type input[type="radio"] {
-  display: none;
-}
-
-#rate-tv-type input[type="radio"]:checked ~ label {
-  color: var(--green);
-  border-color: var(--green);
-}
-
-#rate-tv-type input[type="radio"]:checked ~ label::before {
-  content: "";
-  background: url(../images/check.svg);
-} */
-
-/* #rate-tv-type input[type="radio"]:checked~label::after {
-    content: "";
-} */
-
-/* перемикачі */
-/* 
-#panel-content label {
-    cursor: pointer;
-    display: inline-block;
-    padding: 5px;
-    border: 1px solid transparent;
-    border-radius: 3px;
-}
-
-#panel-content label::before {
-    content: "";
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    position: relative;
-    top: 2px;
-}
-
-#panel-content label::after {
-    content: "?";
-}
-
-#panel-content input[type="radio"] {
-    display: none;
-}
-
-#panel-content input[type="radio"]:checked~label {
-    color: var(--green);
-    border-color: var(--green);
-}
-
-#panel-content input[type="radio"]:checked~label::before {
-    content: "";
-    background: url(../images/check.svg);
-}
-
-#panel-content input[type="radio"]:checked~label::after {
-    content: "";
-}
- */
 
 /* підтвердження */
 
@@ -1228,7 +1149,6 @@ pay.html
   grid-gap: 5px;
   padding-top: 6px !important;
   padding-bottom: 6px !important;
-  /* border-bottom: 1px solid var(--tv-bg-2); */
 }
 
 @media (max-width: 776px) {
