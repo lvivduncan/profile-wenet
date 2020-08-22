@@ -79,7 +79,7 @@ fadeScroll('#levus-fadescroll', 600, 800);
 
 }
 
-// зміна тарифу ТБ
+// change-tv.html
 {
     const buttons = document.querySelectorAll('#rate-tv-buttons a');
 
@@ -94,8 +94,6 @@ fadeScroll('#levus-fadescroll', 600, 800);
 
     // кнопка відміни (1 кнопка!)
     const back = document.querySelector('#rate-tv-approve button');
-
-
 
     // змінити тариф
     const serviceTvChange = document.getElementById('service-tv-change');
@@ -144,16 +142,16 @@ fadeScroll('#levus-fadescroll', 600, 800);
 
 
             } else {
-                serviceTvContent.style.display = serviceTvDevice.style.display = serviceTvPlaylist.style.display = '';
+                serviceTvContent.style.display = 
+                    serviceTvDevice.style.display = 
+                        serviceTvPlaylist.style.display = '';
                 serviceTvContentChange.style.display = 'none';
 
             }
 
         });
 
-
     });
-
 
     serviceTvChange && serviceTvChange.addEventListener('click', e => {
         e.preventDefault();
@@ -217,7 +215,7 @@ fadeScroll('#levus-fadescroll', 600, 800);
 
     // масив, в який кладемо статус послуги
     const status = [];
-    edits.forEach(item => status.push(false));
+    edits && edits.forEach(item => status.push(false));
 
     // усі форми підтвердження
     const approves = allServices && allServices.querySelectorAll('.approve');
@@ -278,7 +276,7 @@ fadeScroll('#levus-fadescroll', 600, 800);
     }));
 
     // клік на кнопці "редагувати"
-    edits.forEach((edit,i) => edit.addEventListener('click', e => {
+    edits && edits.forEach((edit,i) => edit.addEventListener('click', e => {
         e.preventDefault();
 
         // робимо блоки активними/неактивними для змін

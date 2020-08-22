@@ -757,7 +757,9 @@ todo: перевірити де використовується!
 }
 
 #panel input[type="number"] {
-  display: inline-block;
+  /* display: inline-block; */
+  display: block;
+  width: 100%;
   padding: 10px 12px;
   margin: 5px;
   font-size: 14px;
