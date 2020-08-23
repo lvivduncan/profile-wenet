@@ -3590,6 +3590,17 @@ body.compensate-for-scrollbar {
     color: #fff;
 }
 
+@media(max-width: 400px){
+    .stat-green,
+    .stat-yellow,
+    .stat-red,
+    .stat-red2,
+    .stat-black,
+    .stat-online{
+        margin: 2px;
+    }
+}
+
 .cabinet-limited {
     white-space: nowrap;
     display: inline-block;
