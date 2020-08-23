@@ -1118,6 +1118,12 @@ service-tv.html
   border-bottom: 1px solid var(--tv-bg-2);
 }
 
+@media(max-width: 400px){
+  #service-tv-header{
+    display: flex!important;
+  }
+}
+
 #service-tv-content {
   margin-bottom: 6px !important;
   padding-bottom: 6px !important;
