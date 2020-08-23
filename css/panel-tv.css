@@ -1,4 +1,4 @@
-/* 3-4-08-2020 -- 14-08-2020*/
+/* 3-4-08-2020 -- 23-08-2020*/
 
 .panel-wrapper {
   padding: 35px 0 75px !important;
@@ -360,14 +360,6 @@
     text-align: center;
   }
 }
-
-/* //////////////////////////////////
-todo: перевірити де використовується!
-////////////////////////////////// */
-/* #panel section li:not(:first-child) a,
-#panel section li:not(:first-child) span {
-  margin: 0 5px;
-} */
 
 #panel li strong {
   font-size: 18px;
@@ -839,48 +831,23 @@ todo: перевірити де використовується!
 
 /* cтартова - стилізація тільки на мобільних */
 @media(max-width: 400px){
-  #panel .home-panel ul.plus1 li:nth-child(1){
-    grid-area: nth-child-1;
-  }
-  #panel .home-panel ul.plus1 li:nth-child(2){
-    grid-area: nth-child-2;
-  }
-  #panel .home-panel ul.plus1 li:nth-child(3){
-    grid-area: nth-child-3;
-  }
-
+ 
   #panel .home-panel ul{
-    grid-template-columns: repeat(2,1fr);
+    display: flex;
   }
   #panel .home-panel ul li{
-    text-align: right;
+    text-align: center;
   }
   #panel .home-panel ul li:first-child{
     text-align: left;
   }
-
-  #panel .home-panel ul.plus1{
-    grid-template-columns: repeat(2,1fr);
-    grid-template-areas: 'nth-child-1 nth-child-1' 'nth-child-2 nth-child-3';
-  }
-  #panel .home-panel ul.plus1 li:nth-child(1){
-    text-align: center;
-  }
-  #panel .home-panel ul.plus1 li:nth-child(2){
-    text-align: left;
-  }
-  #panel .home-panel ul.plus1 li:nth-child(3){
+  #panel .home-panel ul li:last-child{
     text-align: right;
   }
+
 }
 
 /* кнопки для вибору тарифа */
-
-#rate-tv-buttons {
-  /* display: flex; */
-  /* grid-template-columns: 240px repeat(2, 1fr)!important; */
-}
-
 #rate-tv-buttons p,
 #rate-tv-buttons a {
   display: inline-block;
@@ -1296,12 +1263,6 @@ pay.html
   }
 }
 
-@media (max-width: 400px) {
-  /* #select-rate ul.plus1 {
-        grid-template-columns: auto repeat(2, 1fr);
-    } */
-}
-
 /* //////////////
 all-services.html
 ////////////// */
@@ -1309,17 +1270,6 @@ all-services.html
 #all-services{
   padding: 6px!important;
 }
-/* 
-#all-services ul {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 5px;
-  transition: background 0.5s;
-}
-
-#all-services ul:hover {
-  background: var(--panel-hover);
-} */
 
 #all-services ul.head,
 #all-services ul.head:hover {
@@ -1417,11 +1367,6 @@ all-services.html
 #all-services .service-data-edit ul.non-edit #change-time input~label::before {
   display: none;
 }
-
-
-
-
-
 
 /* форми підтвердження */
 #all-services .approve.off{
