@@ -420,7 +420,14 @@
   width: 100%;
   cursor: pointer;
   border-radius: 3px;
+  font-weight: normal!important;
 }
+
+#panel button:hover,
+#panel input[type="submit"]:hover {
+    letter-spacing: normal!important;
+}
+
 
 /* buttons color */
 
