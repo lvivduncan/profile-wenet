@@ -410,7 +410,8 @@
 
 /* кнопки так/ні */
 
-#panel button {
+#panel button,
+#panel input[type="submit"] {
   border: none;
   padding: 10px;
   text-align: center;
@@ -423,17 +424,20 @@
 
 /* buttons color */
 
-#panel button.green {
+#panel button.green,
+#panel input[type="submit"].green {
   border: 1px solid var(--green);
   color: var(--green);
 }
 
-#panel button.red {
+#panel button.red,
+#panel input[type="submit"].red {
   border: 1px solid var(--red);
   color: var(--red);
 }
 
-#panel button.blue {
+#panel button.blue,
+#panel input[type="submit"].blue {
   border: 1px solid var(--first);
   color: var(--first);
 }
@@ -749,7 +753,6 @@
 }
 
 #panel input[type="number"] {
-  /* display: inline-block; */
   display: block;
   width: 100%;
   padding: 10px 12px;
@@ -763,7 +766,7 @@
   text-align: center;
 }
 
-#panel input[type="submit"] {
+/* #panel input[type="submit"] {
   display: inline-block;
   width: 100%;
   margin: 10px 0;
@@ -782,7 +785,7 @@
 
 #panel input[type="submit"]:hover {
   background: var(--green);
-}
+} */
 
 #panel input[type="text"]:focus,
 #panel input[type="password"]:focus,
