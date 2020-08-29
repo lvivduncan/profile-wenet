@@ -421,6 +421,7 @@
   cursor: pointer;
   border-radius: 3px;
   font-weight: normal!important;
+  font-size: 13px!important;
 }
 
 #panel button:hover,
