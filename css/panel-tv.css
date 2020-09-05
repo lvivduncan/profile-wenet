@@ -1,280 +1,289 @@
 /* 3-4-08-2020 -- 23-08-2020*/
 
 .panel-wrapper {
-  padding: 35px 0 75px !important;
+    padding: 35px 0 75px !important;
 }
 
 #panel hr {
-  margin: 6px 0;
-  border: 0;
-  border-top: 1px solid var(--tv-bg-2);
+    margin: 6px 0;
+    border: 0;
+    border-top: 1px solid var(--tv-bg-2);
 }
+
 
 /* 2 кольори для тарифів -- старий і новий */
 
 .color-old {
-  color: var(--lightgray) !important;
-  text-decoration: line-through;
+    color: var(--lightgray) !important;
+    text-decoration: line-through;
 }
 
 .color-new {
-  color: var(--green) !important;
+    color: var(--green) !important;
 }
 
 .color-empty {
-  color: var(--gray) !important;
+    color: var(--gray) !important;
 }
 
 .color-gray {
-  color: var(--lightgray) !important;
+    color: var(--lightgray) !important;
 }
 
 .text-center {
-  text-align: center !important;
+    text-align: center !important;
 }
 
 .text-left {
-  text-align: left !important;
+    text-align: left !important;
 }
 
 .text-right {
-  text-align: right !important;
+    text-align: right !important;
 }
 
 #panel {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-template-areas: "panel-aside panel-content";
-  grid-gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: "panel-aside panel-content";
+    grid-gap: 20px;
 }
 
 @media (max-width: 776px) {
-  #panel {
-    grid-template-columns: 1fr;
-    grid-template-areas: "panel-aside" "panel-content";
-  }
+    #panel {
+        grid-template-columns: 1fr;
+        grid-template-areas: "panel-aside" "panel-content";
+    }
 }
+
 
 /*Особистий кабінет */
 
 #panel h1 {
-  color: var(--dark);
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 16px;
-  font-weight: 400;
-  margin: 5px 0 10px;
+    color: var(--dark);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 5px 0 10px;
 }
 
 #panel h2 {
-  color: var(--dark);
-  text-align: center;
-  font-size: 16px;
-  font-weight: 400;
-  margin: 15px 0 10px;
+    color: var(--dark);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 15px 0 10px;
 }
 
 #panel h4 {
-  font-size: 13px;
-  font-weight: 400;
-  margin: 0 0 10px;
+    font-size: 13px;
+    font-weight: 400;
+    margin: 0 0 10px;
 }
 
 @media (max-width: 500px) {
-  #panel h4 {
-    text-align: center;
-  }
+    #panel h4 {
+        text-align: center;
+    }
 }
 
 #panel h4 span {
-  float: right;
+    float: right;
 }
 
 @media (max-width: 500px) {
-  #panel h4 span {
-    float: none;
-    display: block;
-  }
+    #panel h4 span {
+        float: none;
+        display: block;
+    }
 }
+
 
 /* sidebar */
 
 #panel-aside {
-  grid-area: panel-aside;
+    grid-area: panel-aside;
 }
 
 #panel-aside aside {
-  background: var(--panel);
+    background: var(--panel);
 }
+
 
 /* гроші на рахунку */
 
 #aside-balance {
-  border: 1px solid var(--tv-bg-2);
-  border-radius: 5px;
-  padding: 4px 6px;
-  margin-bottom: 10px;
-  font-size: 13px;
+    border: 1px solid var(--tv-bg-2);
+    border-radius: 5px;
+    padding: 4px 6px;
+    margin-bottom: 10px;
+    font-size: 13px;
 }
 
 #aside-balance p {
-  display: flex;
-  justify-content: space-between;
-  margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
 }
 
 #aside-balance a {
-  color: var(--first);
-  position: relative;
-  top: 3px;
+    color: var(--first);
+    position: relative;
+    top: 3px;
 }
 
 #aside-balance b {
-  color: var(--green);
-  font-weight: 800;
-  font-size: 18px;
-  padding-left: 5px;
+    color: var(--green);
+    font-weight: 800;
+    font-size: 18px;
+    padding-left: 5px;
 }
 
 #aside-balance strong {
-  font-weight: 500;
+    font-weight: 500;
 }
+
 
 /* aside menu */
 
 .levus-aside-menu,
 .levus-aside-menu ul {
-  display: block;
-  border: 1px solid var(--tv-bg-2);
-  border-radius: 5px;
-  padding: 10px;
+    display: block;
+    border: 1px solid var(--tv-bg-2);
+    border-radius: 5px;
+    padding: 10px;
 }
 
 .levus-aside-menu li {
-  display: block;
-  border-top: 1px solid var(--tv-bg-2);
+    display: block;
+    border-top: 1px solid var(--tv-bg-2);
 }
 
 .levus-aside-menu li:first-child {
-  border: none;
+    border: none;
 }
 
 .levus-aside-menu li a {
-  display: block;
-  text-decoration: none;
-  padding: 10px 5px;
-  color: var(--dark);
+    display: block;
+    text-decoration: none;
+    padding: 10px 5px;
+    color: var(--dark);
 }
 
 .levus-aside-menu li a:hover {
-  color: var(--first);
+    color: var(--first);
 }
 
 .levus-aside-menu .parent {
-  position: relative;
-  overflow: hidden;
+    position: relative;
+    overflow: hidden;
 }
 
-.levus-aside-menu .parent > ul {
-  padding: 0;
-  max-height: 0;
-  -webkit-transform-origin: top;
-  transform-origin: top;
-  -webkit-transform: rotateX(90deg);
-  transform: rotateX(90deg);
-  -webkit-transition: max-height 0.1s, transform 0.1s;
-  transition: max-height 0.1s, transform 0.1s;
+.levus-aside-menu .parent>ul {
+    padding: 0;
+    max-height: 0;
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    -webkit-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    -webkit-transition: max-height 0.1s, transform 0.1s;
+    transition: max-height 0.1s, transform 0.1s;
 }
 
-.levus-aside-menu .parent.open > ul {
-  max-height: 100%;
-  -webkit-transform: rotateX(0);
-  transform: rotateX(0);
-  -webkit-transition: max-height 0.2s, transform 0.2s;
-  transition: max-height 0.2s, transform 0.2s;
+.levus-aside-menu .parent.open>ul {
+    max-height: 100%;
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    -webkit-transition: max-height 0.2s, transform 0.2s;
+    transition: max-height 0.2s, transform 0.2s;
 }
 
 .levus-aside-menu .parent li a {
-  padding-left: 20px;
+    padding-left: 20px;
 }
 
 .levus-aside-menu .parent span {
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 38px;
-  height: 38px;
-  background: var(--tv-bg-2);
-  cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 38px;
+    height: 38px;
+    background: var(--tv-bg-2);
+    cursor: pointer;
 }
 
 .levus-aside-menu .parent span::before {
-  content: "+";
-  color: black;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+    content: "+";
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .levus-aside-menu .parent.open span::before {
-  content: "-";
+    content: "-";
 }
+
 
 /* content */
 
 #panel #panel-content {
-  grid-area: panel-content;
+    grid-area: panel-content;
 }
 
 #panel-content p {
-  line-height: 1.6;
-  font-size: 13px;
+    line-height: 1.6;
+    font-size: 13px;
 }
 
 #panel section {
-  border: 1px solid var(--tv-bg-2);
-  border-radius: 5px;
-  padding: 0 10px;
-  margin-bottom: 20px;
-  transition: border 0.5s;
-  background: var(--panel);
+    border: 1px solid var(--tv-bg-2);
+    border-radius: 5px;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    transition: border 0.5s;
+    background: var(--panel);
 }
 
 #panel section:last-child {
-  margin: 0;
+    margin: 0;
 }
 
 #panel section ul {
-  display: grid;
-  margin: 3px 0;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  align-items: center;
+    display: grid;
+    margin: 3px 0;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    align-items: center;
 }
 
+
 /* grids */
+
 
 /* default */
 
 #panel ul,
 #panel ul.standard {
-  grid-template-columns: 300px 1fr;
+    grid-template-columns: 300px 1fr;
 }
 
 #panel ul.plus1 {
-  grid-template-columns: 300px repeat(2, 1fr);
+    grid-template-columns: 300px repeat(2, 1fr);
 }
 
 #panel ul.plus2 {
-  grid-template-columns: 300px repeat(3, 1fr);
+    grid-template-columns: 300px repeat(3, 1fr);
 }
 
 #panel ul.plus3 {
-  grid-template-columns: 240px repeat(4, 1fr);
+    grid-template-columns: 240px repeat(4, 1fr);
 }
+
 
 /* 
   ** блок для тарифів: 1 LI -- 240 по лівому краю, 2 LI чорний і по правому краю, 3 LI зелений і по лівому 
@@ -283,145 +292,149 @@
 */
 
 #panel ul.rate-tv {
-  grid-template-columns: 240px repeat(2, 1fr);
-  grid-gap: 5px;
-  margin: 3px 0;
+    grid-template-columns: 240px repeat(2, 1fr);
+    grid-gap: 5px;
+    margin: 3px 0;
 }
+
 
 /* блок з полем пароля та кнопками  */
 
 #panel ul.approve {
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-areas: "li-1 li-1 li-1" "li-2 li-3 li-4";
-  grid-gap: 5px 10px;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: "li-1 li-1 li-1" "li-2 li-3 li-4";
+    grid-gap: 5px 10px;
 }
 
 @media (max-width: 776px) {
-  #panel ul,
-  #panel ul.standard {
-    grid-template-columns: auto 1fr;
-  }
-  #panel ul.plus1 {
-    grid-template-columns: auto repeat(2, 1fr);
-  }
-  #panel ul.plus2 {
-    grid-template-columns: auto repeat(3, 1fr);
-  }
-  #panel ul.plus3 {
-    grid-template-columns: auto repeat(4, 1fr);
-  }
-  #panel ul.rate-tv {
-    grid-template-columns: auto repeat(2, 1fr);
-  }
+    #panel ul,
+    #panel ul.standard {
+        grid-template-columns: auto 1fr;
+    }
+    #panel ul.plus1 {
+        grid-template-columns: auto repeat(2, 1fr);
+    }
+    #panel ul.plus2 {
+        grid-template-columns: auto repeat(3, 1fr);
+    }
+    #panel ul.plus3 {
+        grid-template-columns: auto repeat(4, 1fr);
+    }
+    #panel ul.rate-tv {
+        grid-template-columns: auto repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 400px) {
-  #panel ul,
-  #panel ul.standard {
-    grid-template-columns: 1fr;
-  }
-  #panel ul.plus1 {
-    grid-template-columns: 1fr;
-  }
-  #panel ul.plus2 {
-    grid-template-columns: 1fr;
-  }
-  #panel ul.plus3 {
-    grid-template-columns: 1fr;
-  }
-  #panel ul.rate-tv {
-    grid-template-columns: 100px repeat(2, 1fr);
-  }
-
-  #panel ul.approve {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "li-1 li-1" "li-3 li-3" "li-2 li-4";
-  }
+    #panel ul,
+    #panel ul.standard {
+        grid-template-columns: 1fr;
+    }
+    #panel ul.plus1 {
+        grid-template-columns: 1fr;
+    }
+    #panel ul.plus2 {
+        grid-template-columns: 1fr;
+    }
+    #panel ul.plus3 {
+        grid-template-columns: 1fr;
+    }
+    #panel ul.rate-tv {
+        grid-template-columns: 100px repeat(2, 1fr);
+    }
+    #panel ul.approve {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "li-1 li-1" "li-3 li-3" "li-2 li-4";
+    }
 }
 
 #panel ul li {
-  display: block;
-  width: 100%;
-  font-size: 13px;
-  color: var(--dark);
-  padding: 0 5px;
-  text-align: left;
+    display: block;
+    width: 100%;
+    font-size: 13px;
+    color: var(--dark);
+    padding: 0 5px;
+    text-align: left;
 }
 
 @media (max-width: 400px) {
-  #panel ul li {
-    margin: 5px 0;
-  }
+    #panel ul li {
+        margin: 5px 0;
+    }
 }
 
 @media (max-width: 400px) {
-  #panel ul li,
-  #panel ul li:first-child {
-    text-align: center;
-  }
+    #panel ul li,
+    #panel ul li:first-child {
+        text-align: center;
+    }
 }
 
 #panel li strong {
-  font-size: 18px;
+    font-size: 18px;
 }
+
 
 /* центрування тексту */
 
 #panel ul.center li {
-  text-align: center;
+    text-align: center;
 }
 
 @media (max-width: 400px) {
-  #panel ul.rate-tv li:nth-child(1) {
-    text-align: left;
-  }
+    #panel ul.rate-tv li:nth-child(1) {
+        text-align: left;
+    }
 }
 
 #panel ul.rate-tv li:nth-child(2) {
-  text-align: right;
+    text-align: right;
 }
+
 
 /* новий тарийф, до порівняння -- зеленим */
 
 #panel ul.rate-tv li:nth-child(3) {
-  text-align: left;
-  color: var(--green);
-  padding-left: 10px;
+    text-align: left;
+    color: var(--green);
+    padding-left: 10px;
 }
+
 
 /* блок з полем пароля та кнопками  */
 
 #panel ul.approve li:nth-child(1) {
-  grid-area: li-1;
-  text-align: center;
+    grid-area: li-1;
+    text-align: center;
 }
 
 #panel ul.approve li:nth-child(2) {
-  grid-area: li-2;
+    grid-area: li-2;
 }
 
 #panel ul.approve li:nth-child(3) {
-  grid-area: li-3;
+    grid-area: li-3;
 }
 
 #panel ul.approve li:nth-child(4) {
-  grid-area: li-4;
+    grid-area: li-4;
 }
+
 
 /* кнопки так/ні */
 
 #panel button,
 #panel input[type="submit"] {
-  border: none;
-  padding: 10px;
-  text-align: center;
-  color: var(--light);
-  background: transparent;
-  width: 100%;
-  cursor: pointer;
-  border-radius: 3px;
-  font-weight: normal!important;
-  font-size: 13px!important;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    color: var(--light);
+    background: transparent;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 3px;
+    font-weight: normal!important;
+    font-size: 13px!important;
 }
 
 #panel button:hover,
@@ -434,345 +447,348 @@
 
 #panel button.green,
 #panel input[type="submit"].green {
-  border: 1px solid var(--green);
-  color: var(--green);
+    border: 1px solid var(--green);
+    color: var(--green);
 }
 
 #panel button.red,
 #panel input[type="submit"].red {
-  border: 1px solid var(--red);
-  color: var(--red);
+    border: 1px solid var(--red);
+    color: var(--red);
 }
 
 #panel button.blue,
 #panel input[type="submit"].blue {
-  border: 1px solid var(--first);
-  color: var(--first);
+    border: 1px solid var(--first);
+    color: var(--first);
 }
+
 
 /* якщо не кнопка, яле тре оформити, як кнопку */
 
 .button-green {
-  display: inline-block;
-  margin: 5px;
-  padding: 5px;
-  text-decoration: none;
-  cursor: pointer;
-  color: var(--green);
-  text-align: center;
-  border: 1px solid var(--green);
-  border-radius: 3px;
-  color: var(--green);
-  font-weight: 600;
-  line-height: 1.6;
-  font-size: 13px;
+    display: inline-block;
+    margin: 5px;
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--green);
+    text-align: center;
+    border: 1px solid var(--green);
+    border-radius: 3px;
+    color: var(--green);
+    font-size: 13px;
 }
 
 .button-blue {
-  display: inline-block;
-  margin: 5px;
-  padding: 5px;
-  text-decoration: none;
-  cursor: pointer;
-  color: var(--first);
-  text-align: center;
-  border: 1px solid var(--first);
-  border-radius: 3px;
-  color: var(--first);
-  font-weight: 600;
-  line-height: 1.6;
-  font-size: 13px;
+    display: inline-block;
+    margin: 5px;
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--first);
+    text-align: center;
+    border: 1px solid var(--first);
+    border-radius: 3px;
+    color: var(--first);
+    font-size: 13px;
 }
 
 .button-gray {
-  display: inline-block;
-  margin: 5px;
-  padding: 5px;
-  text-decoration: none;
-  cursor: pointer;
-  color: var(--dark);
-  text-align: center;
-  border: 1px solid var(--dark);
-  border-radius: 3px;
-  color: var(--dark);
-  font-weight: 600;
-  line-height: 1.6;
-  font-size: 13px;
+    display: inline-block;
+    margin: 5px;
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--dark);
+    text-align: center;
+    border: 1px solid var(--dark);
+    border-radius: 3px;
+    color: var(--dark);
+    font-size: 13px;
 }
+
 
 /* horizontal blocks */
 
 .block-5,
 .block-5-border {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 10px;
-  align-items: center;
-  text-align: center;
-  padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
 }
 
 .block-5-border {
-  align-items: stretch;
+    align-items: stretch;
 }
 
 @media (max-width: 996px) {
-  .block-5,
-  .block-5-border {
-    grid-template-columns: repeat(3, 1fr);
-  }
+    .block-5,
+    .block-5-border {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @media (max-width: 776px) {
-  .block-5,
-  .block-5-border {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    .block-5,
+    .block-5-border {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 500px) {
-  .block-5,
-  .block-5-border {
-    grid-template-columns: 1fr;
-  }
+    .block-5,
+    .block-5-border {
+        grid-template-columns: 1fr;
+    }
 }
 
 .block-4,
 .block-4-border {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
-  align-items: center;
-  text-align: center;
-  padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
 }
 
 .block-4-border {
-  align-items: stretch;
+    align-items: stretch;
 }
 
 @media (max-width: 996px) {
-  .block-4,
-  .block-4-border {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    .block-4,
+    .block-4-border {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 776px) {
-  .block-4,
-  .block-4-border {
-    grid-template-columns: 1fr;
-  }
+    .block-4,
+    .block-4-border {
+        grid-template-columns: 1fr;
+    }
 }
 
 .block-3,
 .block-3-border {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-  align-items: center;
-  text-align: center;
-  padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
 }
 
 .block-3-border {
-  align-items: stretch;
+    align-items: stretch;
 }
 
 @media (max-width: 996px) {
-  .block-3,
-  .block-3-border {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    .block-3,
+    .block-3-border {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 776px) {
-  .block-3,
-  .block-3-border {
-    grid-template-columns: 1fr;
-  }
+    .block-3,
+    .block-3-border {
+        grid-template-columns: 1fr;
+    }
 }
 
 .block-2,
 .block-2-border {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 10px;
-  align-items: center;
-  text-align: center;
-  padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
 }
 
 .block-2-border {
-  align-items: stretch;
+    align-items: stretch;
 }
 
 @media (max-width: 776px) {
-  .block-2,
-  .block-2-border {
-    grid-template-columns: 1fr;
-  }
+    .block-2,
+    .block-2-border {
+        grid-template-columns: 1fr;
+    }
 }
+
 
 /* -border */
 
 .block-5 a,
 .block-4 a,
 .block-3 a {
-  display: block;
-  color: var(--dark);
-  text-decoration: underline;
-  padding: 20px 10px;
-  font-size: 13px;
+    display: block;
+    color: var(--dark);
+    text-decoration: underline;
+    padding: 20px 10px;
+    font-size: 13px;
 }
 
 .block-5 a:hover,
 .block-4 a:hover,
 .block-3 a:hover {
-  color: var(--second);
-  text-decoration: none;
+    color: var(--second);
+    text-decoration: none;
 }
+
 
 /* +border */
 
 .block-5-border a,
 .block-4-border a,
 .block-3-border a {
-  display: block;
-  text-decoration: none;
-  padding: 20px 10px;
-  border-radius: 5px;
-  color: var(--second);
-  border: 1px solid var(--second);
-  font-size: 13px;
+    display: block;
+    text-decoration: none;
+    padding: 20px 10px;
+    border-radius: 5px;
+    color: var(--second);
+    border: 1px solid var(--second);
+    font-size: 13px;
 }
 
 .block-5-border a:hover,
 .block-4-border a:hover,
 .block-3-border a:hover {
-  color: var(--dark);
-  border-color: var(--dark);
+    color: var(--dark);
+    border-color: var(--dark);
 }
+
 
 /* block flex */
 
 #panel section.block-flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 3px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 5px;
 }
 
 @media (max-width: 776px) {
-  #panel section.block-flex {
-    flex-wrap: wrap;
-  }
+    #panel section.block-flex {
+        flex-wrap: wrap;
+    }
 }
 
 #panel section.block-flex a {
-  display: block;
-  margin: 2px;
-  text-decoration: none;
-  padding: 10px;
-  border: 1px solid var(--panel-border);
-  border-radius: 3px;
-  font-size: 13px;
-  text-align: center;
-  color: var(--dark);
+    display: block;
+    margin: 2px;
+    text-decoration: none;
+    padding: 10px;
+    border: 1px solid var(--panel-border);
+    border-radius: 3px;
+    font-size: 13px;
+    text-align: center;
+    color: var(--dark);
 }
 
 @media (max-width: 776px) {
-  #panel section.block-flex a {
-    width: 100%;
-  }
+    #panel section.block-flex a {
+        width: 100%;
+    }
 }
 
 #panel section.block-flex a:hover {
-  border: 1px solid var(--panel-hover);
-  color: var(--first);
+    border: 1px solid var(--panel-hover);
+    color: var(--first);
 }
+
 
 /* lists */
 
 #panel section.list {
-  display: block;
-  margin: 0 0 20px;
+    display: block;
+    margin: 0 0 20px;
 }
 
 #panel section.list ul {
-  display: block;
-  margin: 0;
+    display: block;
+    margin: 0;
 }
 
 #panel section.list a,
 #panel section.list ul li a {
-  display: block;
-  margin: 10px 0;
-  color: var(--dark);
-  text-decoration: underline;
-  /* font-size: 14px; */
-  font-size: 13px;
+    display: block;
+    margin: 10px 0;
+    color: var(--dark);
+    text-decoration: underline;
+    /* font-size: 14px; */
+    font-size: 13px;
 }
 
 #panel section.list a:hover,
 #panel section.list ul li a:hover {
-  color: var(--second);
-  text-decoration: none;
+    color: var(--second);
+    text-decoration: none;
 }
 
 #panel section.list ul li a::before {
-  content: "";
-  width: 10px;
-  height: 10px;
-  display: inline-block;
-  border: 1px solid var(--dark);
-  margin-right: 5px;
+    content: "";
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border: 1px solid var(--dark);
+    margin-right: 5px;
 }
 
 #panel section.list ul li a:hover::before {
-  border-color: var(--second);
+    border-color: var(--second);
 }
+
 
 /* історія платежів */
 
 .pay-list {
-  display: grid;
-  grid-template-columns: 1fr 2fr repeat(2, 1fr) 2fr;
-  grid-gap: 10px;
-  align-items: center;
-  text-align: center;
-  padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 2fr repeat(2, 1fr) 2fr;
+    grid-gap: 10px;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
 }
+
 
 /* panel inputs*/
 
 #panel input[type="text"],
 #panel input[type="password"] {
-  display: block;
-  width: 100%;
-  padding: 10px 12px;
-  margin: 5px 0;
-  font-size: 14px;
-  color: var(--gray);
-  background: var(--lightly);
-  border: 1px solid #eaeaea;
-  border-radius: 4px;
-  outline: none;
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    margin: 5px 0;
+    font-size: 14px;
+    color: var(--gray);
+    background: var(--lightly);
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+    outline: none;
 }
 
 #panel input[type="number"] {
-  display: block;
-  width: 100%;
-  padding: 10px 12px;
-  margin: 5px;
-  font-size: 14px;
-  color: var(--gray);
-  background: var(--lightly);
-  border: 1px solid #eaeaea;
-  border-radius: 4px;
-  outline: none;
-  text-align: center;
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    margin: 5px;
+    font-size: 14px;
+    color: var(--gray);
+    background: var(--lightly);
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+    outline: none;
+    text-align: center;
 }
+
 
 /* #panel input[type="submit"] {
   display: inline-block;
@@ -798,679 +814,734 @@
 #panel input[type="text"]:focus,
 #panel input[type="password"]:focus,
 #panel input[type="number"]:focus {
-  border: 1px solid var(--first);
-  background: var(--light);
+    border: 1px solid var(--first);
+    background: var(--light);
 }
+
 
 /* текст у вигляді цитати */
 
 #panel .quotes,
 #panel blockquote {
-  padding: 40px 60px;
-  font-size: 12px;
-  text-align: justify;
-  line-height: 1.8;
+    padding: 40px 60px;
+    font-size: 12px;
+    text-align: justify;
+    line-height: 1.8;
 }
 
 @media (max-width: 400px) {
-  #panel .quotes,
-  #panel blockquote {
-    padding: 20px;
-  }
+    #panel .quotes,
+    #panel blockquote {
+        padding: 20px;
+    }
 }
+
 
 /*
 нотіси будуть використовуватися?
 */
 
 #panel .notice {
-  display: block;
-  border: 1px solid var(--green);
-  border-radius: 5px;
-  padding: 10px;
-  margin: 20px 0;
-  color: var(--green);
-  text-align: center;
-  font-weight: bold;
-  font-size: 13px;
+    display: block;
+    border: 1px solid var(--green);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px 0;
+    color: var(--green);
+    text-align: center;
+    font-weight: bold;
+    font-size: 13px;
 }
 
 #panel .notice.error {
-  border-color: var(--red);
-  color: var(--red);
+    border-color: var(--red);
+    color: var(--red);
 }
+
 
 /* cтартова - стилізація тільки на мобільних */
-@media(max-width: 400px){
- 
-  #panel .home-panel ul{
-    display: flex;
-  }
-  #panel .home-panel ul li{
-    text-align: center;
-  }
-  #panel .home-panel ul li:first-child{
-    text-align: left;
-  }
-  #panel .home-panel ul li:last-child{
-    text-align: right;
-  }
 
+@media(max-width: 400px) {
+    #panel .home-panel ul {
+        display: flex;
+    }
+    #panel .home-panel ul li {
+        text-align: center;
+    }
+    #panel .home-panel ul li:first-child {
+        text-align: left;
+    }
+    #panel .home-panel ul li:last-child {
+        text-align: right;
+    }
 }
+
 
 /* кнопки для вибору тарифа */
+
 #rate-tv-buttons p,
 #rate-tv-buttons a {
-  display: inline-block;
-  margin: 0 5px 0 !important;
-  padding: 4px 6px;
-  text-decoration: none;
-  cursor: pointer;
-  color: var(--first);
-  text-align: center;
-  border: 1px solid var(--first);
-  border-radius: 3px;
-  color: var(--first);
-  font-weight: 600;
+    display: inline-block;
+    margin: 0 5px 0 !important;
+    padding: 4px 6px;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--first);
+    text-align: center;
+    border: 1px solid var(--first);
+    border-radius: 3px;
+    color: var(--first);
+    font-weight: 600;
 }
 
-@media(max-width: 996px){
-  #rate-tv-buttons a {
-    margin: 5px !important;
-  }
+@media(max-width: 996px) {
+    #rate-tv-buttons a {
+        margin: 5px !important;
+    }
 }
+
 
 /* старий тариф */
 
 #rate-tv-buttons p.current,
 #rate-tv-buttons a.current {
-  background: var(--tv-bg-2);
-  border-color: var(--lightgray);
-  color: var(--dark);
-  /* margin: 0!important; */
+    background: var(--tv-bg-2);
+    border-color: var(--lightgray);
+    color: var(--dark);
+    /* margin: 0!important; */
 }
+
 
 /* тариф, на який клікнули */
 
 #rate-tv-buttons p.active,
 #rate-tv-buttons a.active {
-  border-color: var(--green);
-  color: var(--green);
+    border-color: var(--green);
+    color: var(--green);
 }
 
 #rate-tv-buttons p span,
 #rate-tv-buttons a span {
-  display: block;
-  font-size: 12px;
-  font-weight: 400;
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
 }
+
 
 /* ховаємо додаткові тарифи */
 
 #rate-tv-data {
-  border-top: 1px solid var(--tv-bg-2);
+    border-top: 1px solid var(--tv-bg-2);
 }
 
 #rate-tv-data ul {
-  grid-template-columns: 300px repeat(2, 1fr) !important;
+    grid-template-columns: 300px repeat(2, 1fr) !important;
 }
 
 @media (max-width: 500px) {
-  #rate-tv-data ul {
-    grid-template-columns: auto repeat(2, 1fr) !important;
-  }
+    #rate-tv-data ul {
+        grid-template-columns: auto repeat(2, 1fr) !important;
+    }
 }
 
 #rate-tv-data ul li:nth-child(3) p {
-  margin: 0;
-  line-height: normal;
-  display: none;
+    margin: 0;
+    line-height: normal;
+    display: none;
 }
 
-#rate-tv-data ul.rate-tv li:nth-child(3){
-  padding-left: 0;
+#rate-tv-data ul.rate-tv li:nth-child(3) {
+    padding-left: 0;
 }
+
 
 /* центруємо 2 і 3 колонку (дані для порівняння) */
-@media(max-width: 776px){
-  #panel #rate-tv-data li:nth-child(2),
-  #panel #rate-tv-data li:nth-child(3){
-    text-align: center;
-    padding: 5px 0;
-  }
+
+@media(max-width: 776px) {
+    #panel #rate-tv-data li:nth-child(2),
+    #panel #rate-tv-data li:nth-child(3) {
+        text-align: center;
+        padding: 5px 0;
+    }
 }
+
 
 /* тип зміни */
 
 #rate-tv-type {
-  border-top: 1px solid var(--tv-bg-2);
+    border-top: 1px solid var(--tv-bg-2);
 }
+
 
 /* підтвердження */
 
 #rate-tv-approve {
-  border-top: 1px solid var(--tv-bg-2);
+    border-top: 1px solid var(--tv-bg-2);
 }
+
 
 /* класи показати/сховати */
 
 .none {
-  display: none !important;
+    display: none !important;
 }
 
 .block {
-  display: block !important;
+    display: block !important;
 }
+
 
 /* ////////////
 history-payment
 //////////// */
 
 #history-payment ul {
-  display: grid;
-  grid-template-columns: 1fr 2fr repeat(2, 1fr) 2fr;
-  grid-template-areas: "history-payment-1 history-payment-1 history-payment-1 history-payment-1 history-payment-1" "history-payment-2 history-payment-3 history-payment-4 history-payment-5 history-payment-6";
-  grid-gap: 5px;
-  padding-bottom: 12px;
-  margin: 0!important;
-  padding-top: 0;
-  transition: background 0.5s;
+    display: grid;
+    grid-template-columns: 1fr 2fr repeat(2, 1fr) 2fr;
+    grid-template-areas: "history-payment-1 history-payment-1 history-payment-1 history-payment-1 history-payment-1" "history-payment-2 history-payment-3 history-payment-4 history-payment-5 history-payment-6";
+    grid-gap: 5px;
+    padding-bottom: 12px;
+    margin: 0!important;
+    padding-top: 0;
+    transition: background 0.5s;
 }
 
 #history-payment ul:hover {
-  background: var(--panel-hover);
+    background: var(--panel-hover);
 }
 
 #history-payment li {
-  padding: 5px!important;
+    padding: 5px!important;
 }
+
 
 /* на всю ширину */
 
 #history-payment li:nth-child(1) {
-  grid-area: history-payment-1;
-  background: var(--tv-bg-2);
-  font-size: 13px;
-  font-weight: 500;
-  border-top: 1px solid var(--panel-border);
-  border-bottom: 1px solid var(--panel-border);
+    grid-area: history-payment-1;
+    background: var(--tv-bg-2);
+    font-size: 13px;
+    font-weight: 500;
+    border-top: 1px solid var(--panel-border);
+    border-bottom: 1px solid var(--panel-border);
 }
+
 
 /* час */
 
 #history-payment li:nth-child(2) {
-  grid-area: history-payment-2;
+    grid-area: history-payment-2;
 }
+
 
 /* опис */
 
 #history-payment li:nth-child(3) {
-  grid-area: history-payment-3;
+    grid-area: history-payment-3;
 }
+
 
 /* сума */
 
 #history-payment li:nth-child(4) {
-  grid-area: history-payment-4;
-  text-align: right;
+    grid-area: history-payment-4;
+    text-align: right;
 }
+
 
 /* залишок */
 
 #history-payment li:nth-child(5) {
-  grid-area: history-payment-5;
-  text-align: right;
+    grid-area: history-payment-5;
+    text-align: right;
 }
+
 
 /* примітка */
 
 #history-payment li:nth-child(6) {
-  grid-area: history-payment-6;
-  padding-left: 30px!important;
+    grid-area: history-payment-6;
+    padding-left: 30px!important;
 }
 
 #history-payment li b {
-  font-weight: 500;
+    font-weight: 500;
 }
 
 #history-payment li small {
-  display: block;
-  margin: 5px 0 0;
+    display: block;
+    margin: 5px 0 0;
 }
+
 
 /* у заголовка інше розташування */
 
 #history-payment-head {
-  color: var(--lightgray);
-  /* history-payment-head-1 -- горизонтальний блок відсутній */
-  grid-template-areas: "history-payment-head-2 history-payment-head-3 history-payment-head-4 history-payment-head-5 history-payment-head-6" !important;
-  padding: 0 !important;
-  border: none !important;
-  grid-gap: 0 5px !important;
+    color: var(--lightgray);
+    /* history-payment-head-1 -- горизонтальний блок відсутній */
+    grid-template-areas: "history-payment-head-2 history-payment-head-3 history-payment-head-4 history-payment-head-5 history-payment-head-6" !important;
+    padding: 0 !important;
+    border: none !important;
+    grid-gap: 0 5px !important;
 }
 
 #history-payment-head:hover {
-  background: none !important;
+    background: none !important;
 }
 
 #history-payment-head li {
-  color: var(--lightgray)!important;
+    color: var(--lightgray)!important;
 }
 
 #history-payment-head li:nth-child(1) {
-  grid-area: history-payment-head-2;
-  background: none !important;
-  border: none !important;
+    grid-area: history-payment-head-2;
+    background: none !important;
+    border: none !important;
 }
 
 #history-payment-head li:nth-child(2) {
-  grid-area: history-payment-head-3;
+    grid-area: history-payment-head-3;
 }
 
 #history-payment-head li:nth-child(3) {
-  grid-area: history-payment-head-4;
-  text-align: right;
+    grid-area: history-payment-head-4;
+    text-align: right;
 }
 
 #history-payment-head li:nth-child(4) {
-  grid-area: history-payment-head-5;
+    grid-area: history-payment-head-5;
 }
 
 #history-payment-head li:nth-child(5) {
-  grid-area: history-payment-head-6;
-  text-align: left;
-  padding-left: 30px!important;
+    grid-area: history-payment-head-6;
+    text-align: left;
+    padding-left: 30px!important;
 }
+
 
 /* на малому екрані додаємо before зі заголовками */
 
 @media (max-width: 776px) {
-  #history-payment ul {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "history-payment-1 history-payment-1" "history-payment-3 history-payment-2" "history-payment-4 history-payment-4" "history-payment-5 history-payment-5" "history-payment-6 history-payment-6";
-    padding: 0 0 10px;
-    margin: 0 0 10px !important;
-  }
-  #history-payment-head {
-    display: none !important;
-  }
-  #history-payment li::before {
-    display: block;
-    float: left;
-  }
-  #history-payment li:nth-child(2) {
-    text-align: right;
-  }
-  #history-payment li:nth-child(3) {
-    text-align: left;
-  }
-  #history-payment li:nth-child(4)::before {
-    content: "Сума (грн): ";
-  }
-  #history-payment li:nth-child(5)::before {
-    content: "Залишок (грн): ";
-  }
-  #history-payment li:nth-child(6)::before {
-    content: "Примітка: ";
-  }
-  #history-payment li:nth-child(6) {
-    padding-left: 5px;
-    text-align: right;
-  }
+    #history-payment ul {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "history-payment-1 history-payment-1" "history-payment-3 history-payment-2" "history-payment-4 history-payment-4" "history-payment-5 history-payment-5" "history-payment-6 history-payment-6";
+        padding: 0 0 10px;
+        margin: 0 0 10px !important;
+    }
+    #history-payment-head {
+        display: none !important;
+    }
+    #history-payment li::before {
+        display: block;
+        float: left;
+    }
+    #history-payment li:nth-child(2) {
+        text-align: right;
+    }
+    #history-payment li:nth-child(3) {
+        text-align: left;
+    }
+    #history-payment li:nth-child(4)::before {
+        content: "Сума (грн): ";
+    }
+    #history-payment li:nth-child(5)::before {
+        content: "Залишок (грн): ";
+    }
+    #history-payment li:nth-child(6)::before {
+        content: "Примітка: ";
+    }
+    #history-payment li:nth-child(6) {
+        padding-left: 5px;
+        text-align: right;
+    }
 }
+
 
 /*/////////////
 service-tv.html
 /////////////*/
 
 #service-tv-header {
-  margin-bottom: 6px !important;
-  padding-bottom: 6px !important;
-  border-bottom: 1px solid var(--tv-bg-2);
+    margin-bottom: 6px !important;
+    padding-bottom: 6px !important;
+    border-bottom: 1px solid var(--tv-bg-2);
 }
 
-@media(max-width: 400px){
-  #service-tv-header{
-    display: flex!important;
-  }
+@media(max-width: 400px) {
+    #service-tv-header {
+        display: flex!important;
+    }
 }
 
 #service-tv-content {
-  margin-bottom: 6px !important;
-  padding-bottom: 6px !important;
-  border-bottom: 1px solid var(--tv-bg-2);
+    margin-bottom: 6px !important;
+    padding-bottom: 6px !important;
+    border-bottom: 1px solid var(--tv-bg-2);
 }
 
-@media(max-width: 400px){
-  #service-tv-content ul{
-    grid-template-columns: repeat(2,1fr);
-  }
+@media(max-width: 400px) {
+    #service-tv-content ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 #service-tv-content li:nth-child(2) {
-  text-align: center;
+    text-align: center;
 }
 
-@media(max-width: 776px){
-  #service-tv-content ul li:nth-child(2) {
-    text-align: right;
-    white-space: nowrap;
-  }
-  #service-tv-content a{
-    margin: 0;
-  }
+@media(max-width: 776px) {
+    #service-tv-content ul li:nth-child(2) {
+        text-align: right;
+        white-space: nowrap;
+    }
+    #service-tv-content a {
+        margin: 0;
+    }
 }
 
-@media(max-width: 400px){
-  #service-tv-content ul li:first-child{
-    text-align: left;
-  }
-  #service-tv-content ul li:nth-child(2) {
-    text-align: right;
-  }
+@media(max-width: 400px) {
+    #service-tv-content ul li:first-child {
+        text-align: left;
+    }
+    #service-tv-content ul li:nth-child(2) {
+        text-align: right;
+    }
 }
 
 #service-tv-content .current {
-  margin-right: 0 !important;
-  border-color: var(--lightgray);
+    margin-right: 0 !important;
+    border-color: var(--lightgray);
 }
 
 #service-tv-playlist {
-  margin-top: 6px !important;
-  padding-top: 6px !important;
-  border-top: 1px solid var(--tv-bg-2);
+    margin-top: 6px !important;
+    padding-top: 6px !important;
+    border-top: 1px solid var(--tv-bg-2);
 }
 
 #service-tv-content-change {
-  padding-top: 3px;
+    padding-top: 3px;
 }
+
 
 /* /////
 pay.html
 ///// */
 
 #select-pay {
-  display: grid !important;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 5px;
-  padding-top: 6px !important;
-  padding-bottom: 6px !important;
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
 }
 
 @media (max-width: 776px) {
-  #select-pay {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    #select-pay {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 400px) {
-  #select-pay {
-    grid-template-columns: 1fr;
-  }
+    #select-pay {
+        grid-template-columns: 1fr;
+    }
 }
 
+
 /* блоки з кнопками */
-#select-pay > span {
-  font-size: 13px;
-  display: flex;
-  align-items: stretch;
-  align-content: center;
-  justify-content: center;
+
+#select-pay>span {
+    font-size: 13px;
+    display: flex;
+    align-items: stretch;
+    align-content: center;
+    justify-content: center;
 }
 
 #select-pay label {
-  font-size: 13px;
-  display: inline-block;
-  width: 100%;
-  min-height: 42px;
-  padding: 4px 6px;
-  text-decoration: none;
-  cursor: pointer;
-  color: var(--first);
-  text-align: center;
-  border: 1px solid var(--first);
-  border-radius: 3px;
-  color: var(--first);
-  font-weight: 600;
+    font-size: 13px;
+    display: inline-block;
+    width: 100%;
+    min-height: 42px;
+    padding: 4px 6px;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--first);
+    text-align: center;
+    border: 1px solid var(--first);
+    border-radius: 3px;
+    color: var(--first);
+    font-weight: 600;
 }
 
 #select-pay input[type="radio"] {
-  display: none;
+    display: none;
 }
 
-#select-pay input[type="radio"]:checked ~ label {
-  border-color: var(--green);
-  color: var(--green);
+#select-pay input[type="radio"]:checked~label {
+    border-color: var(--green);
+    color: var(--green);
 }
+
 
 /* описи */
+
 #select-quotes {
-  padding: 6px 0;
-  border-bottom: 1px solid var(--tv-bg-2);
+    padding: 6px 0;
+    border-bottom: 1px solid var(--tv-bg-2);
 }
 
 #select-quotes div {
-  font-size: 13px;
+    font-size: 13px;
 }
 
 #select-quotes .text-center {
-  padding-left: 20px;
-  padding-right: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
+
 
 /* тариф */
+
 #select-rate {
-  padding: 6px 0;
-  border-bottom: 1px solid var(--tv-bg-2);
+    padding: 6px 0;
+    border-bottom: 1px solid var(--tv-bg-2);
 }
 
+
 /* у цьому блоці списки оптитмізовані інакше */
+
 @media (max-width: 776px) {
-  #select-rate ul.plus1 {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  #select-rate ul.plus1 li:nth-child(1) {
-    text-align: left;
-  }
-  #select-rate ul.plus1 li:nth-child(2) {
-    text-align: center;
-  }
-  #select-rate ul.plus1 li:nth-child(3) {
-    text-align: right;
-  }
+    #select-rate ul.plus1 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #select-rate ul.plus1 li:nth-child(1) {
+        text-align: left;
+    }
+    #select-rate ul.plus1 li:nth-child(2) {
+        text-align: center;
+    }
+    #select-rate ul.plus1 li:nth-child(3) {
+        text-align: right;
+    }
 }
+
 
 /* //////////////
 all-services.html
 ////////////// */
 
-#all-services{
-  padding: 6px!important;
+#all-services {
+    padding: 6px!important;
 }
 
 #all-services ul.head,
 #all-services ul.head:hover {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 5px;
-
-  background: var(--tv-bg-2);
-  font-size: 13px;
-  font-weight: 500;
-  border-top: 1px solid var(--panel-border);
-  border-bottom: 1px solid var(--panel-border);
-  padding-top: 6px;
-  padding-bottom: 6px;
-  margin: 6px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    background: var(--tv-bg-2);
+    font-size: 13px;
+    font-weight: 500;
+    border-top: 1px solid var(--panel-border);
+    border-bottom: 1px solid var(--panel-border);
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin: 6px 0;
 }
 
 #all-services li {
-  padding: 5px;
+    padding: 5px;
 }
 
-#all-services input{
-  width: 100%;
+#all-services input {
+    width: 100%;
 }
 
 #all-services li b {
-  font-weight: 500;
+    font-weight: 500;
 }
 
 #all-services li small {
-  display: block;
-  margin: 5px 0 0;
+    display: block;
+    margin: 5px 0 0;
 }
 
-#all-services .description{
-  margin: 10px 5px;
-  font-size: 13px;
+#all-services .description {
+    margin: 10px 5px;
+    font-size: 13px;
 }
+
 
 /* блок з даними, зліва -- дані, справа кнопка "змінити".  */
-#all-services .service-data-edit{
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  align-items: center;
+
+#all-services .service-data-edit {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
 }
 
-#all-services .service-data-edit.off{
-  display: none;
+#all-services .service-data-edit.off {
+    display: none;
 }
+
 
 /* дані зліва */
-#all-services .service-data-edit ul{
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  grid-gap: 5px;
-}
 
+#all-services .service-data-edit ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+}
 
 
 /* якщо дані тре зробити неактивні для змін */
-#all-services .service-data-edit ul.non-edit{
-  pointer-events: none;
+
+#all-services .service-data-edit ul.non-edit {
+    pointer-events: none;
 }
+
 
 /* поле телефона */
-#all-services .service-data-edit ul.non-edit #change-phone input{
-  padding: 0;
-  margin: 0;
-  background: transparent;
-  border: none;
-  font-size: 13px;
-  text-align: left;
+
+#all-services .service-data-edit ul.non-edit #change-phone input {
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    border: none;
+    font-size: 13px;
+    text-align: left;
 }
 
+
 /* поле з кількістю днів */
-#all-services .service-data-edit ul.non-edit #change-days input{
-  padding: 0;
-  margin-left: 0;
-  background: transparent;
-  border: none;
-  font-size: 13px;
-  text-align: left;
+
+#all-services .service-data-edit ul.non-edit #change-days input {
+    padding: 0;
+    margin-left: 0;
+    background: transparent;
+    border: none;
+    font-size: 13px;
+    text-align: left;
 }
 
 #all-services .service-data-edit ul.non-edit #change-time input:not(:checked)~label {
-  display: none;
+    display: none;
 }
 
 #all-services .service-data-edit ul.non-edit #change-time input~label {
-  border: none;
-  color: var(--dark);
-  padding: 0;
+    border: none;
+    color: var(--dark);
+    padding: 0;
 }
 
 #all-services .service-data-edit ul.non-edit #change-time input~label::before {
-  display: none;
+    display: none;
 }
+
 
 /* форми підтвердження */
-#all-services .approve.off{
-  display: none;
+
+#all-services .approve.off {
+    display: none;
 }
+
 
 /* блок з кнопкою "змінити" */
-.service-change a{
-  font-size: 13px;
-  padding: 5px;
+
+.service-change a {
+    font-size: 13px;
+    padding: 5px;
 }
 
-.service-change a.off{
-  display: none;
+.service-change a.off {
+    display: none;
 }
+
 
 /* чекбокси юзаються у 2 шаблонах -- виніс в окремий клас */
+
 .panel-check label {
-  cursor: pointer;
-  display: inline-block;
-  padding: 5px;
-  border: 1px solid transparent;
-  border-radius: 3px;
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px;
+    border: 1px solid transparent;
+    border-radius: 3px;
 }
 
 .panel-check label::before {
-  content: "";
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  position: relative;
-  top: 2px;
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    position: relative;
+    top: 2px;
 }
 
 .panel-check input[type="radio"] {
-  display: none;
+    display: none;
 }
 
-.panel-check input[type="radio"]:checked ~ label {
-  color: var(--green);
-  border-color: var(--green);
+.panel-check input[type="radio"]:checked~label {
+    color: var(--green);
+    border-color: var(--green);
 }
 
-.panel-check input[type="radio"]:checked ~ label::before {
-  content: "";
-  background: url(../images/check.svg);
+.panel-check input[type="radio"]:checked~label::before {
+    content: "";
+    background: url(../images/check.svg);
 }
+
 
 /* підключити/відключити */
+
 .turn {
-  color: var(--red);
+    color: var(--red);
 }
 
-.turn::before{
-  content: 'Відключити';
-  display: inline-block;
+.turn::before {
+    content: 'Відключити';
+    display: inline-block;
 }
+
 
 /* відключити (підсвітка зелена) */
-.turn.off{
-  color: var(--green);
+
+.turn.off {
+    color: var(--green);
 }
 
-.turn.off::before{
-  content: 'Підключити';
+.turn.off::before {
+    content: 'Підключити';
 }
+
 
 /* послуга підключена */
-.service-check{
-  color: var(--green);
+
+.service-check {
+    color: var(--green);
 }
 
-.service-check::before{
-  content: 'Послугу підключено';
-  display: inline-block;
+.service-check::before {
+    content: 'Послугу підключено';
+    display: inline-block;
 }
+
 
 /* послуга НЕ підключена */
-.service-check.off{
-  color: var(--lightgray);
+
+.service-check.off {
+    color: var(--lightgray);
 }
 
-.service-check.off::before{
-  content: 'Послугу не підключено';
+.service-check.off::before {
+    content: 'Послугу не підключено';
 }
+
 
 /* ховаємо опис */
-.description.off{
-  display: none;
+
+.description.off {
+    display: none;
 }
