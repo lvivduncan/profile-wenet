@@ -1470,14 +1470,14 @@ all-services.html
     border-radius: 3px;
 }
 
-.panel-check label::before {
+/* .panel-check label::before {
     content: "";
     display: inline-block;
     width: 18px;
     height: 18px;
     position: relative;
     top: 2px;
-}
+} */
 
 .panel-check input[type="radio"] {
     display: none;
@@ -1488,10 +1488,10 @@ all-services.html
     border-color: var(--green);
 }
 
-.panel-check input[type="radio"]:checked~label::before {
+/* .panel-check input[type="radio"]:checked~label::before {
     content: "";
     background: url(../images/check.svg);
-}
+} */
 
 
 /* підключити/відключити */
