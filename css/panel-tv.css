@@ -1483,10 +1483,10 @@ all-services.html
     display: none;
 }
 
-.panel-check input[type="radio"]:checked~label {
+/* .panel-check input[type="radio"]:checked~label {
     color: var(--green);
     border-color: var(--green);
-}
+} */
 
 /* .panel-check input[type="radio"]:checked~label::before {
     content: "";
